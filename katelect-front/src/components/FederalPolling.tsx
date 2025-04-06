@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import styled from 'styled-components';
 import * as d3 from 'd3';
 
 // Import headshots
@@ -9,19 +8,6 @@ import singhImg from '/src/assets/headshots/singh.jpg';
 import blanchetImg from '/src/assets/headshots/blanchet.jpg';
 import pedneaultImg from '/src/assets/headshots/pedneault.jpg';
 import bernierImg from '/src/assets/headshots/bernier.jpg';
-
-const PollSection = styled.div`
-  margin-bottom: 4rem;
-  position: relative;
-  padding: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  .headshot-clip {
-    clip-path: circle(50%);
-  }
-`;
 
 interface PartyData {
   name: string;
@@ -102,9 +88,9 @@ const FederalPolling = () => {
     d3.select(svgRef.current).selectAll('*').remove();
 
     // Set up dimensions
-    const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+    const margin = { top: 0, right: 0, bottom: 0, left: 0 };
     const width = 800 - margin.left - margin.right;
-    const height = 600 - margin.top - margin.bottom;
+    const height = 420 - margin.top - margin.bottom;
     const barHeight = 60;
     const imageSize = 50;
 
@@ -156,7 +142,7 @@ const FederalPolling = () => {
     // Add circle background for the "Other" category
     imageGroups
       .filter(function (d: PartyData): boolean {
-        return !d.headshot;
+        return !d.headshot && d.name !== 'Other';
       })
       .append('circle')
       .attr('cx', imageSize / 2)
@@ -236,11 +222,7 @@ const FederalPolling = () => {
       .attr('fill', (d) => d.color);
   }, []);
 
-  return (
-    <PollSection>
-      <svg ref={svgRef}></svg>
-    </PollSection>
-  );
+  return <svg ref={svgRef}></svg>;
 };
 
 export default FederalPolling;

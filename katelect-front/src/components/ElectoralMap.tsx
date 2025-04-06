@@ -2,18 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import * as d3 from 'd3';
 
-const MapSection = styled.div`
-  margin-bottom: 4rem;
-  position: relative;
-  padding: 0;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100%;
-  height: 800px;
-`;
-
 const Tooltip = styled.div`
   position: fixed;
   padding: 0.5rem 0.75rem;
@@ -129,7 +117,6 @@ const formatRidingName = (name: string): string => {
 
 const ElectoralMap = () => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const mapSectionRef = useRef<HTMLDivElement>(null);
   const [tooltipData, setTooltipData] = useState<{
     x: number;
     y: number;
@@ -142,12 +129,9 @@ const ElectoralMap = () => {
     // Clear any existing content
     d3.select(svgRef.current).selectAll('*').remove();
 
-    // set up responsive dimensions
-    const mapSection = mapSectionRef.current;
-    if (!mapSection) return;
-
-    const width = mapSection.clientWidth;
-    const height = mapSection.clientHeight;
+    // set up dimensions
+    const width = 800;
+    const height = 600;
     const margin = { top: 0, right: 0, bottom: 0, left: 0 };
 
     // make svg responsive
@@ -270,11 +254,11 @@ const ElectoralMap = () => {
   // add window resize handler
   useEffect(() => {
     const handleResize = () => {
-      if (!svgRef.current || !mapSectionRef.current) return;
+      if (!svgRef.current) return;
 
       // update svg dimensions on resize
-      const width = mapSectionRef.current.clientWidth;
-      const height = mapSectionRef.current.clientHeight;
+      const width = 800;
+      const height = 600;
 
       d3.select(svgRef.current)
         .attr('width', '100%')
@@ -289,8 +273,8 @@ const ElectoralMap = () => {
 
   // Add event listeners to prevent default browser behavior
   useEffect(() => {
-    const mapSection = mapSectionRef.current;
-    if (!mapSection) return;
+    const svg = svgRef.current;
+    if (!svg) return;
 
     // Function to prevent default behavior
     const preventDefault = (e: Event) => {
@@ -298,43 +282,47 @@ const ElectoralMap = () => {
     };
 
     // Add event listeners for mouse wheel, touch, and drag events
-    mapSection.addEventListener('wheel', preventDefault, { passive: false });
-    mapSection.addEventListener('touchmove', preventDefault, {
+    svg.addEventListener('wheel', preventDefault, { passive: false });
+    svg.addEventListener('touchmove', preventDefault, {
       passive: false,
     });
-    mapSection.addEventListener('touchstart', preventDefault, {
+    svg.addEventListener('touchstart', preventDefault, {
       passive: false,
     });
-    mapSection.addEventListener('touchcancel', preventDefault, {
+    svg.addEventListener('touchcancel', preventDefault, {
       passive: false,
     });
-    mapSection.addEventListener('touchforcechange', preventDefault, {
+    svg.addEventListener('touchforcechange', preventDefault, {
       passive: false,
     });
-    mapSection.addEventListener('touchend', preventDefault, { passive: false });
-    mapSection.addEventListener('dragstart', preventDefault, {
+    svg.addEventListener('touchend', preventDefault, {
       passive: false,
     });
-    mapSection.addEventListener('drag', preventDefault, { passive: false });
-    mapSection.addEventListener('dragend', preventDefault, { passive: false });
+    svg.addEventListener('dragstart', preventDefault, {
+      passive: false,
+    });
+    svg.addEventListener('drag', preventDefault, { passive: false });
+    svg.addEventListener('dragend', preventDefault, {
+      passive: false,
+    });
 
     // Clean up event listeners
     return () => {
-      mapSection.removeEventListener('wheel', preventDefault);
-      mapSection.removeEventListener('touchmove', preventDefault);
-      mapSection.removeEventListener('touchstart', preventDefault);
-      mapSection.removeEventListener('touchcancel', preventDefault);
-      mapSection.removeEventListener('touchforcechange', preventDefault);
-      mapSection.removeEventListener('touchend', preventDefault);
-      mapSection.removeEventListener('dragstart', preventDefault);
-      mapSection.removeEventListener('drag', preventDefault);
-      mapSection.removeEventListener('dragend', preventDefault);
+      svg.removeEventListener('wheel', preventDefault);
+      svg.removeEventListener('touchmove', preventDefault);
+      svg.removeEventListener('touchstart', preventDefault);
+      svg.removeEventListener('touchcancel', preventDefault);
+      svg.removeEventListener('touchforcechange', preventDefault);
+      svg.removeEventListener('touchend', preventDefault);
+      svg.removeEventListener('dragstart', preventDefault);
+      svg.removeEventListener('drag', preventDefault);
+      svg.removeEventListener('dragend', preventDefault);
     };
   }, []);
 
   return (
-    <MapSection ref={mapSectionRef}>
-      <svg ref={svgRef} style={{ width: '100%', height: '100%' }}></svg>
+    <>
+      <svg ref={svgRef} style={{ width: '100%', height: '600px' }}></svg>
       {tooltipData && (
         <Tooltip
           style={{
@@ -345,7 +333,7 @@ const ElectoralMap = () => {
           dangerouslySetInnerHTML={{ __html: tooltipData.content }}
         />
       )}
-    </MapSection>
+    </>
   );
 };
 

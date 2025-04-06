@@ -6,6 +6,7 @@ import FederalPolling from './FederalPolling';
 import ElectoralMap from './ElectoralMap';
 import About from './About';
 import Polls from './Polls';
+import TopLine from './TopLine';
 
 // styled components for the homepage
 const Header = styled.header`
@@ -133,18 +134,26 @@ const Content = styled.main<{ hasSidebar: boolean }>`
 `;
 
 const DataSection = styled.section`
-  margin-bottom: 0rem;
+  margin: 0.25rem 0 0.5rem 0;
   width: 100%;
-  min-height: 400px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  padding: 1rem;
+  overflow: hidden;
 `;
 
 const SectionTitle = styled.h2`
   font-family: 'Raleway', sans-serif;
   font-size: 2rem;
   color: #333333;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 `;
 
 function Homepage() {
@@ -198,28 +207,36 @@ function Homepage() {
             <SidebarTitle>Regions</SidebarTitle>
             <RegionList>
               <RegionItem>
-                <RegionLink href="#federal">Federal</RegionLink>
+                <RegionLink href={`#${activeTab}-federal`}>Federal</RegionLink>
               </RegionItem>
               <RegionItem>
-                <RegionLink href="#alberta">Alberta</RegionLink>
+                <RegionLink href={`#${activeTab}-alberta`}>Alberta</RegionLink>
               </RegionItem>
               <RegionItem>
-                <RegionLink href="#atlantic">Atlantic Canada</RegionLink>
+                <RegionLink href={`#${activeTab}-atlantic`}>
+                  Atlantic Canada
+                </RegionLink>
               </RegionItem>
               <RegionItem>
-                <RegionLink href="#bc">British Columbia</RegionLink>
+                <RegionLink href={`#${activeTab}-bc`}>
+                  British Columbia
+                </RegionLink>
               </RegionItem>
               <RegionItem>
-                <RegionLink href="#ontario">Ontario</RegionLink>
+                <RegionLink href={`#${activeTab}-ontario`}>Ontario</RegionLink>
               </RegionItem>
               <RegionItem>
-                <RegionLink href="#prairies">Prairies (MB + SK)</RegionLink>
+                <RegionLink href={`#${activeTab}-prairies`}>
+                  Prairies (MB + SK)
+                </RegionLink>
               </RegionItem>
               <RegionItem>
-                <RegionLink href="#quebec">Quebec</RegionLink>
+                <RegionLink href={`#${activeTab}-quebec`}>Quebec</RegionLink>
               </RegionItem>
               <RegionItem>
-                <RegionLink href="#territories">Territories</RegionLink>
+                <RegionLink href={`#${activeTab}-territories`}>
+                  Territories
+                </RegionLink>
               </RegionItem>
             </RegionList>
           </Sidebar>
@@ -227,6 +244,11 @@ function Homepage() {
         <Content hasSidebar={activeTab === 'home' || activeTab === 'polls'}>
           {activeTab === 'home' && (
             <>
+              <DataSection>
+                <SectionTitle>Who will form the next government?</SectionTitle>
+                <TopLine />
+              </DataSection>
+
               <DataSection>
                 <SectionTitle>Electoral Map</SectionTitle>
                 <ElectoralMap />

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 0.25rem 1rem;
   min-height: calc(100vh - 89px);
 `;
 
@@ -14,7 +14,7 @@ const ContentBlock = styled.div`
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
 `;
 
 const Section = styled.section`
@@ -75,7 +75,7 @@ const About = () => {
           </Paragraph>
           <Paragraph>
             We use national and provincial polling averages to give the model a
-            sense of each party’s strength at the time. To make these inputs
+            sense of each party's strength at the time. To make these inputs
             more meaningful, we apply polling firm ratings and weightings
             inspired by 338Canada — favoring higher-quality pollsters with
             better track records.
@@ -89,7 +89,8 @@ const About = () => {
         <Section>
           <SectionTitle>About: Katelect</SectionTitle>
           <Paragraph>
-            Katelect is a project by <a href="https://github.com/ninkat">ninkat</a>, an undergraduate
+            Katelect is a project by{' '}
+            <a href="https://github.com/ninkat">ninkat</a>, an undergraduate
             computer science student with interests in visualization and
             (occasionally) politics. Unfortunately, he doesn't specialize in
             statistics or machine learning, so if you want to help, he would be

@@ -1,15 +1,5 @@
 import { useEffect, useRef } from 'react';
-import styled from 'styled-components';
 import * as d3 from 'd3';
-
-const SeatsSection = styled.div`
-  margin-bottom: 4rem;
-  position: relative;
-  padding: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
 
 interface PartyData {
   name: string;
@@ -70,8 +60,8 @@ const ProjectedSeats = () => {
     d3.select(svgRef.current).selectAll('*').remove();
 
     // Set up dimensions
-    const margin = { top: 40, right: 120, bottom: 20, left: 160 };
-    const width = 1000 - margin.left - margin.right;
+    const margin = { top: 0, right: 0, bottom: 0, left: 120 };
+    const width = 1100 - margin.left - margin.right;
     const height = 500 - margin.top - margin.bottom;
 
     // Create SVG
@@ -199,11 +189,7 @@ const ProjectedSeats = () => {
       .text((d) => d.seats.median);
   }, []);
 
-  return (
-    <SeatsSection>
-      <svg ref={svgRef}></svg>
-    </SeatsSection>
-  );
+  return <svg ref={svgRef}></svg>;
 };
 
 export default ProjectedSeats;
