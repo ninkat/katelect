@@ -1,21 +1,14 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Poll, partyColors, pollingData } from './PollingData';
+import { Poll, pollingData } from './PollingData';
+import { partyColors } from './PartyColors';
 
 // styled components for the polling table
-const TableContainer = styled.div`
-  width: 100%;
-  overflow-x: auto;
-  margin-bottom: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
-
 const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   font-family: 'Inter', sans-serif;
+  background: white;
 `;
 
 const TableHeader = styled.thead`
@@ -65,7 +58,7 @@ const PollingTable = () => {
   const [polls] = useState<Poll[]>(pollingData);
 
   return (
-    <TableContainer>
+    <div style={{ width: '100%', overflowX: 'auto' }}>
       <Table>
         <TableHeader>
           <TableRow>
@@ -100,7 +93,7 @@ const PollingTable = () => {
           ))}
         </tbody>
       </Table>
-    </TableContainer>
+    </div>
   );
 };
 

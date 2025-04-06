@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 // interface for a single poll
 export interface Poll {
   id: number;
@@ -298,24 +296,26 @@ export const pollingData: Poll[] = [
     other: 0,
     lead: 'CPC +2',
   },
+  {
+    id: 21,
+    date: '2022-10-16',
+    pollster: 'Mainstreet Research',
+    sampleSize: 1000,
+    liberal: 35,
+    conservative: 34,
+    ndp: 20,
+    bloc: 7,
+    green: 4,
+    ppc: 3,
+    other: 0,
+    lead: 'CPC +2',
+  },
 ];
-
-// party colors
-export const partyColors = {
-  liberal: '#D71920',
-  conservative: '#1A4782',
-  ndp: '#F37021',
-  bloc: '#33B2CC',
-  green: '#3D9B35',
-  ppc: '#4B306A',
-  other: '#808080',
-};
 
 // component to provide polling data to other components
 const PollingData = () => {
-  const [polls] = useState<Poll[]>(pollingData);
-
-  return null; // This component doesn't render anything, it just provides data
+  // This component doesn't render anything, it just provides data
+  return null;
 };
 
 export default PollingData;

@@ -12,8 +12,8 @@ import TopLine from './TopLine';
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0rem 0;
+  align-items: flex-start;
+  padding: 0;
   background-color: #fafafa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #eaeaea;
@@ -21,6 +21,7 @@ const Header = styled.header`
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   position: relative;
+  height: 110px;
 `;
 
 const LogoContainer = styled.div`
@@ -29,6 +30,7 @@ const LogoContainer = styled.div`
   gap: 0.25rem;
   margin-left: -0.95rem;
   padding-left: calc(50vw - 50% + 2rem);
+  padding-top: 0.5rem;
 `;
 
 const Logo = styled.img`
@@ -46,23 +48,40 @@ const Title = styled.h1`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 2rem;
+  gap: 0;
   padding-right: calc(50vw - 50% + 2rem);
+  height: 100%;
+  align-items: flex-end;
 `;
 
 const NavLink = styled.a<{ active: boolean }>`
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
+  font-weight: ${(props) => (props.active ? '600' : '400')};
   color: ${(props) => (props.active ? '#333333' : '#666666')};
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  background-color: ${(props) => (props.active ? '#f5f5f5' : 'transparent')};
+  padding: 1.5rem 3rem;
+  background-color: ${(props) => (props.active ? '#ffffff' : '#f0f0f0')};
+  border: 2px solid #e0e0e0;
+  border-bottom: ${(props) => (props.active ? 'none' : '2px solid #e0e0e0')};
+  border-radius: 6px 6px 0 0;
+  margin-bottom: -2px;
+  position: relative;
+  z-index: ${(props) => (props.active ? '2' : '1')};
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: ${(props) =>
+    props.active ? 'none' : 'inset 0 -4px 8px -4px rgba(0, 0, 0, 0.1)'};
 
   &:hover {
     color: #333333;
-    background-color: #f5f5f5;
+    background-color: ${(props) => (props.active ? '#ffffff' : '#f8f8f8')};
+  }
+
+  &:not(:first-child) {
+    margin-left: -2px;
   }
 `;
 

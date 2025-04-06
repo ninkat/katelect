@@ -42,16 +42,11 @@ const Polls = () => {
     <>
       <DataSection>
         <SectionTitle>Federal Polling</SectionTitle>
-        <Description>
-          This page displays the latest federal polling data from various
-          polling firms. The line chart shows the trend of voting intentions
-          over time, while the table below provides detailed information for
-          each poll.
-        </Description>
         <PollingChart polls={polls} />
       </DataSection>
 
       <DataSection>
+        <SectionTitle>Individual Polls</SectionTitle>
         <PollingTable />
       </DataSection>
     </>

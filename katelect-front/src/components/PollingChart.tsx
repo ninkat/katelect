@@ -1,26 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import * as d3 from 'd3';
-import { Poll, partyColors } from './PollingData';
+import { Poll } from './PollingData';
+import { partyColors } from './PartyColors';
 
 // styled components for the polling chart
-const ChartContainer = styled.div`
+const ChartWrapper = styled.div`
   width: 100%;
   height: 500px;
-  margin-bottom: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-`;
-
-const ChartWrapper = styled.div`
-  flex: 1;
-  width: 100%;
   min-height: 400px;
   position: relative;
+  background: white;
 `;
 
 const LegendContainer = styled.div`
@@ -46,6 +36,33 @@ const LegendColor = styled.div<{ color: string }>`
   border-radius: 4px;
 `;
 
+const Tooltip = styled.div`
+  position: fixed;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  transform: translate(10px, 10px);
+`;
+
+interface AveragedDataPoint {
+  date: string;
+  liberal: number;
+  conservative: number;
+  ndp: number;
+  bloc: number;
+  green: number;
+  ppc: number;
+}
+
+type PartyKey = keyof Omit<AveragedDataPoint, 'date'>;
+
 interface PollingChartProps {
   polls: Poll[];
 }
@@ -54,6 +71,11 @@ const PollingChart = ({ polls }: PollingChartProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const chartWrapperRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [tooltipData, setTooltipData] = useState<{
+    x: number;
+    y: number;
+    content: string;
+  } | null>(null);
 
   // Update dimensions on resize
   useEffect(() => {
@@ -102,10 +124,51 @@ const PollingChart = ({ polls }: PollingChartProps) => {
     // Sort data by date
     data.sort((a, b) => a.date.getTime() - b.date.getTime());
 
+    // Calculate averaged data points for all parties
+    const dateGroups = d3.group(data, (d) => d.date);
+    const averagedData: AveragedDataPoint[] = Array.from(
+      dateGroups.entries()
+    ).map(([date, polls]) => {
+      const result: AveragedDataPoint = {
+        date: date.toString(),
+        liberal: 0,
+        conservative: 0,
+        ndp: 0,
+        bloc: 0,
+        green: 0,
+        ppc: 0,
+      };
+
+      // Calculate average for each party
+      (Object.keys(result) as Array<keyof AveragedDataPoint>).forEach(
+        (party) => {
+          if (party !== 'date') {
+            const sum = polls.reduce(
+              (acc, poll) => acc + (poll[party as keyof Poll] as number),
+              0
+            );
+            result[party] = sum / polls.length;
+          }
+        }
+      );
+
+      return result;
+    });
+
+    // Party acronym mapping
+    const partyAcronyms: Record<string, string> = {
+      liberal: 'LPC',
+      conservative: 'CPC',
+      ndp: 'NDP',
+      bloc: 'BQ',
+      green: 'GPC',
+      ppc: 'PPC',
+    };
+
     // Create scales
     const xScale = d3
       .scaleTime()
-      .domain(d3.extent(data, (d) => d.date) as [Date, Date])
+      .domain(d3.extent(averagedData, (d) => new Date(d.date)) as [Date, Date])
       .range([0, width]);
 
     const yScale = d3.scaleLinear().domain([0, 50]).range([height, 0]);
@@ -143,15 +206,6 @@ const PollingChart = ({ polls }: PollingChartProps) => {
       .style('font-size', '14px')
       .text('Voting Intention (%)');
 
-    // Create line generator functions
-    const createLine = (party: keyof typeof partyColors) => {
-      return d3
-        .line<Poll>()
-        .x((d) => xScale(d.date))
-        .y((d) => yScale(d[party]))
-        .curve(d3.curveMonotoneX);
-    };
-
     // Add lines for each party
     const parties: (keyof typeof partyColors)[] = [
       'liberal',
@@ -163,13 +217,19 @@ const PollingChart = ({ polls }: PollingChartProps) => {
     ];
 
     parties.forEach((party) => {
+      const line = d3
+        .line<(typeof averagedData)[0]>()
+        .x((d) => xScale(new Date(d.date)))
+        .y((d) => yScale(d[party]))
+        .curve(d3.curveMonotoneX);
+
       svg
         .append('path')
-        .datum(data)
+        .datum(averagedData)
         .attr('fill', 'none')
         .attr('stroke', partyColors[party])
         .attr('stroke-width', 2)
-        .attr('d', createLine(party));
+        .attr('d', line);
     });
 
     // Add dots for each data point
@@ -180,7 +240,7 @@ const PollingChart = ({ polls }: PollingChartProps) => {
         .enter()
         .append('circle')
         .attr('class', `dot-${party}`)
-        .attr('cx', (d) => xScale(d.date))
+        .attr('cx', (d) => xScale(new Date(d.date)))
         .attr('cy', (d) => yScale(d[party]))
         .attr('r', 4)
         .attr('fill', partyColors[party])
@@ -206,30 +266,124 @@ const PollingChart = ({ polls }: PollingChartProps) => {
 
     // Add hover effects to dots
     parties.forEach((party) => {
-      svg
-        .selectAll(`.dot-${party}`)
-        .on('mouseover', function (event, d) {
-          d3.select(this).attr('r', 6);
+      if (party !== 'other') {
+        svg
+          .selectAll(`.dot-${party}`)
+          .data(data)
+          .on('mouseover', function (event: MouseEvent, d: Poll) {
+            d3.select(this).attr('r', 6);
 
-          const date = d.date.toISOString().split('T')[0];
-          const value = d[party];
-
-          tooltip
-            .style('visibility', 'visible')
-            .html(`${date}<br>${party.toUpperCase()}: ${value}%`)
-            .style('left', `${event.pageX + 10}px`)
-            .style('top', `${event.pageY - 10}px`);
-        })
-        .on('mousemove', function (event) {
-          tooltip
-            .style('left', `${event.pageX + 10}px`)
-            .style('top', `${event.pageY - 10}px`);
-        })
-        .on('mouseout', function () {
-          d3.select(this).attr('r', 4);
-          tooltip.style('visibility', 'hidden');
-        });
+            setTooltipData({
+              x: event.clientX,
+              y: event.clientY,
+              content: `${d.date}<br>${d.pollster}<br>${
+                partyAcronyms[party]
+              }: ${d[party as keyof Poll]}%`,
+            });
+          })
+          .on('mousemove', function (event) {
+            setTooltipData((prev) =>
+              prev
+                ? {
+                    ...prev,
+                    x: event.clientX,
+                    y: event.clientY,
+                  }
+                : null
+            );
+          })
+          .on('mouseout', function () {
+            d3.select(this).attr('r', 4);
+            setTooltipData(null);
+          });
+      }
     });
+
+    // Create a shared tooltip for all parties at a specific date
+    const sharedTooltip = d3
+      .select(svgRef.current.parentNode as HTMLElement)
+      .append('div')
+      .attr('class', 'shared-tooltip')
+      .style('position', 'absolute')
+      .style('visibility', 'hidden')
+      .style('background-color', 'rgba(0, 0, 0, 0.8)')
+      .style('color', 'white')
+      .style('padding', '12px')
+      .style('border-radius', '4px')
+      .style('font-family', 'Inter')
+      .style('font-size', '12px')
+      .style('pointer-events', 'none')
+      .style('z-index', '10');
+
+    // Create an invisible overlay for the entire chart area to detect hover
+    const overlay = svg
+      .append('rect')
+      .attr('width', width)
+      .attr('height', height)
+      .attr('fill', 'none')
+      .attr('pointer-events', 'all')
+      .style('cursor', 'default');
+
+    // Add vertical line that follows the cursor
+    const verticalLine = svg
+      .append('line')
+      .attr('class', 'vertical-line')
+      .attr('y1', 0)
+      .attr('y2', height)
+      .style('stroke', '#999')
+      .style('stroke-width', '1px')
+      .style('visibility', 'hidden');
+
+    // Add hover effects to the overlay
+    overlay
+      .on('mousemove', function (event: MouseEvent) {
+        const xPos = d3.pointer(event)[0];
+        const xDate = xScale.invert(xPos);
+
+        const bisect = d3.bisector(
+          (d: AveragedDataPoint) => new Date(d.date)
+        ).left;
+        const i = bisect(averagedData, xDate, 1);
+        const d0 = averagedData[i - 1];
+        const d1 = averagedData[i];
+
+        const d =
+          xDate.getTime() - new Date(d0.date).getTime() >
+          new Date(d1.date).getTime() - xDate.getTime()
+            ? d1
+            : d0;
+
+        verticalLine
+          .attr('x1', xScale(new Date(d.date)))
+          .attr('x2', xScale(new Date(d.date)))
+          .style('visibility', 'visible');
+
+        const dateStr = new Date(d.date).toISOString().split('T')[0];
+
+        let tooltipContent = `<strong>${dateStr}</strong><br/>`;
+
+        parties.forEach((party) => {
+          if (party !== 'other' && party in d) {
+            const value = d[party as PartyKey];
+            tooltipContent += `<div style="display: flex; align-items: center; margin-top: 4px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background-color: ${
+                partyColors[party]
+              }; margin-right: 8px;"></span>
+              <span>${partyAcronyms[party]}: ${value.toFixed(1)}%</span>
+            </div>`;
+          }
+        });
+
+        setTooltipData({
+          x: event.clientX,
+          y: event.clientY,
+          content: tooltipContent,
+        });
+      })
+      .on('mouseout', function () {
+        verticalLine.style('visibility', 'hidden');
+        setTooltipData(null);
+      });
 
     // Add majority line
     svg
@@ -254,10 +408,20 @@ const PollingChart = ({ polls }: PollingChartProps) => {
   }, [polls, dimensions]);
 
   return (
-    <ChartContainer>
+    <>
       <ChartWrapper ref={chartWrapperRef}>
         <svg ref={svgRef} style={{ width: '100%', height: '100%' }}></svg>
       </ChartWrapper>
+      {tooltipData && (
+        <Tooltip
+          style={{
+            left: `${tooltipData.x}px`,
+            top: `${tooltipData.y}px`,
+            opacity: 1,
+          }}
+          dangerouslySetInnerHTML={{ __html: tooltipData.content }}
+        />
+      )}
       <LegendContainer>
         <LegendItem>
           <LegendColor color={partyColors.liberal} />
@@ -269,7 +433,7 @@ const PollingChart = ({ polls }: PollingChartProps) => {
         </LegendItem>
         <LegendItem>
           <LegendColor color={partyColors.ndp} />
-          <span>NDP</span>
+          <span>New Democrat</span>
         </LegendItem>
         <LegendItem>
           <LegendColor color={partyColors.bloc} />
@@ -284,7 +448,7 @@ const PollingChart = ({ polls }: PollingChartProps) => {
           <span>People's Party</span>
         </LegendItem>
       </LegendContainer>
-    </ChartContainer>
+    </>
   );
 };
 
