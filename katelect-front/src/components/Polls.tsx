@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import PollingChart from './PollingChart';
-import PollingTable from './PollingTable';
-import { pollingData } from './PollingData';
+import RegionalPolls from './RegionalPolls';
+import LatestPolling from './LatestPolling';
 
 const DataSection = styled.section`
   margin: 0.25rem 0 0.5rem 0;
@@ -27,28 +26,53 @@ const SectionTitle = styled.h2`
   margin-bottom: 0.25rem;
 `;
 
-const Description = styled.p`
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444444;
-  margin-bottom: 1rem;
-`;
+// map of region codes to display names
+const regionDisplayNames: Record<string, string> = {
+  federal: 'Federal',
+  alberta: 'Alberta',
+  atlantic: 'Atlantic Canada',
+  bc: 'British Columbia',
+  ontario: 'Ontario',
+  prairies: 'Manitoba and Saskatchewan',
+  quebec: 'Quebec',
+};
 
 const Polls = () => {
-  const [polls] = useState(pollingData);
+  const [region, setRegion] = useState<string>('federal');
+
+  useEffect(() => {
+    // extract region from URL hash
+    const hash = window.location.hash;
+    const regionMatch = hash.match(/#polls-(.+)/);
+    if (regionMatch && regionMatch[1]) {
+      setRegion(regionMatch[1]);
+    }
+  }, []);
+
+  // listen for hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      const regionMatch = hash.match(/#polls-(.+)/);
+      if (regionMatch && regionMatch[1]) {
+        setRegion(regionMatch[1]);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // get the display name for the current region
+  const regionDisplayName = regionDisplayNames[region] || 'Federal';
 
   return (
     <>
       <DataSection>
-        <SectionTitle>Federal Polling</SectionTitle>
-        <PollingChart polls={polls} />
+        <SectionTitle>Latest Polling Average: {regionDisplayName}</SectionTitle>
+        <LatestPolling />
       </DataSection>
-
-      <DataSection>
-        <SectionTitle>Individual Polls</SectionTitle>
-        <PollingTable />
-      </DataSection>
+      <RegionalPolls />
     </>
   );
 };

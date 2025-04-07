@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import * as d3 from 'd3';
-import { Poll } from './PollingData';
 import { partyColors } from './PartyColors';
+import { Poll } from './PollingData';
 
 // styled components for the polling chart
 const ChartWrapper = styled.div`
@@ -11,14 +11,22 @@ const ChartWrapper = styled.div`
   min-height: 400px;
   position: relative;
   background: white;
+  display: flex;
+`;
+
+const ChartContainer = styled.div`
+  flex: 1;
+  position: relative;
 `;
 
 const LegendContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
   margin-top: 1rem;
-  justify-content: center;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  width: 150px;
 `;
 
 const LegendItem = styled.div`
@@ -51,6 +59,9 @@ const Tooltip = styled.div`
   transform: translate(10px, 10px);
 `;
 
+// type for chart parties (excluding 'other')
+type ChartParty = Exclude<keyof typeof partyColors, 'other'>;
+
 interface AveragedDataPoint {
   date: string;
   liberal: number;
@@ -65,9 +76,43 @@ type PartyKey = keyof Omit<AveragedDataPoint, 'date'>;
 
 interface PollingChartProps {
   polls: Poll[];
+  region?: string;
+  showBloc?: boolean;
 }
 
-const PollingChart = ({ polls }: PollingChartProps) => {
+// function to calculate exponentially weighted moving average
+const calculateEWMA = (
+  data: Poll[],
+  party: PartyKey,
+  smoothingFactor: number = 0.25
+): number[] => {
+  if (data.length === 0) return [];
+
+  // sort data by date to ensure chronological order
+  const sortedData = [...data].sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+
+  // initialize result array with the first value
+  const result: number[] = [sortedData[0][party]];
+
+  // calculate ewma for each subsequent data point
+  for (let i = 1; i < sortedData.length; i++) {
+    const currentValue = sortedData[i][party];
+    const previousEWMA = result[i - 1];
+    const newEWMA =
+      previousEWMA + smoothingFactor * (currentValue - previousEWMA);
+    result.push(newEWMA);
+  }
+
+  return result;
+};
+
+const PollingChart = ({
+  polls,
+  region = 'federal',
+  showBloc = false,
+}: PollingChartProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const chartWrapperRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -76,6 +121,11 @@ const PollingChart = ({ polls }: PollingChartProps) => {
     y: number;
     content: string;
   } | null>(null);
+  const [zoomLevel, setZoomLevel] = useState(3); // 1 = 1 year, 2 = 6 months, 3 = 3 months, 4 = 1 month
+  const [allData, setAllData] = useState<AveragedDataPoint[]>([]);
+  const [filteredData, setFilteredData] = useState<AveragedDataPoint[]>([]);
+  const [rawData, setRawData] = useState<Poll[]>([]);
+  const smoothingFactor = 0.25; // constant smoothing factor
 
   // Update dimensions on resize
   useEffect(() => {
@@ -93,8 +143,126 @@ const PollingChart = ({ polls }: PollingChartProps) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Process data when polls change
   useEffect(() => {
-    if (!svgRef.current || polls.length === 0 || dimensions.width === 0) return;
+    if (polls.length === 0) return;
+
+    // Parse dates
+    const parseDate = d3.timeParse('%Y-%m-%d');
+    const data = polls.map((poll) => ({
+      ...poll,
+      parsedDate: parseDate(poll.date) as Date,
+    }));
+
+    // Sort data by date
+    data.sort((a, b) => a.parsedDate.getTime() - b.parsedDate.getTime());
+    setRawData(polls);
+
+    // Calculate ewma data points for all parties
+    const parties: PartyKey[] = [
+      'liberal',
+      'conservative',
+      'ndp',
+      'bloc',
+      'green',
+      'ppc',
+    ];
+
+    // Create a map of dates to data points
+    const dateMap = new Map<string, AveragedDataPoint>();
+
+    // Initialize the map with all dates
+    data.forEach((poll) => {
+      const dateStr = poll.date;
+      if (!dateMap.has(dateStr)) {
+        dateMap.set(dateStr, {
+          date: dateStr,
+          liberal: 0,
+          conservative: 0,
+          ndp: 0,
+          bloc: 0,
+          green: 0,
+          ppc: 0,
+        });
+      }
+    });
+
+    // Calculate EWMA for each party
+    parties.forEach((party) => {
+      const ewmaValues = calculateEWMA(data, party, smoothingFactor);
+
+      // Assign EWMA values to the corresponding dates
+      data.forEach((poll, index) => {
+        const dateStr = poll.date;
+        const dataPoint = dateMap.get(dateStr);
+        if (dataPoint) {
+          dataPoint[party] = ewmaValues[index];
+        }
+      });
+    });
+
+    // Convert map to array and sort by date
+    const ewmaData: AveragedDataPoint[] = Array.from(dateMap.values()).sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
+
+    setAllData(ewmaData);
+  }, [polls]);
+
+  // Filter data based on zoom level
+  useEffect(() => {
+    if (allData.length === 0) return;
+
+    const now = new Date();
+    let startDate: Date;
+
+    // Calculate start date based on zoom level
+    switch (zoomLevel) {
+      case 1: // 1 year
+        startDate = new Date(
+          now.getFullYear() - 1,
+          now.getMonth(),
+          now.getDate()
+        );
+        break;
+      case 2: // 6 months
+        startDate = new Date(
+          now.getFullYear(),
+          now.getMonth() - 6,
+          now.getDate()
+        );
+        break;
+      case 3: // 3 months
+        startDate = new Date(
+          now.getFullYear(),
+          now.getMonth() - 3,
+          now.getDate()
+        );
+        break;
+      case 4: // 1 month
+        startDate = new Date(
+          now.getFullYear(),
+          now.getMonth() - 1,
+          now.getDate()
+        );
+        break;
+      default:
+        startDate = new Date(
+          now.getFullYear(),
+          now.getMonth() - 3,
+          now.getDate()
+        );
+    }
+
+    // Filter data to only include dates after startDate
+    const filtered = allData.filter((d) => new Date(d.date) >= startDate);
+    setFilteredData(filtered);
+  }, [allData, zoomLevel]);
+
+  // Render chart when filtered data or dimensions change
+  useEffect(() => {
+    if (!svgRef.current || filteredData.length === 0 || dimensions.width === 0)
+      return;
 
     // Clear any existing content
     d3.select(svgRef.current).selectAll('*').remove();
@@ -114,47 +282,6 @@ const PollingChart = ({ polls }: PollingChartProps) => {
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    // Parse dates
-    const parseDate = d3.timeParse('%Y-%m-%d');
-    const data = polls.map((poll) => ({
-      ...poll,
-      date: parseDate(poll.date) as Date,
-    }));
-
-    // Sort data by date
-    data.sort((a, b) => a.date.getTime() - b.date.getTime());
-
-    // Calculate averaged data points for all parties
-    const dateGroups = d3.group(data, (d) => d.date);
-    const averagedData: AveragedDataPoint[] = Array.from(
-      dateGroups.entries()
-    ).map(([date, polls]) => {
-      const result: AveragedDataPoint = {
-        date: date.toString(),
-        liberal: 0,
-        conservative: 0,
-        ndp: 0,
-        bloc: 0,
-        green: 0,
-        ppc: 0,
-      };
-
-      // Calculate average for each party
-      (Object.keys(result) as Array<keyof AveragedDataPoint>).forEach(
-        (party) => {
-          if (party !== 'date') {
-            const sum = polls.reduce(
-              (acc, poll) => acc + (poll[party as keyof Poll] as number),
-              0
-            );
-            result[party] = sum / polls.length;
-          }
-        }
-      );
-
-      return result;
-    });
-
     // Party acronym mapping
     const partyAcronyms: Record<string, string> = {
       liberal: 'LPC',
@@ -168,10 +295,27 @@ const PollingChart = ({ polls }: PollingChartProps) => {
     // Create scales
     const xScale = d3
       .scaleTime()
-      .domain(d3.extent(averagedData, (d) => new Date(d.date)) as [Date, Date])
+      .domain(d3.extent(filteredData, (d) => new Date(d.date)) as [Date, Date])
       .range([0, width]);
 
-    const yScale = d3.scaleLinear().domain([0, 50]).range([height, 0]);
+    // Find the maximum vote share across all parties
+    const maxVoteShare = Math.max(
+      ...rawData.map((poll) =>
+        Math.max(
+          poll.liberal,
+          poll.conservative,
+          poll.ndp,
+          poll.bloc,
+          poll.green,
+          poll.ppc
+        )
+      )
+    );
+
+    // Add 5% padding to the max value and round up to nearest 5
+    const yMax = Math.ceil((maxVoteShare + 5) / 5) * 5;
+
+    const yScale = d3.scaleLinear().domain([0, yMax]).range([height, 0]);
 
     // Create axes
     const xAxis = d3.axisBottom(xScale).ticks(5);
@@ -206,37 +350,32 @@ const PollingChart = ({ polls }: PollingChartProps) => {
       .style('font-size', '14px')
       .text('Voting Intention (%)');
 
-    // Add lines for each party
-    const parties: (keyof typeof partyColors)[] = [
+    // Determine which parties to show based on region
+    const parties: ChartParty[] = [
       'liberal',
       'conservative',
       'ndp',
-      'bloc',
       'green',
       'ppc',
     ];
 
-    parties.forEach((party) => {
-      const line = d3
-        .line<(typeof averagedData)[0]>()
-        .x((d) => xScale(new Date(d.date)))
-        .y((d) => yScale(d[party]))
-        .curve(d3.curveMonotoneX);
+    // Only add BQ for Quebec and Federal if showBloc is true
+    if (showBloc) {
+      parties.push('bloc');
+    }
 
-      svg
-        .append('path')
-        .datum(averagedData)
-        .attr('fill', 'none')
-        .attr('stroke', partyColors[party])
-        .attr('stroke-width', 2)
-        .attr('d', line);
-    });
-
-    // Add dots for each data point
+    // Add dots for each data point first (so they appear behind the lines)
     parties.forEach((party) => {
       svg
         .selectAll(`.dot-${party}`)
-        .data(data)
+        .data(
+          rawData.filter((d) => {
+            const pollDate = new Date(d.date);
+            return (
+              pollDate >= xScale.domain()[0] && pollDate <= xScale.domain()[1]
+            );
+          })
+        )
         .enter()
         .append('circle')
         .attr('class', `dot-${party}`)
@@ -245,75 +384,26 @@ const PollingChart = ({ polls }: PollingChartProps) => {
         .attr('r', 4)
         .attr('fill', partyColors[party])
         .attr('stroke', 'white')
-        .attr('stroke-width', 1);
+        .attr('stroke-width', 1)
+        .style('opacity', 0.4);
     });
 
-    // Add hover effects
-    const tooltip = d3
-      .select(svgRef.current.parentNode as HTMLElement)
-      .append('div')
-      .attr('class', 'tooltip')
-      .style('position', 'absolute')
-      .style('visibility', 'hidden')
-      .style('background-color', 'rgba(0, 0, 0, 0.8)')
-      .style('color', 'white')
-      .style('padding', '8px')
-      .style('border-radius', '4px')
-      .style('font-family', 'Inter')
-      .style('font-size', '12px')
-      .style('pointer-events', 'none')
-      .style('z-index', '10');
-
-    // Add hover effects to dots
+    // Add lines for each party (after dots so they appear on top)
     parties.forEach((party) => {
-      if (party !== 'other') {
-        svg
-          .selectAll(`.dot-${party}`)
-          .data(data)
-          .on('mouseover', function (event: MouseEvent, d: Poll) {
-            d3.select(this).attr('r', 6);
+      const line = d3
+        .line<(typeof filteredData)[0]>()
+        .x((d) => xScale(new Date(d.date)))
+        .y((d) => yScale(d[party]))
+        .curve(d3.curveMonotoneX);
 
-            setTooltipData({
-              x: event.clientX,
-              y: event.clientY,
-              content: `${d.date}<br>${d.pollster}<br>${
-                partyAcronyms[party]
-              }: ${d[party as keyof Poll]}%`,
-            });
-          })
-          .on('mousemove', function (event) {
-            setTooltipData((prev) =>
-              prev
-                ? {
-                    ...prev,
-                    x: event.clientX,
-                    y: event.clientY,
-                  }
-                : null
-            );
-          })
-          .on('mouseout', function () {
-            d3.select(this).attr('r', 4);
-            setTooltipData(null);
-          });
-      }
+      svg
+        .append('path')
+        .datum(filteredData)
+        .attr('fill', 'none')
+        .attr('stroke', partyColors[party])
+        .attr('stroke-width', 2)
+        .attr('d', line);
     });
-
-    // Create a shared tooltip for all parties at a specific date
-    const sharedTooltip = d3
-      .select(svgRef.current.parentNode as HTMLElement)
-      .append('div')
-      .attr('class', 'shared-tooltip')
-      .style('position', 'absolute')
-      .style('visibility', 'hidden')
-      .style('background-color', 'rgba(0, 0, 0, 0.8)')
-      .style('color', 'white')
-      .style('padding', '12px')
-      .style('border-radius', '4px')
-      .style('font-family', 'Inter')
-      .style('font-size', '12px')
-      .style('pointer-events', 'none')
-      .style('z-index', '10');
 
     // Create an invisible overlay for the entire chart area to detect hover
     const overlay = svg
@@ -343,9 +433,11 @@ const PollingChart = ({ polls }: PollingChartProps) => {
         const bisect = d3.bisector(
           (d: AveragedDataPoint) => new Date(d.date)
         ).left;
-        const i = bisect(averagedData, xDate, 1);
-        const d0 = averagedData[i - 1];
-        const d1 = averagedData[i];
+        const i = bisect(filteredData, xDate, 1);
+        const d0 = filteredData[i - 1];
+        const d1 = filteredData[i];
+
+        if (!d0 || !d1) return;
 
         const d =
           xDate.getTime() - new Date(d0.date).getTime() >
@@ -363,15 +455,13 @@ const PollingChart = ({ polls }: PollingChartProps) => {
         let tooltipContent = `<strong>${dateStr}</strong><br/>`;
 
         parties.forEach((party) => {
-          if (party !== 'other' && party in d) {
-            const value = d[party as PartyKey];
-            tooltipContent += `<div style="display: flex; align-items: center; margin-top: 4px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background-color: ${
-                partyColors[party]
-              }; margin-right: 8px;"></span>
-              <span>${partyAcronyms[party]}: ${value.toFixed(1)}%</span>
-            </div>`;
-          }
+          const value = d[party as PartyKey];
+          tooltipContent += `<div style="display: flex; align-items: center; margin-top: 4px;">
+            <span style="display: inline-block; width: 12px; height: 12px; background-color: ${
+              partyColors[party]
+            }; margin-right: 8px;"></span>
+            <span>${partyAcronyms[party]}: ${value.toFixed(1)}%</span>
+          </div>`;
         });
 
         setTooltipData({
@@ -385,33 +475,56 @@ const PollingChart = ({ polls }: PollingChartProps) => {
         setTooltipData(null);
       });
 
-    // Add majority line
-    svg
-      .append('line')
-      .attr('x1', 0)
-      .attr('x2', width)
-      .attr('y1', yScale(50))
-      .attr('y2', yScale(50))
-      .attr('stroke', '#e0e0e0')
-      .attr('stroke-dasharray', '4')
-      .attr('stroke-width', 1);
+    // Update majority line position if needed
+    if (yMax >= 50) {
+      svg
+        .append('line')
+        .attr('x1', 0)
+        .attr('x2', width)
+        .attr('y1', yScale(50))
+        .attr('y2', yScale(50))
+        .attr('stroke', '#e0e0e0')
+        .attr('stroke-dasharray', '4')
+        .attr('stroke-width', 1);
 
-    svg
-      .append('text')
-      .attr('x', width - 10)
-      .attr('y', yScale(50) - 5)
-      .attr('text-anchor', 'end')
-      .style('font-family', 'Inter')
-      .style('font-size', '12px')
-      .style('fill', '#666666')
-      .text('50%');
-  }, [polls, dimensions]);
+      svg
+        .append('text')
+        .attr('x', width - 10)
+        .attr('y', yScale(50) - 5)
+        .attr('text-anchor', 'end')
+        .style('font-family', 'Inter')
+        .style('font-size', '12px')
+        .style('fill', '#666666')
+        .text('50%');
+    }
+
+    // Add wheel event listener for zooming
+    const chartArea = d3.select(chartWrapperRef.current);
+    chartArea.on('wheel', (event) => {
+      event.preventDefault();
+
+      // Determine zoom direction (reversed)
+      const delta = event.deltaY;
+      if (delta < 0 && zoomLevel < 4) {
+        // Zoom in (scroll up)
+        setZoomLevel((prev) => prev + 1);
+      } else if (delta > 0 && zoomLevel > 1) {
+        // Zoom out (scroll down)
+        setZoomLevel((prev) => prev - 1);
+      }
+    });
+
+    // Clean up function
+    return () => {
+      chartArea.on('wheel', null);
+    };
+  }, [filteredData, dimensions, region, rawData, zoomLevel, showBloc]);
 
   return (
-    <>
-      <ChartWrapper ref={chartWrapperRef}>
+    <ChartWrapper ref={chartWrapperRef}>
+      <ChartContainer>
         <svg ref={svgRef} style={{ width: '100%', height: '100%' }}></svg>
-      </ChartWrapper>
+      </ChartContainer>
       {tooltipData && (
         <Tooltip
           style={{
@@ -435,10 +548,12 @@ const PollingChart = ({ polls }: PollingChartProps) => {
           <LegendColor color={partyColors.ndp} />
           <span>New Democrat</span>
         </LegendItem>
-        <LegendItem>
-          <LegendColor color={partyColors.bloc} />
-          <span>Bloc Québécois</span>
-        </LegendItem>
+        {showBloc && (
+          <LegendItem>
+            <LegendColor color={partyColors.bloc} />
+            <span>Bloc Québécois</span>
+          </LegendItem>
+        )}
         <LegendItem>
           <LegendColor color={partyColors.green} />
           <span>Green</span>
@@ -448,7 +563,7 @@ const PollingChart = ({ polls }: PollingChartProps) => {
           <span>People's Party</span>
         </LegendItem>
       </LegendContainer>
-    </>
+    </ChartWrapper>
   );
 };
 

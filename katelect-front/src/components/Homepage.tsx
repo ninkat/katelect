@@ -2,7 +2,6 @@ import kat from '/src/assets/katelectlogo.svg';
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import ProjectedSeats from './ProjectedSeats';
-import FederalPolling from './FederalPolling';
 import ElectoralMap from './ElectoralMap';
 import About from './About';
 import Polls from './Polls';
@@ -252,11 +251,6 @@ function Homepage() {
               <RegionItem>
                 <RegionLink href={`#${activeTab}-quebec`}>Quebec</RegionLink>
               </RegionItem>
-              <RegionItem>
-                <RegionLink href={`#${activeTab}-territories`}>
-                  Territories
-                </RegionLink>
-              </RegionItem>
             </RegionList>
           </Sidebar>
         )}
@@ -276,11 +270,6 @@ function Homepage() {
               <DataSection>
                 <SectionTitle>Projected Seats</SectionTitle>
                 <ProjectedSeats />
-              </DataSection>
-
-              <DataSection>
-                <SectionTitle>Federal Polling</SectionTitle>
-                <FederalPolling />
               </DataSection>
             </>
           )}
