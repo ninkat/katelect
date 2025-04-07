@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import RegionalPolls from './RegionalPolls';
 import LatestPolling from './LatestPolling';
+import PollingChart, { PollingTrends } from './PollingChart';
 
 const DataSection = styled.section`
   margin: 0.25rem 0 0.5rem 0;
@@ -39,6 +40,9 @@ const regionDisplayNames: Record<string, string> = {
 
 const Polls = () => {
   const [region, setRegion] = useState<string>('federal');
+  const [pollingTrends, setPollingTrends] = useState<PollingTrends | null>(
+    null
+  );
 
   useEffect(() => {
     // extract region from URL hash
@@ -63,6 +67,11 @@ const Polls = () => {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  // handle polling trends update
+  const handleTrendsUpdate = (trends: PollingTrends) => {
+    setPollingTrends(trends);
+  };
+
   // get the display name for the current region
   const regionDisplayName = regionDisplayNames[region] || 'Federal';
 
@@ -70,9 +79,9 @@ const Polls = () => {
     <>
       <DataSection>
         <SectionTitle>Latest Polling Average: {regionDisplayName}</SectionTitle>
-        <LatestPolling />
+        <LatestPolling pollingTrends={pollingTrends} />
       </DataSection>
-      <RegionalPolls />
+      <RegionalPolls onTrendsUpdate={handleTrendsUpdate} />
     </>
   );
 };

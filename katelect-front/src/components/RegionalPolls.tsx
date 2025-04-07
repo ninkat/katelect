@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import PollingChart from './PollingChart';
+import PollingChart, { PollingTrends } from './PollingChart';
 import PollingTable from './PollingTable';
 import { Poll } from './PollingData';
 
@@ -58,13 +58,17 @@ const regionDisplayMap: Record<string, string> = {
   quebec: 'Quebec',
 };
 
-// function to convert JSON data to Poll interface
+// function to convert JSON data to Poll format
 const convertToPollFormat = (
   jsonData: Record<string, string | number>[]
 ): Poll[] => {
   return jsonData.map((item, index) => {
     // handle different field names for pollster
-    const pollster = item['Polling Firm'] || item['Firm'] || 'Unknown';
+    const pollster = (
+      item['Polling Firm'] ||
+      item['Firm'] ||
+      'Unknown'
+    ).toString();
 
     // handle sample size - some regions might not have this field
     let sampleSize = 0;
@@ -106,7 +110,11 @@ const convertToPollFormat = (
   });
 };
 
-const RegionalPolls = () => {
+interface RegionalPollsProps {
+  onTrendsUpdate?: (trends: PollingTrends) => void;
+}
+
+const RegionalPolls = ({ onTrendsUpdate }: RegionalPollsProps) => {
   const [polls, setPolls] = useState<Poll[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -209,12 +217,13 @@ const RegionalPolls = () => {
     <>
       <DataSection>
         <SectionTitle>
-          {regionDisplayMap[region] || 'Federal'} Polling
+          {regionDisplayMap[region] || 'Federal'} Polling Trends
         </SectionTitle>
         <PollingChart
           polls={polls}
           region={region}
           showBloc={region === 'quebec' || region === 'federal'}
+          onTrendsUpdate={onTrendsUpdate}
         />
       </DataSection>
 

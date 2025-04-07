@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import { Poll } from './PollingData';
 import { partyColors } from './PartyColors';
 import styled from 'styled-components';
+import { PollingTrends } from './PollingChart';
 
 // Import headshots
 import carneyImg from '/src/assets/headshots/carney.jpg';
@@ -32,53 +33,17 @@ const regionFileMap: Record<string, string> = {
   quebec: 'polls_qc.json',
 };
 
-// function to calculate exponentially weighted moving average
-const calculateEWMA = (
-  data: Poll[],
-  party: keyof Poll,
-  smoothingFactor: number = 0.25
-): number[] => {
-  if (data.length === 0) return [];
-
-  // sort data by date to ensure chronological order
-  const sortedData = [...data].sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-  );
-
-  // initialize result array with the first value
-  const result: number[] = [sortedData[0][party] as number];
-
-  // calculate ewma for each subsequent data point
-  for (let i = 1; i < sortedData.length; i++) {
-    const currentValue = sortedData[i][party] as number;
-    const previousEWMA = result[i - 1];
-    const newEWMA =
-      previousEWMA + smoothingFactor * (currentValue - previousEWMA);
-    result.push(newEWMA);
-  }
-
-  return result;
-};
-
-// function to normalize vote share to 100%
-const normalizeVoteShare = (partyData: PartyData[]): PartyData[] => {
-  const total = partyData.reduce((sum, party) => sum + party.polling, 0);
-
-  if (total === 0) return partyData;
-
-  return partyData.map((party) => ({
-    ...party,
-    polling: (party.polling / total) * 100,
-  }));
-};
-
 // styled component for the container
 const ChartContainer = styled.div<{ numParties: number }>`
   width: 100%;
   height: ${(props) => props.numParties * 60}px;
 `;
 
-const LatestPolling = () => {
+interface LatestPollingProps {
+  pollingTrends?: PollingTrends | null;
+}
+
+const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [polls, setPolls] = useState<Poll[]>([]);
   const [loading, setLoading] = useState(true);
@@ -216,110 +181,64 @@ const LatestPolling = () => {
   useEffect(() => {
     if (polls.length === 0) return;
 
-    // sort polls by date (newest first)
-    const sortedPolls = [...polls].sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
-
-    // get the most recent poll for change calculation
-    const mostRecentPoll = sortedPolls[0];
-    const secondMostRecentPoll = sortedPolls[1];
-
-    // calculate EWMA for each party
-    const smoothingFactor = 0.25;
-    const parties: (keyof Poll)[] = [
-      'liberal',
-      'conservative',
-      'ndp',
-      'bloc',
-      'green',
-      'ppc',
-      'other',
-    ];
-
-    // create a map to store the latest EWMA values
-    const latestEWMA: Record<string, number> = {};
-
-    // calculate EWMA for each party
-    parties.forEach((party) => {
-      const ewmaValues = calculateEWMA(polls, party, smoothingFactor);
-      if (ewmaValues.length > 0) {
-        latestEWMA[party] = ewmaValues[ewmaValues.length - 1];
-      }
-    });
-
     // determine which parties to show based on region
     const showBloc = region === 'quebec' || region === 'federal';
 
-    // create party data with the latest EWMA values
+    // create party data with the latest EWMA values from pollingTrends
     const newPartyData: PartyData[] = [
       {
         name: 'Liberal',
         leader: 'Mark Carney',
-        polling: latestEWMA.liberal || 0,
-        change: secondMostRecentPoll
-          ? mostRecentPoll.liberal - secondMostRecentPoll.liberal
-          : null,
+        polling: pollingTrends?.latestValues.liberal || 0,
+        change: pollingTrends?.changes.liberal || null,
         color: partyColors.liberal,
         headshot: carneyImg,
       },
       {
         name: 'Conservative',
         leader: 'Pierre Poilievre',
-        polling: latestEWMA.conservative || 0,
-        change: secondMostRecentPoll
-          ? mostRecentPoll.conservative - secondMostRecentPoll.conservative
-          : null,
+        polling: pollingTrends?.latestValues.conservative || 0,
+        change: pollingTrends?.changes.conservative || null,
         color: partyColors.conservative,
         headshot: poilievreImg,
       },
       {
         name: 'New Democrat',
         leader: 'Jagmeet Singh',
-        polling: latestEWMA.ndp || 0,
-        change: secondMostRecentPoll
-          ? mostRecentPoll.ndp - secondMostRecentPoll.ndp
-          : null,
+        polling: pollingTrends?.latestValues.ndp || 0,
+        change: pollingTrends?.changes.ndp || null,
         color: partyColors.ndp,
         headshot: singhImg,
       },
       {
         name: 'Bloc Québécois',
         leader: 'Yves-François Blanchet',
-        polling: latestEWMA.bloc || 0,
-        change: secondMostRecentPoll
-          ? mostRecentPoll.bloc - secondMostRecentPoll.bloc
-          : null,
+        polling: pollingTrends?.latestValues.bloc || 0,
+        change: pollingTrends?.changes.bloc || null,
         color: partyColors.bloc,
         headshot: blanchetImg,
       },
       {
         name: 'Green',
         leader: 'Jonathan Pedneault',
-        polling: latestEWMA.green || 0,
-        change: secondMostRecentPoll
-          ? mostRecentPoll.green - secondMostRecentPoll.green
-          : null,
+        polling: pollingTrends?.latestValues.green || 0,
+        change: pollingTrends?.changes.green || null,
         color: partyColors.green,
         headshot: pedneaultImg,
       },
       {
         name: "People's Party",
         leader: 'Maxime Bernier',
-        polling: latestEWMA.ppc || 0,
-        change: secondMostRecentPoll
-          ? mostRecentPoll.ppc - secondMostRecentPoll.ppc
-          : null,
+        polling: pollingTrends?.latestValues.ppc || 0,
+        change: pollingTrends?.changes.ppc || null,
         color: partyColors.ppc,
         headshot: bernierImg,
       },
       {
         name: 'Other',
         leader: '',
-        polling: latestEWMA.other || 0,
-        change: secondMostRecentPoll
-          ? mostRecentPoll.other - secondMostRecentPoll.other
-          : null,
+        polling: pollingTrends?.latestValues.other || 0,
+        change: pollingTrends?.changes.other || null,
         color: partyColors.other,
         headshot: '',
       },
@@ -330,12 +249,12 @@ const LatestPolling = () => {
       ? newPartyData
       : newPartyData.filter((party) => party.name !== 'Bloc Québécois');
 
-    // normalize vote share to 100% and sort by polling numbers
-    const normalizedPartyData = normalizeVoteShare(filteredPartyData).sort(
+    // sort by polling numbers
+    const sortedPartyData = filteredPartyData.sort(
       (a, b) => b.polling - a.polling
     );
-    setPartyData(normalizedPartyData);
-  }, [polls, region]);
+    setPartyData(sortedPartyData);
+  }, [polls, region, pollingTrends]);
 
   useEffect(() => {
     if (!svgRef.current || partyData.length === 0) return;

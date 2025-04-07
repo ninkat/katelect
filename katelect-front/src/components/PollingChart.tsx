@@ -70,6 +70,7 @@ interface AveragedDataPoint {
   bloc: number;
   green: number;
   ppc: number;
+  other: number;
 }
 
 type PartyKey = keyof Omit<AveragedDataPoint, 'date'>;
@@ -78,6 +79,7 @@ interface PollingChartProps {
   polls: Poll[];
   region?: string;
   showBloc?: boolean;
+  onTrendsUpdate?: (trends: PollingTrends) => void;
 }
 
 // function to calculate exponentially weighted moving average
@@ -108,10 +110,46 @@ const calculateEWMA = (
   return result;
 };
 
+// function to normalize vote share to 100%
+const normalizeVoteShare = (
+  dataPoint: AveragedDataPoint
+): AveragedDataPoint => {
+  const parties: PartyKey[] = [
+    'liberal',
+    'conservative',
+    'ndp',
+    'bloc',
+    'green',
+    'ppc',
+    'other',
+  ];
+
+  // calculate total
+  const total = parties.reduce((sum, party) => sum + dataPoint[party], 0);
+
+  // if total is 0, return the original data point
+  if (total === 0) return dataPoint;
+
+  // normalize each party's vote share
+  const normalizedDataPoint = { ...dataPoint };
+  parties.forEach((party) => {
+    normalizedDataPoint[party] = (dataPoint[party] / total) * 100;
+  });
+
+  return normalizedDataPoint;
+};
+
+// interface for exposing latest EWMA values and changes
+export interface PollingTrends {
+  latestValues: Record<PartyKey, number>;
+  changes: Record<PartyKey, number>;
+}
+
 const PollingChart = ({
   polls,
   region = 'federal',
   showBloc = false,
+  onTrendsUpdate,
 }: PollingChartProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const chartWrapperRef = useRef<HTMLDivElement>(null);
@@ -125,6 +163,10 @@ const PollingChart = ({
   const [allData, setAllData] = useState<AveragedDataPoint[]>([]);
   const [filteredData, setFilteredData] = useState<AveragedDataPoint[]>([]);
   const [rawData, setRawData] = useState<Poll[]>([]);
+  const [pollingTrends, setPollingTrends] = useState<PollingTrends>({
+    latestValues: {} as Record<PartyKey, number>,
+    changes: {} as Record<PartyKey, number>,
+  });
   const smoothingFactor = 0.25; // constant smoothing factor
 
   // Update dimensions on resize
@@ -166,6 +208,7 @@ const PollingChart = ({
       'bloc',
       'green',
       'ppc',
+      'other',
     ];
 
     // Create a map of dates to data points
@@ -183,6 +226,7 @@ const PollingChart = ({
           bloc: 0,
           green: 0,
           ppc: 0,
+          other: 0,
         });
       }
     });
@@ -201,12 +245,40 @@ const PollingChart = ({
       });
     });
 
+    // Normalize all data points to 100%
+    dateMap.forEach((dataPoint, dateStr) => {
+      dateMap.set(dateStr, normalizeVoteShare(dataPoint));
+    });
+
     // Convert map to array and sort by date
     const ewmaData: AveragedDataPoint[] = Array.from(dateMap.values()).sort(
       (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
     );
 
     setAllData(ewmaData);
+
+    // Calculate latest values and changes for each party
+    if (ewmaData.length >= 2) {
+      const latestValues: Record<PartyKey, number> = {} as Record<
+        PartyKey,
+        number
+      >;
+      const changes: Record<PartyKey, number> = {} as Record<PartyKey, number>;
+
+      const lastIndex = ewmaData.length - 1;
+      const secondLastIndex = ewmaData.length - 2;
+
+      parties.forEach((party) => {
+        latestValues[party] = ewmaData[lastIndex][party];
+        changes[party] =
+          ewmaData[lastIndex][party] - ewmaData[secondLastIndex][party];
+      });
+
+      setPollingTrends({
+        latestValues,
+        changes,
+      });
+    }
   }, [polls]);
 
   // Filter data based on zoom level
@@ -258,6 +330,13 @@ const PollingChart = ({
     const filtered = allData.filter((d) => new Date(d.date) >= startDate);
     setFilteredData(filtered);
   }, [allData, zoomLevel]);
+
+  // Update pollingTrends when it changes
+  useEffect(() => {
+    if (onTrendsUpdate) {
+      onTrendsUpdate(pollingTrends);
+    }
+  }, [pollingTrends, onTrendsUpdate]);
 
   // Render chart when filtered data or dimensions change
   useEffect(() => {
