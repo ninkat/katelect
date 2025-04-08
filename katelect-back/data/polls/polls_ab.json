@@ -2,6 +2,28 @@
   {
     "": "AB",
     "Firm": "Liaison Strategies",
+    "Date (middle)": "2025-04-05",
+    "LPC": "33",
+    "CPC": "56",
+    "NDP": "6",
+    "GPC": "3",
+    "PPC": "1",
+    "Leader": "CPC +23"
+  },
+  {
+    "": "AB",
+    "Firm": "Liaison Strategies",
+    "Date (middle)": "2025-04-04",
+    "LPC": "33",
+    "CPC": "56",
+    "NDP": "7",
+    "GPC": "3",
+    "PPC": "1",
+    "Leader": "CPC +23"
+  },
+  {
+    "": "AB",
+    "Firm": "Liaison Strategies",
     "Date (middle)": "2025-04-03",
     "LPC": "36",
     "CPC": "54",
@@ -9,6 +31,17 @@
     "GPC": "3",
     "PPC": "1",
     "Leader": "CPC +18"
+  },
+  {
+    "": "AB",
+    "Firm": "Ipsos",
+    "Date (middle)": "2025-04-02",
+    "LPC": "40",
+    "CPC": "52",
+    "NDP": "7",
+    "GPC": "0",
+    "PPC": "1",
+    "Leader": "CPC +12"
   },
   {
     "": "AB",
@@ -2135,17 +2168,6 @@
   },
   {
     "": "AB",
-    "Firm": "Mainstreet Research",
-    "Date (middle)": "2023-03-09",
-    "LPC": "18",
-    "CPC": "55",
-    "NDP": "19",
-    "GPC": "2",
-    "PPC": "3",
-    "Leader": "CPC +36"
-  },
-  {
-    "": "AB",
     "Firm": "Abacus Data",
     "Date (middle)": "2023-03-09",
     "LPC": "12",
@@ -2154,6 +2176,17 @@
     "GPC": "1",
     "PPC": "8",
     "Leader": "CPC +40"
+  },
+  {
+    "": "AB",
+    "Firm": "Mainstreet Research",
+    "Date (middle)": "2023-03-09",
+    "LPC": "18",
+    "CPC": "55",
+    "NDP": "19",
+    "GPC": "2",
+    "PPC": "3",
+    "Leader": "CPC +36"
   },
   {
     "": "AB",

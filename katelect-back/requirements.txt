@@ -1,4 +1,7 @@
 requests==2.31.0
 beautifulsoup4==4.12.3
+fastapi
+uvicorn[standard]
 pandas==2.2.1
+numpy
 python-dateutil==2.8.2 

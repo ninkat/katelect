@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
-import { Poll } from './PollingData';
-import { partyColors } from './PartyColors';
+import { partyColors } from '../types/PartyColors';
 import styled from 'styled-components';
-import { PollingTrends } from './PollingChart';
+import { LatestPollingData, PartyKey } from '../types/polling';
 
 // Import headshots
 import carneyImg from '/src/assets/headshots/carney.jpg';
@@ -13,7 +12,7 @@ import blanchetImg from '/src/assets/headshots/blanchet.jpg';
 import pedneaultImg from '/src/assets/headshots/pedneault.jpg';
 import bernierImg from '/src/assets/headshots/bernier.jpg';
 
-interface PartyData {
+interface PartyDisplayData {
   name: string;
   leader: string;
   polling: number;
@@ -22,223 +21,85 @@ interface PartyData {
   headshot: string;
 }
 
-// map of region codes to file names
-const regionFileMap: Record<string, string> = {
-  federal: 'polls_federal.json',
-  alberta: 'polls_ab.json',
-  atlantic: 'polls_atl.json',
-  bc: 'polls_bc.json',
-  ontario: 'polls_on.json',
-  prairies: 'polls_pr.json',
-  quebec: 'polls_qc.json',
-};
-
 // styled component for the container
-const ChartContainer = styled.div<{ numParties: number }>`
+const ChartContainer = styled.div<{ $numParties: number }>`
   width: 100%;
-  height: ${(props) => props.numParties * 60}px;
+  height: ${(props) => props.$numParties * 60}px;
 `;
 
 interface LatestPollingProps {
-  pollingTrends?: PollingTrends | null;
+  region: string;
+  latestData: LatestPollingData | null;
 }
 
-const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
+const LatestPolling = ({ region, latestData }: LatestPollingProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [polls, setPolls] = useState<Poll[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [partyData, setPartyData] = useState<PartyData[]>([]);
-  const [region, setRegion] = useState<string>('federal');
+  const [partyData, setPartyData] = useState<PartyDisplayData[]>([]);
 
-  // extract region from URL hash
   useEffect(() => {
-    const extractRegion = () => {
-      const hash = window.location.hash;
-      const regionMatch = hash.match(/#polls-(.+)/);
-      if (regionMatch && regionMatch[1]) {
-        const extractedRegion = regionMatch[1];
-        // validate that the region exists in our map
-        if (regionFileMap[extractedRegion]) {
-          setRegion(extractedRegion);
-        } else {
-          // fallback to federal if region is not found
-          setRegion('federal');
-          console.warn(
-            `Unknown region: ${extractedRegion}, falling back to federal`
-          );
-        }
-      }
-    };
-
-    extractRegion();
-
-    // listen for hash changes
-    const handleHashChange = () => {
-      extractRegion();
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  // fetch polling data
-  useEffect(() => {
-    const fetchPolls = async () => {
-      setLoading(true);
-      setError(null);
-
-      try {
-        const fileName = regionFileMap[region] || 'polls_federal.json';
-        const response = await fetch(`/polls/${fileName}`);
-
-        if (!response.ok) {
-          throw new Error(
-            `Failed to fetch polling data: ${response.statusText}`
-          );
-        }
-
-        const data = await response.json();
-
-        // validate that data is an array
-        if (!Array.isArray(data)) {
-          throw new Error('Invalid data format: expected an array');
-        }
-
-        // validate that data is not empty
-        if (data.length === 0) {
-          throw new Error('No polling data available for this region');
-        }
-
-        // convert JSON data to Poll interface
-        const convertedData = data.map(
-          (item: Record<string, string | number>, index: number) => {
-            // handle different field names for pollster
-            const pollster = (
-              item['Polling Firm'] ||
-              item['Firm'] ||
-              'Unknown'
-            ).toString();
-
-            // handle sample size - some regions might not have this field
-            let sampleSize = 0;
-            if (item['Sample']) {
-              // remove commas and convert to number
-              sampleSize = parseInt(
-                item['Sample'].toString().replace(/,/g, ''),
-                10
-              );
-            }
-
-            // handle different field names for parties
-            const liberal = parseInt(item['LPC']?.toString() || '0', 10);
-            const conservative = parseInt(item['CPC']?.toString() || '0', 10);
-            const ndp = parseInt(item['NDP']?.toString() || '0', 10);
-            const bloc = parseInt(item['BQ']?.toString() || '0', 10);
-            const green = parseInt(item['GPC']?.toString() || '0', 10);
-            const ppc = parseInt(item['PPC']?.toString() || '0', 10);
-
-            // calculate other percentage if not provided
-            const total = liberal + conservative + ndp + bloc + green + ppc;
-            const other = Math.max(0, 100 - total);
-
-            // handle missing date or leader
-            const date = item['Date (middle)']?.toString() || '';
-            const lead = item['Leader']?.toString() || '';
-
-            return {
-              id: index + 1,
-              date,
-              pollster,
-              sampleSize,
-              liberal,
-              conservative,
-              ndp,
-              bloc,
-              green,
-              ppc,
-              other,
-              lead,
-            };
-          }
-        );
-
-        setPolls(convertedData);
-      } catch (err) {
-        setError(
-          err instanceof Error ? err.message : 'An unknown error occurred'
-        );
-        console.error('Error fetching polling data:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPolls();
-  }, [region]);
-
-  // calculate latest polling data
-  useEffect(() => {
-    if (polls.length === 0) return;
+    if (!latestData) {
+      setPartyData([]);
+      return;
+    }
 
     // determine which parties to show based on region
     const showBloc = region === 'quebec' || region === 'federal';
 
-    // create party data with the latest EWMA values from pollingTrends
-    const newPartyData: PartyData[] = [
+    // create party data using the passed latestData
+    const newPartyData: PartyDisplayData[] = [
       {
         name: 'Liberal',
         leader: 'Mark Carney',
-        polling: pollingTrends?.latestValues.liberal || 0,
-        change: pollingTrends?.changes.liberal || null,
+        polling: latestData.latestValues.liberal || 0,
+        change: latestData.changes.liberal,
         color: partyColors.liberal,
         headshot: carneyImg,
       },
       {
         name: 'Conservative',
         leader: 'Pierre Poilievre',
-        polling: pollingTrends?.latestValues.conservative || 0,
-        change: pollingTrends?.changes.conservative || null,
+        polling: latestData.latestValues.conservative || 0,
+        change: latestData.changes.conservative,
         color: partyColors.conservative,
         headshot: poilievreImg,
       },
       {
         name: 'New Democrat',
         leader: 'Jagmeet Singh',
-        polling: pollingTrends?.latestValues.ndp || 0,
-        change: pollingTrends?.changes.ndp || null,
+        polling: latestData.latestValues.ndp || 0,
+        change: latestData.changes.ndp,
         color: partyColors.ndp,
         headshot: singhImg,
       },
       {
         name: 'Bloc Québécois',
         leader: 'Yves-François Blanchet',
-        polling: pollingTrends?.latestValues.bloc || 0,
-        change: pollingTrends?.changes.bloc || null,
+        polling: latestData.latestValues.bloc || 0,
+        change: latestData.changes.bloc,
         color: partyColors.bloc,
         headshot: blanchetImg,
       },
       {
         name: 'Green',
         leader: 'Jonathan Pedneault',
-        polling: pollingTrends?.latestValues.green || 0,
-        change: pollingTrends?.changes.green || null,
+        polling: latestData.latestValues.green || 0,
+        change: latestData.changes.green,
         color: partyColors.green,
         headshot: pedneaultImg,
       },
       {
         name: "People's Party",
         leader: 'Maxime Bernier',
-        polling: pollingTrends?.latestValues.ppc || 0,
-        change: pollingTrends?.changes.ppc || null,
+        polling: latestData.latestValues.ppc || 0,
+        change: latestData.changes.ppc,
         color: partyColors.ppc,
         headshot: bernierImg,
       },
       {
         name: 'Other',
         leader: '',
-        polling: pollingTrends?.latestValues.other || 0,
-        change: pollingTrends?.changes.other || null,
+        polling: latestData.latestValues.other || 0,
+        change: latestData.changes.other,
         color: partyColors.other,
         headshot: '',
       },
@@ -254,28 +115,41 @@ const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
       (a, b) => b.polling - a.polling
     );
     setPartyData(sortedPartyData);
-  }, [polls, region, pollingTrends]);
+  }, [latestData, region]);
 
   useEffect(() => {
-    if (!svgRef.current || partyData.length === 0) return;
+    if (!svgRef.current || partyData.length === 0) {
+      if (svgRef.current) {
+        d3.select(svgRef.current).selectAll('*').remove();
+      }
+      return;
+    }
 
     // Clear any existing content
     d3.select(svgRef.current).selectAll('*').remove();
 
     // Set up dimensions
     const margin = { top: 0, right: 0, bottom: 0, left: 0 };
-    const width = 800 - margin.left - margin.right;
-    // calculate height based on number of parties
+    const parentWidth = svgRef.current.parentElement?.clientWidth || 800;
+    const width = parentWidth - margin.left - margin.right;
     const barHeight = 60;
     const totalHeight = partyData.length * barHeight;
     const height = totalHeight - margin.top - margin.bottom;
     const imageSize = 50;
+    const barStartX = imageSize + 350;
 
     // Create SVG
     const svg = d3
       .select(svgRef.current)
-      .attr('width', width + margin.left + margin.right)
+      .attr('width', '100%')
       .attr('height', height + margin.top + margin.bottom)
+      .attr(
+        'viewBox',
+        `0 0 ${width + margin.left + margin.right} ${
+          height + margin.top + margin.bottom
+        }`
+      )
+      .attr('preserveAspectRatio', 'xMidYMid meet')
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
@@ -291,10 +165,11 @@ const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
       .attr('fill', 'white');
 
     // Create scales
+    const maxPolling = d3.max(partyData, (d) => d.polling);
     const xScale = d3
       .scaleLinear()
-      .domain([0, 100])
-      .range([0, width - 200]);
+      .domain([0, Math.max(60, maxPolling || 0)])
+      .range([0, width - barStartX]);
 
     const yScale = d3
       .scaleBand()
@@ -314,24 +189,20 @@ const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
     // Add profile images container
     const imageGroups = partyRows
       .append('g')
-      .attr('transform', () => `translate(0,${barHeight / 2 - imageSize / 2})`);
+      .attr('transform', `translate(0,${barHeight / 2 - imageSize / 2})`);
 
-    // Add circle background for the "Other" category
+    // Add circle background for parties without headshots
     imageGroups
-      .filter(function (d: PartyData): boolean {
-        return !d.headshot && d.name !== 'Other';
-      })
+      .filter((d: PartyDisplayData) => !d.headshot)
       .append('circle')
       .attr('cx', imageSize / 2)
       .attr('cy', imageSize / 2)
       .attr('r', imageSize / 2)
-      .attr('fill', '#e0e0e0');
+      .attr('fill', (d) => d.color || '#e0e0e0');
 
     // Add headshot images for parties with leaders
     imageGroups
-      .filter(function (d: PartyData): boolean {
-        return !!d.headshot;
-      })
+      .filter((d: PartyDisplayData) => !!d.headshot)
       .append('image')
       .attr('mask', 'url(#circle-mask)')
       .attr('x', 0)
@@ -343,8 +214,8 @@ const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
     // Add party names and leaders
     partyRows
       .append('text')
-      .attr('x', imageSize + 20)
-      .attr('y', barHeight / 2 - 10)
+      .attr('x', imageSize + 15)
+      .attr('y', barHeight / 2 - 8)
       .attr('font-family', 'Inter')
       .attr('font-size', 16)
       .attr('font-weight', 'bold')
@@ -352,9 +223,10 @@ const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
       .text((d) => d.name);
 
     partyRows
+      .filter((d) => d.leader)
       .append('text')
-      .attr('x', imageSize + 20)
-      .attr('y', barHeight / 2 + 10)
+      .attr('x', imageSize + 15)
+      .attr('y', barHeight / 2 + 12)
       .attr('font-family', 'Inter')
       .attr('font-size', 14)
       .attr('fill', '#666')
@@ -363,7 +235,7 @@ const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
     // Add polling numbers
     partyRows
       .append('text')
-      .attr('x', imageSize + 200)
+      .attr('x', imageSize + 180)
       .attr('y', barHeight / 2)
       .attr('font-family', 'Inter')
       .attr('font-size', 24)
@@ -375,7 +247,7 @@ const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
     // Add change indicators
     partyRows
       .append('text')
-      .attr('x', imageSize + 280)
+      .attr('x', imageSize + 270)
       .attr('y', barHeight / 2)
       .attr('font-family', 'Inter')
       .attr('font-size', 14)
@@ -392,23 +264,19 @@ const LatestPolling = ({ pollingTrends }: LatestPollingProps) => {
     // Add bars
     partyRows
       .append('rect')
-      .attr('x', imageSize + 350)
+      .attr('x', barStartX)
       .attr('y', barHeight / 4)
-      .attr('width', (d) => xScale(d.polling))
+      .attr('width', (d) => Math.max(0, xScale(d.polling)))
       .attr('height', barHeight / 2)
       .attr('fill', (d) => d.color);
   }, [partyData]);
 
-  if (loading) {
-    return <div>Loading polling data...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
+  if (!latestData || partyData.length === 0) {
+    return <div>Loading latest polling average...</div>;
   }
 
   return (
-    <ChartContainer numParties={partyData.length}>
+    <ChartContainer $numParties={partyData.length}>
       <svg ref={svgRef} style={{ width: '100%', height: '100%' }}></svg>
     </ChartContainer>
   );

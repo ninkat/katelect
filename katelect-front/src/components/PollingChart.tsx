@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import * as d3 from 'd3';
-import { partyColors } from './PartyColors';
-import { Poll } from './PollingData';
+import { partyColors } from '../types/PartyColors';
+import {
+  RawPoll,
+  AveragedDataPoint,
+  PartyKey,
+  LatestPollingData,
+} from '../types/polling';
 
 // styled components for the polling chart
 const ChartWrapper = styled.div`
@@ -12,11 +17,13 @@ const ChartWrapper = styled.div`
   position: relative;
   background: white;
   display: flex;
+  overflow: hidden;
 `;
 
 const ChartContainer = styled.div`
   flex: 1;
   position: relative;
+  min-width: 0;
 `;
 
 const LegendContainer = styled.div`
@@ -27,6 +34,42 @@ const LegendContainer = styled.div`
   margin-right: 1rem;
   padding-top: 1rem;
   width: 150px;
+`;
+
+const ZoomControls = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #eaeaea;
+`;
+
+const ZoomButton = styled.button<{ $active: boolean }>`
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e0e0e0;
+  background-color: ${(props) => (props.$active ? '#ffffff' : '#f0f0f0')};
+  color: ${(props) => (props.$active ? '#333333' : '#666666')};
+  font-weight: ${(props) => (props.$active ? '600' : '400')};
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  box-shadow: ${(props) =>
+    props.$active ? 'none' : 'inset 0 -4px 8px -4px rgba(0, 0, 0, 0.1)'};
+
+  &:hover {
+    color: #333333;
+    background-color: ${(props) => (props.$active ? '#ffffff' : '#f8f8f8')};
+  }
+
+  &:not(:first-child) {
+    margin-top: -2px;
+  }
 `;
 
 const LegendItem = styled.div`
@@ -62,93 +105,26 @@ const Tooltip = styled.div`
 // type for chart parties (excluding 'other')
 type ChartParty = Exclude<keyof typeof partyColors, 'other'>;
 
-interface AveragedDataPoint {
-  date: string;
-  liberal: number;
-  conservative: number;
-  ndp: number;
-  bloc: number;
-  green: number;
-  ppc: number;
-  other: number;
-}
-
-type PartyKey = keyof Omit<AveragedDataPoint, 'date'>;
+// utility function to safely parse dates
+const safeParseDateISO = (dateStr: string): Date | null => {
+  if (!dateStr) return null;
+  const parseResult = d3.timeParse('%Y-%m-%d')(dateStr);
+  if (!parseResult) {
+    console.warn('[PollingChart Debug] Failed to parse date:', dateStr);
+    return null;
+  }
+  return parseResult;
+};
 
 interface PollingChartProps {
-  polls: Poll[];
-  region?: string;
-  showBloc?: boolean;
-  onTrendsUpdate?: (trends: PollingTrends) => void;
-}
-
-// function to calculate exponentially weighted moving average
-const calculateEWMA = (
-  data: Poll[],
-  party: PartyKey,
-  smoothingFactor: number = 0.25
-): number[] => {
-  if (data.length === 0) return [];
-
-  // sort data by date to ensure chronological order
-  const sortedData = [...data].sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-  );
-
-  // initialize result array with the first value
-  const result: number[] = [sortedData[0][party]];
-
-  // calculate ewma for each subsequent data point
-  for (let i = 1; i < sortedData.length; i++) {
-    const currentValue = sortedData[i][party];
-    const previousEWMA = result[i - 1];
-    const newEWMA =
-      previousEWMA + smoothingFactor * (currentValue - previousEWMA);
-    result.push(newEWMA);
-  }
-
-  return result;
-};
-
-// function to normalize vote share to 100%
-const normalizeVoteShare = (
-  dataPoint: AveragedDataPoint
-): AveragedDataPoint => {
-  const parties: PartyKey[] = [
-    'liberal',
-    'conservative',
-    'ndp',
-    'bloc',
-    'green',
-    'ppc',
-    'other',
-  ];
-
-  // calculate total
-  const total = parties.reduce((sum, party) => sum + dataPoint[party], 0);
-
-  // if total is 0, return the original data point
-  if (total === 0) return dataPoint;
-
-  // normalize each party's vote share
-  const normalizedDataPoint = { ...dataPoint };
-  parties.forEach((party) => {
-    normalizedDataPoint[party] = (dataPoint[party] / total) * 100;
-  });
-
-  return normalizedDataPoint;
-};
-
-// interface for exposing latest EWMA values and changes
-export interface PollingTrends {
-  latestValues: Record<PartyKey, number>;
-  changes: Record<PartyKey, number>;
+  region: string;
+  showBloc: boolean;
+  onTrendsUpdate?: (trends: LatestPollingData) => void;
 }
 
 const PollingChart = ({
-  polls,
-  region = 'federal',
-  showBloc = false,
+  region,
+  showBloc,
   onTrendsUpdate,
 }: PollingChartProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -159,137 +135,148 @@ const PollingChart = ({
     y: number;
     content: string;
   } | null>(null);
-  const [zoomLevel, setZoomLevel] = useState(3); // 1 = 1 year, 2 = 6 months, 3 = 3 months, 4 = 1 month
-  const [allData, setAllData] = useState<AveragedDataPoint[]>([]);
-  const [filteredData, setFilteredData] = useState<AveragedDataPoint[]>([]);
-  const [rawData, setRawData] = useState<Poll[]>([]);
-  const [pollingTrends, setPollingTrends] = useState<PollingTrends>({
-    latestValues: {} as Record<PartyKey, number>,
-    changes: {} as Record<PartyKey, number>,
-  });
-  const smoothingFactor = 0.25; // constant smoothing factor
+  const [zoomLevel, setZoomLevel] = useState(3); // 0 = all data, 1 = 1 year, 2 = 6 months, 3 = 3 months, 4 = 1 month
+
+  // State for fetched data
+  const [averagedData, setAveragedData] = useState<AveragedDataPoint[]>([]);
+  const [rawData, setRawData] = useState<RawPoll[]>([]);
+  const [filteredAveragedData, setFilteredAveragedData] = useState<
+    AveragedDataPoint[]
+  >([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   // Update dimensions on resize
   useEffect(() => {
-    const handleResize = () => {
+    // Initial dimensions setup with a small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
       if (chartWrapperRef.current) {
-        setDimensions({
+        const newDimensions = {
           width: chartWrapperRef.current.clientWidth,
           height: chartWrapperRef.current.clientHeight,
-        });
+        };
+        setDimensions(newDimensions);
+      }
+    }, 100);
+
+    // Set up resize observer instead of event listener
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const newDimensions = {
+          width: entry.contentRect.width,
+          height: entry.contentRect.height,
+        };
+        setDimensions(newDimensions);
+      }
+    });
+
+    if (chartWrapperRef.current) {
+      resizeObserver.observe(chartWrapperRef.current);
+    }
+
+    return () => {
+      clearTimeout(timer);
+      resizeObserver.disconnect();
+    };
+  }, []);
+
+  // Fetch data when region changes
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
+      setAveragedData([]); // Clear old data
+      setRawData([]);
+      try {
+        // Fetch both averaged and raw data
+        const [avgResponse, rawResponse] = await Promise.all([
+          fetch(`http://localhost:8000/api/averages/${region}`),
+          fetch(`http://localhost:8000/api/polls/${region}`),
+        ]);
+
+        if (!avgResponse.ok) {
+          throw new Error(
+            `Failed to fetch averaged data: ${avgResponse.statusText}`
+          );
+        }
+        if (!rawResponse.ok) {
+          throw new Error(
+            `Failed to fetch raw poll data: ${rawResponse.statusText}`
+          );
+        }
+
+        const avgData: AveragedDataPoint[] = await avgResponse.json();
+        const rawDataJson: RawPoll[] = await rawResponse.json();
+
+        // Basic validation (optional but good)
+        if (!Array.isArray(avgData))
+          throw new Error('Invalid averaged data format');
+        if (!Array.isArray(rawDataJson))
+          throw new Error('Invalid raw data format');
+
+        setAveragedData(avgData);
+        setRawData(rawDataJson);
+
+        // If onTrendsUpdate exists, extract latest trends from fetched averaged data
+        if (onTrendsUpdate && avgData.length > 0) {
+          const parties = Object.keys(avgData[0]).filter(
+            (k) => k !== 'date'
+          ) as PartyKey[];
+          const latestValues: Record<PartyKey, number> = {} as Record<
+            PartyKey,
+            number
+          >;
+          const changes: Record<PartyKey, number | null> = {} as Record<
+            PartyKey,
+            number | null
+          >;
+
+          const lastIndex = avgData.length - 1;
+          const secondLastIndex = avgData.length - 2;
+
+          parties.forEach((party) => {
+            latestValues[party] = avgData[lastIndex][party];
+            if (secondLastIndex >= 0) {
+              changes[party] =
+                avgData[lastIndex][party] - avgData[secondLastIndex][party];
+            } else {
+              changes[party] = null; // No change if only one data point
+            }
+          });
+
+          onTrendsUpdate({
+            latestValues,
+            changes,
+          });
+        }
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : 'An unknown error occurred'
+        );
+        console.error('Error fetching polling chart data:', err);
+      } finally {
+        setLoading(false);
       }
     };
 
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    fetchData();
+  }, [region, onTrendsUpdate]);
 
-  // Process data when polls change
+  // Filter averaged data based on zoom level
   useEffect(() => {
-    if (polls.length === 0) return;
-
-    // Parse dates
-    const parseDate = d3.timeParse('%Y-%m-%d');
-    const data = polls.map((poll) => ({
-      ...poll,
-      parsedDate: parseDate(poll.date) as Date,
-    }));
-
-    // Sort data by date
-    data.sort((a, b) => a.parsedDate.getTime() - b.parsedDate.getTime());
-    setRawData(polls);
-
-    // Calculate ewma data points for all parties
-    const parties: PartyKey[] = [
-      'liberal',
-      'conservative',
-      'ndp',
-      'bloc',
-      'green',
-      'ppc',
-      'other',
-    ];
-
-    // Create a map of dates to data points
-    const dateMap = new Map<string, AveragedDataPoint>();
-
-    // Initialize the map with all dates
-    data.forEach((poll) => {
-      const dateStr = poll.date;
-      if (!dateMap.has(dateStr)) {
-        dateMap.set(dateStr, {
-          date: dateStr,
-          liberal: 0,
-          conservative: 0,
-          ndp: 0,
-          bloc: 0,
-          green: 0,
-          ppc: 0,
-          other: 0,
-        });
-      }
-    });
-
-    // Calculate EWMA for each party
-    parties.forEach((party) => {
-      const ewmaValues = calculateEWMA(data, party, smoothingFactor);
-
-      // Assign EWMA values to the corresponding dates
-      data.forEach((poll, index) => {
-        const dateStr = poll.date;
-        const dataPoint = dateMap.get(dateStr);
-        if (dataPoint) {
-          dataPoint[party] = ewmaValues[index];
-        }
-      });
-    });
-
-    // Normalize all data points to 100%
-    dateMap.forEach((dataPoint, dateStr) => {
-      dateMap.set(dateStr, normalizeVoteShare(dataPoint));
-    });
-
-    // Convert map to array and sort by date
-    const ewmaData: AveragedDataPoint[] = Array.from(dateMap.values()).sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-    );
-
-    setAllData(ewmaData);
-
-    // Calculate latest values and changes for each party
-    if (ewmaData.length >= 2) {
-      const latestValues: Record<PartyKey, number> = {} as Record<
-        PartyKey,
-        number
-      >;
-      const changes: Record<PartyKey, number> = {} as Record<PartyKey, number>;
-
-      const lastIndex = ewmaData.length - 1;
-      const secondLastIndex = ewmaData.length - 2;
-
-      parties.forEach((party) => {
-        latestValues[party] = ewmaData[lastIndex][party];
-        changes[party] =
-          ewmaData[lastIndex][party] - ewmaData[secondLastIndex][party];
-      });
-
-      setPollingTrends({
-        latestValues,
-        changes,
-      });
+    if (averagedData.length === 0) {
+      setFilteredAveragedData([]); // Clear filtered data if no base data
+      return;
     }
-  }, [polls]);
-
-  // Filter data based on zoom level
-  useEffect(() => {
-    if (allData.length === 0) return;
 
     const now = new Date();
     let startDate: Date;
 
     // Calculate start date based on zoom level
     switch (zoomLevel) {
+      case 0: // all data
+        startDate = new Date(0); // earliest possible date
+        break;
       case 1: // 1 year
         startDate = new Date(
           now.getFullYear() - 1,
@@ -326,32 +313,34 @@ const PollingChart = ({
         );
     }
 
-    // Filter data to only include dates after startDate
-    const filtered = allData.filter((d) => new Date(d.date) >= startDate);
-    setFilteredData(filtered);
-  }, [allData, zoomLevel]);
+    // Filter data to only include dates after startDate and with valid dates
+    const filtered = averagedData.filter((d) => {
+      const date = safeParseDateISO(d.date);
+      return date !== null && date >= startDate;
+    });
 
-  // Update pollingTrends when it changes
-  useEffect(() => {
-    if (onTrendsUpdate) {
-      onTrendsUpdate(pollingTrends);
-    }
-  }, [pollingTrends, onTrendsUpdate]);
+    setFilteredAveragedData(filtered);
+  }, [averagedData, zoomLevel]);
 
-  // Render chart when filtered data or dimensions change
+  // Render chart when filtered averaged data, raw data, or dimensions change
   useEffect(() => {
-    if (!svgRef.current || filteredData.length === 0 || dimensions.width === 0)
+    if (
+      !svgRef.current ||
+      filteredAveragedData.length === 0 ||
+      dimensions.width === 0
+    ) {
+      if (svgRef.current) {
+        d3.select(svgRef.current).selectAll('*').remove();
+      }
       return;
+    }
 
-    // Clear any existing content
     d3.select(svgRef.current).selectAll('*').remove();
 
-    // Set up dimensions
     const margin = { top: 20, right: 30, bottom: 40, left: 60 };
     const width = dimensions.width - margin.left - margin.right;
     const height = dimensions.height - margin.top - margin.bottom;
 
-    // Create SVG
     const svg = d3
       .select(svgRef.current)
       .attr('width', '100%')
@@ -361,7 +350,6 @@ const PollingChart = ({
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    // Party acronym mapping
     const partyAcronyms: Record<string, string> = {
       liberal: 'LPC',
       conservative: 'CPC',
@@ -371,36 +359,70 @@ const PollingChart = ({
       ppc: 'PPC',
     };
 
-    // Create scales
-    const xScale = d3
-      .scaleTime()
-      .domain(d3.extent(filteredData, (d) => new Date(d.date)) as [Date, Date])
-      .range([0, width]);
+    // Filter out any data points with invalid dates first
+    const validFilteredData = filteredAveragedData.filter(
+      (d) => safeParseDateISO(d.date) !== null
+    );
+    if (validFilteredData.length === 0) {
+      return;
+    }
 
-    // Find the maximum vote share across all parties
-    const maxVoteShare = Math.max(
-      ...rawData.map((poll) =>
+    const xScaleDomain = d3.extent(validFilteredData, (d) =>
+      safeParseDateISO(d.date)
+    ) as [Date, Date];
+    if (!xScaleDomain[0] || !xScaleDomain[1]) {
+      return; // Stop rendering if domain is invalid
+    }
+
+    const xScale = d3.scaleTime().domain(xScaleDomain).range([0, width]);
+
+    const xDomain = xScale.domain();
+
+    const relevantRawData = rawData.filter((d) => {
+      const date = safeParseDateISO(d.date);
+      if (!date) return false;
+      return date >= xDomain[0] && date <= xDomain[1];
+    });
+
+    // Calculate max Y values
+    const maxRawVoteShare = Math.max(
+      0,
+      ...relevantRawData.map((poll) =>
         Math.max(
-          poll.liberal,
-          poll.conservative,
-          poll.ndp,
-          poll.bloc,
-          poll.green,
-          poll.ppc
+          poll.liberal ?? 0,
+          poll.conservative ?? 0,
+          poll.ndp ?? 0,
+          poll.bloc ?? 0,
+          poll.green ?? 0,
+          poll.ppc ?? 0
         )
       )
     );
+    const maxAvgVoteShare = Math.max(
+      0,
+      ...filteredAveragedData.map((d) =>
+        Math.max(
+          d.liberal ?? 0,
+          d.conservative ?? 0,
+          d.ndp ?? 0,
+          d.bloc ?? 0,
+          d.green ?? 0,
+          d.ppc ?? 0
+        )
+      )
+    );
+    const overallMax = Math.max(maxRawVoteShare, maxAvgVoteShare);
+    const yMax = Math.ceil((overallMax * 1.05) / 5) * 5;
+    const finalYMax = Math.max(30, yMax);
 
-    // Add 5% padding to the max value and round up to nearest 5
-    const yMax = Math.ceil((maxVoteShare + 5) / 5) * 5;
+    const yScale = d3.scaleLinear().domain([0, finalYMax]).range([height, 0]);
+    if (isNaN(yScale.domain()[0]) || isNaN(yScale.domain()[1])) {
+      return; // Stop rendering
+    }
 
-    const yScale = d3.scaleLinear().domain([0, yMax]).range([height, 0]);
-
-    // Create axes
     const xAxis = d3.axisBottom(xScale).ticks(5);
     const yAxis = d3.axisLeft(yScale).ticks(10);
 
-    // Add x-axis
     svg
       .append('g')
       .attr('transform', `translate(0,${height})`)
@@ -409,7 +431,6 @@ const PollingChart = ({
       .style('font-family', 'Inter')
       .style('font-size', '12px');
 
-    // Add y-axis
     svg
       .append('g')
       .call(yAxis)
@@ -417,7 +438,6 @@ const PollingChart = ({
       .style('font-family', 'Inter')
       .style('font-size', '12px');
 
-    // Add y-axis label
     svg
       .append('text')
       .attr('transform', 'rotate(-90)')
@@ -429,7 +449,6 @@ const PollingChart = ({
       .style('font-size', '14px')
       .text('Voting Intention (%)');
 
-    // Determine which parties to show based on region
     const parties: ChartParty[] = [
       'liberal',
       'conservative',
@@ -437,29 +456,19 @@ const PollingChart = ({
       'green',
       'ppc',
     ];
-
-    // Only add BQ for Quebec and Federal if showBloc is true
     if (showBloc) {
       parties.push('bloc');
     }
 
-    // Add dots for each data point first (so they appear behind the lines)
     parties.forEach((party) => {
       svg
         .selectAll(`.dot-${party}`)
-        .data(
-          rawData.filter((d) => {
-            const pollDate = new Date(d.date);
-            return (
-              pollDate >= xScale.domain()[0] && pollDate <= xScale.domain()[1]
-            );
-          })
-        )
+        .data(relevantRawData)
         .enter()
         .append('circle')
         .attr('class', `dot-${party}`)
-        .attr('cx', (d) => xScale(new Date(d.date)))
-        .attr('cy', (d) => yScale(d[party]))
+        .attr('cx', (d) => xScale(safeParseDateISO(d.date) as Date))
+        .attr('cy', (d) => yScale(d[party as PartyKey] ?? 0))
         .attr('r', 4)
         .attr('fill', partyColors[party])
         .attr('stroke', 'white')
@@ -467,24 +476,27 @@ const PollingChart = ({
         .style('opacity', 0.4);
     });
 
-    // Add lines for each party (after dots so they appear on top)
     parties.forEach((party) => {
       const line = d3
-        .line<(typeof filteredData)[0]>()
-        .x((d) => xScale(new Date(d.date)))
-        .y((d) => yScale(d[party]))
+        .line<AveragedDataPoint>()
+        .x((d) => xScale(safeParseDateISO(d.date) as Date))
+        .y((d) => yScale(d[party as PartyKey] ?? 0))
+        .defined(
+          (d) =>
+            safeParseDateISO(d.date) !== null &&
+            typeof d[party as PartyKey] === 'number'
+        )
         .curve(d3.curveMonotoneX);
 
       svg
         .append('path')
-        .datum(filteredData)
+        .datum(filteredAveragedData)
         .attr('fill', 'none')
         .attr('stroke', partyColors[party])
         .attr('stroke-width', 2)
         .attr('d', line);
     });
 
-    // Create an invisible overlay for the entire chart area to detect hover
     const overlay = svg
       .append('rect')
       .attr('width', width)
@@ -493,7 +505,6 @@ const PollingChart = ({
       .attr('pointer-events', 'all')
       .style('cursor', 'default');
 
-    // Add vertical line that follows the cursor
     const verticalLine = svg
       .append('line')
       .attr('class', 'vertical-line')
@@ -503,38 +514,39 @@ const PollingChart = ({
       .style('stroke-width', '1px')
       .style('visibility', 'hidden');
 
-    // Add hover effects to the overlay
     overlay
       .on('mousemove', function (event: MouseEvent) {
-        const xPos = d3.pointer(event)[0];
-        const xDate = xScale.invert(xPos);
+        const pointerDate = xScale.invert(d3.pointer(event)[0]);
 
         const bisect = d3.bisector(
-          (d: AveragedDataPoint) => new Date(d.date)
+          (d: AveragedDataPoint) => safeParseDateISO(d.date) as Date
         ).left;
-        const i = bisect(filteredData, xDate, 1);
-        const d0 = filteredData[i - 1];
-        const d1 = filteredData[i];
+        const i = bisect(filteredAveragedData, pointerDate, 1);
+        const d0 = filteredAveragedData[i - 1];
+        const d1 = filteredAveragedData[i];
 
         if (!d0 || !d1) return;
+        const date0 = safeParseDateISO(d0.date);
+        const date1 = safeParseDateISO(d1.date);
+        if (!date0 || !date1) return; // Ensure dates are valid
 
         const d =
-          xDate.getTime() - new Date(d0.date).getTime() >
-          new Date(d1.date).getTime() - xDate.getTime()
+          pointerDate.getTime() - date0.getTime() >
+          date1.getTime() - pointerDate.getTime()
             ? d1
             : d0;
+        const nearestDate = safeParseDateISO(d.date) as Date;
 
         verticalLine
-          .attr('x1', xScale(new Date(d.date)))
-          .attr('x2', xScale(new Date(d.date)))
+          .attr('x1', xScale(nearestDate))
+          .attr('x2', xScale(nearestDate))
           .style('visibility', 'visible');
 
-        const dateStr = new Date(d.date).toISOString().split('T')[0];
+        const dateStr = nearestDate.toISOString().split('T')[0];
 
         let tooltipContent = `<strong>${dateStr}</strong><br/>`;
-
         parties.forEach((party) => {
-          const value = d[party as PartyKey];
+          const value = d[party as PartyKey] ?? 0;
           tooltipContent += `<div style="display: flex; align-items: center; margin-top: 4px;">
             <span style="display: inline-block; width: 12px; height: 12px; background-color: ${
               partyColors[party]
@@ -554,8 +566,7 @@ const PollingChart = ({
         setTooltipData(null);
       });
 
-    // Update majority line position if needed
-    if (yMax >= 50) {
+    if (finalYMax >= 50) {
       svg
         .append('line')
         .attr('x1', 0)
@@ -577,27 +588,30 @@ const PollingChart = ({
         .text('50%');
     }
 
-    // Add wheel event listener for zooming
     const chartArea = d3.select(chartWrapperRef.current);
-    chartArea.on('wheel', (event) => {
+    chartArea.on('wheel.zoom', (event) => {
       event.preventDefault();
-
-      // Determine zoom direction (reversed)
       const delta = event.deltaY;
       if (delta < 0 && zoomLevel < 4) {
-        // Zoom in (scroll up)
         setZoomLevel((prev) => prev + 1);
-      } else if (delta > 0 && zoomLevel > 1) {
-        // Zoom out (scroll down)
+      } else if (delta > 0 && zoomLevel > 0) {
         setZoomLevel((prev) => prev - 1);
       }
     });
 
-    // Clean up function
     return () => {
-      chartArea.on('wheel', null);
+      chartArea.on('wheel.zoom', null);
     };
-  }, [filteredData, dimensions, region, rawData, zoomLevel, showBloc]);
+  }, [filteredAveragedData, rawData, dimensions, showBloc, zoomLevel]);
+
+  // Handle loading and error states
+  if (loading) {
+    return <LoadingMessage>Loading chart data...</LoadingMessage>;
+  }
+
+  if (error) {
+    return <LoadingMessage>Error loading chart: {error}</LoadingMessage>;
+  }
 
   return (
     <ChartWrapper ref={chartWrapperRef}>
@@ -641,9 +655,43 @@ const PollingChart = ({
           <LegendColor color={partyColors.ppc} />
           <span>People's Party</span>
         </LegendItem>
+        <ZoomControls>
+          <ZoomButton
+            onClick={() => setZoomLevel(4)}
+            $active={zoomLevel === 4}
+          >
+            1 Month
+          </ZoomButton>
+          <ZoomButton
+            onClick={() => setZoomLevel(1)}
+            $active={zoomLevel === 1}
+          >
+            1 Year
+          </ZoomButton>
+          <ZoomButton
+            onClick={() => setZoomLevel(0)}
+            $active={zoomLevel === 0}
+          >
+            All Data
+          </ZoomButton>
+        </ZoomControls>
       </LegendContainer>
     </ChartWrapper>
   );
 };
+
+// Loading message styled component (can be reused or defined locally)
+const LoadingMessage = styled.div`
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #666666;
+  text-align: center;
+  padding: 2rem;
+  width: 100%; // Ensure it takes full width
+  height: 100%; // Ensure it takes full height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export default PollingChart;

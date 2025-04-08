@@ -1,6 +1,28 @@
 [
   {
     "": "MB/SK",
+    "Firm": "Angus Reid Institute",
+    "Date (middle)": "2025-04-06",
+    "LPC": "32",
+    "CPC": "56",
+    "NDP": "11",
+    "GPC": "1",
+    "PPC": "0",
+    "Leader": "CPC +24"
+  },
+  {
+    "": "MB/SK",
+    "Firm": "Liaison Strategies",
+    "Date (middle)": "2025-04-05",
+    "LPC": "35",
+    "CPC": "50",
+    "NDP": "8",
+    "GPC": "1",
+    "PPC": "3",
+    "Leader": "CPC +15"
+  },
+  {
+    "": "MB/SK",
     "Firm": "Liaison Strategies",
     "Date (middle)": "2025-04-04",
     "LPC": "34",
@@ -9,6 +31,17 @@
     "GPC": "2",
     "PPC": "2",
     "Leader": "CPC +15"
+  },
+  {
+    "": "MB/SK",
+    "Firm": "Pollara",
+    "Date (middle)": "2025-04-04",
+    "LPC": "36",
+    "CPC": "47",
+    "NDP": "12",
+    "GPC": "3",
+    "PPC": "2",
+    "Leader": "CPC +11"
   },
   {
     "": "MB/SK",

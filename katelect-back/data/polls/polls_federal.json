@@ -1,5 +1,70 @@
 [
   {
+    "Polling Firm": "Angus Reid Institute",
+    "Rating": "B+",
+    "Date (middle)": "2025-04-06",
+    "Sample": "2,184",
+    "LPC": "46",
+    "CPC": "36",
+    "NDP": "7",
+    "GPC": "2",
+    "BQ": "7",
+    "PPC": "1",
+    "Leader": "LPC +10"
+  },
+  {
+    "Polling Firm": "Nanos Research",
+    "Rating": "A",
+    "Date (middle)": "2025-04-05",
+    "Sample": "1,264",
+    "LPC": "43",
+    "CPC": "38",
+    "NDP": "8",
+    "GPC": "3",
+    "BQ": "7",
+    "PPC": "2",
+    "Leader": "LPC +5"
+  },
+  {
+    "Polling Firm": "Mainstreet Research",
+    "Rating": "A−",
+    "Date (middle)": "2025-04-05",
+    "Sample": "1,240",
+    "LPC": "44",
+    "CPC": "40",
+    "NDP": "8",
+    "GPC": "2",
+    "BQ": "3",
+    "PPC": "3",
+    "Leader": "LPC +4"
+  },
+  {
+    "Polling Firm": "Liaison Strategies",
+    "Rating": "B",
+    "Date (middle)": "2025-04-05",
+    "Sample": "1,500",
+    "LPC": "45",
+    "CPC": "39",
+    "NDP": "7",
+    "GPC": "2",
+    "BQ": "4",
+    "PPC": "2",
+    "Leader": "LPC +6"
+  },
+  {
+    "Polling Firm": "MQO Research",
+    "Rating": "B−",
+    "Date (middle)": "2025-04-05",
+    "Sample": "1,859",
+    "LPC": "44",
+    "CPC": "34",
+    "NDP": "11",
+    "GPC": "4",
+    "BQ": "5",
+    "PPC": "2",
+    "Leader": "LPC +10"
+  },
+  {
     "Polling Firm": "Nanos Research",
     "Rating": "A",
     "Date (middle)": "2025-04-04",
@@ -37,6 +102,19 @@
     "BQ": "4",
     "PPC": "2",
     "Leader": "LPC +5"
+  },
+  {
+    "Polling Firm": "Pollara",
+    "Rating": "NR",
+    "Date (middle)": "2025-04-04",
+    "Sample": "2,132",
+    "LPC": "44",
+    "CPC": "36",
+    "NDP": "9",
+    "GPC": "2",
+    "BQ": "6",
+    "PPC": "2",
+    "Leader": "LPC +8"
   },
   {
     "Polling Firm": "Nanos Research",
@@ -208,19 +286,6 @@
     "Leader": "LPC +7"
   },
   {
-    "Polling Firm": "Mainstreet Research",
-    "Rating": "A−",
-    "Date (middle)": "2025-03-31",
-    "Sample": "1,651",
-    "LPC": "43",
-    "CPC": "40",
-    "NDP": "9",
-    "GPC": "1",
-    "BQ": "5",
-    "PPC": "2",
-    "Leader": "LPC +3"
-  },
-  {
     "Polling Firm": "Pallas Data",
     "Rating": "B+",
     "Date (middle)": "2025-03-31",
@@ -232,6 +297,19 @@
     "BQ": "6",
     "PPC": "2",
     "Leader": "LPC +9"
+  },
+  {
+    "Polling Firm": "Mainstreet Research",
+    "Rating": "A−",
+    "Date (middle)": "2025-03-31",
+    "Sample": "1,651",
+    "LPC": "43",
+    "CPC": "40",
+    "NDP": "9",
+    "GPC": "1",
+    "BQ": "5",
+    "PPC": "2",
+    "Leader": "LPC +3"
   },
   {
     "Polling Firm": "Liaison Strategies",
@@ -260,19 +338,6 @@
     "Leader": "LPC +8"
   },
   {
-    "Polling Firm": "Mainstreet Research",
-    "Rating": "A−",
-    "Date (middle)": "2025-03-30",
-    "Sample": "1,628",
-    "LPC": "44",
-    "CPC": "41",
-    "NDP": "8",
-    "GPC": "1",
-    "BQ": "5",
-    "PPC": "2",
-    "Leader": "LPC +3"
-  },
-  {
     "Polling Firm": "Angus Reid Institute",
     "Rating": "B+",
     "Date (middle)": "2025-03-30",
@@ -284,6 +349,19 @@
     "BQ": "7",
     "PPC": "1",
     "Leader": "LPC +8"
+  },
+  {
+    "Polling Firm": "Mainstreet Research",
+    "Rating": "A−",
+    "Date (middle)": "2025-03-30",
+    "Sample": "1,628",
+    "LPC": "44",
+    "CPC": "41",
+    "NDP": "8",
+    "GPC": "1",
+    "BQ": "5",
+    "PPC": "2",
+    "Leader": "LPC +3"
   },
   {
     "Polling Firm": "Liaison Strategies",
@@ -598,19 +676,6 @@
     "Leader": "LPC +1"
   },
   {
-    "Polling Firm": "Mainstreet Research",
-    "Rating": "A−",
-    "Date (middle)": "2025-03-23",
-    "Sample": "1,745",
-    "LPC": "44",
-    "CPC": "39",
-    "NDP": "7",
-    "GPC": "2",
-    "BQ": "6",
-    "PPC": "2",
-    "Leader": "LPC +5"
-  },
-  {
     "Polling Firm": "Angus Reid Institute",
     "Rating": "B+",
     "Date (middle)": "2025-03-23",
@@ -622,6 +687,19 @@
     "BQ": "6",
     "PPC": "1",
     "Leader": "LPC +8"
+  },
+  {
+    "Polling Firm": "Mainstreet Research",
+    "Rating": "A−",
+    "Date (middle)": "2025-03-23",
+    "Sample": "1,745",
+    "LPC": "44",
+    "CPC": "39",
+    "NDP": "7",
+    "GPC": "2",
+    "BQ": "6",
+    "PPC": "2",
+    "Leader": "LPC +5"
   },
   {
     "Polling Firm": "Liaison Strategies",

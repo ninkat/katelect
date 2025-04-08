@@ -1,6 +1,50 @@
 [
   {
     "": "BC",
+    "Firm": "Angus Reid Institute",
+    "Date (middle)": "2025-04-06",
+    "LPC": "48",
+    "CPC": "37",
+    "NDP": "11",
+    "GPC": "4",
+    "PPC": "0",
+    "Leader": "LPC +11"
+  },
+  {
+    "": "BC",
+    "Firm": "Nanos Research",
+    "Date (middle)": "2025-04-05",
+    "LPC": "40",
+    "CPC": "37",
+    "NDP": "16",
+    "GPC": "5",
+    "PPC": "1",
+    "Leader": "LPC +3"
+  },
+  {
+    "": "BC",
+    "Firm": "Liaison Strategies",
+    "Date (middle)": "2025-04-05",
+    "LPC": "46",
+    "CPC": "36",
+    "NDP": "14",
+    "GPC": "1",
+    "PPC": "2",
+    "Leader": "LPC +10"
+  },
+  {
+    "": "BC",
+    "Firm": "MQO Research",
+    "Date (middle)": "2025-04-05",
+    "LPC": "44",
+    "CPC": "33",
+    "NDP": "15",
+    "GPC": "7",
+    "PPC": "1",
+    "Leader": "LPC +11"
+  },
+  {
+    "": "BC",
     "Firm": "Nanos Research",
     "Date (middle)": "2025-04-04",
     "LPC": "38",
@@ -20,6 +64,17 @@
     "GPC": "1",
     "PPC": "2",
     "Leader": "LPC +9"
+  },
+  {
+    "": "BC",
+    "Firm": "Pollara",
+    "Date (middle)": "2025-04-04",
+    "LPC": "40",
+    "CPC": "40",
+    "NDP": "16",
+    "GPC": "2",
+    "PPC": "1",
+    "Leader": "Tie"
   },
   {
     "": "BC",

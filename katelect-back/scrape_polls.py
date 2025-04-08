@@ -66,7 +66,7 @@ def extract_poll_table(soup):
 
 # Create output directory path (relative to script location)
 script_dir = os.path.dirname(os.path.abspath(__file__))
-output_dir = os.path.join(script_dir, "..", "katelect-front", "public", "polls")
+output_dir = os.path.join(script_dir, "data", "polls")
 os.makedirs(output_dir, exist_ok=True)
 
 # Scrape and write each region to a separate file
@@ -90,6 +90,6 @@ for region, url in urls.items():
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ Saved {region} polls to {output_path}")
+    print(f"Saved {region} polls to {output_path}")
 
-print("\n🎉 All regions scraped and saved.")
+print("\nAll regions scraped and saved.")

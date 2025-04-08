@@ -56,10 +56,10 @@ const LegendText = styled.span`
 
 // synthetic data for the visualization
 const data = [
-  { label: 'Liberal Majority', value: 72, color: '#D7191C' },
+  { label: 'Liberal Majority', value: 72, color: '#d71920' },
   { label: 'Liberal Minority', value: 12, color: '#F4A6A8' },
   { label: 'Conservative Minority', value: 14, color: '#90A8C3' },
-  { label: 'Conservative Majority', value: 2, color: '#003366' },
+  { label: 'Conservative Majority', value: 2, color: '#003F72' },
 ];
 
 function TopLine() {
