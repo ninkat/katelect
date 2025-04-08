@@ -1,9 +1,9 @@
-import Homepage from '/src/components/Homepage.tsx';
+import Forecast from '../components/Forecast';
 
 function App() {
   return (
     <div className="App">
-      <Homepage></Homepage>
+      <Forecast></Forecast>
     </div>
   );
 }

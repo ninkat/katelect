@@ -174,8 +174,8 @@ const SectionTitle = styled.h2`
   margin-bottom: 0.25rem;
 `;
 
-function Homepage() {
-  const [activeTab, setActiveTab] = useState('home');
+function Forecast() {
+  const [activeTab, setActiveTab] = useState('forecast');
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   useEffect(() => {
@@ -193,15 +193,15 @@ function Homepage() {
       <Header>
         <LogoContainer>
           <Logo src={kat} alt="Katelect logo" />
-          <Title>Katelect</Title>
+          <Title>polikat</Title>
         </LogoContainer>
         <Nav>
           <NavLink
-            href="#home"
-            active={activeTab === 'home'}
-            onClick={() => setActiveTab('home')}
+            href="#forecast"
+            active={activeTab === 'forecast'}
+            onClick={() => setActiveTab('forecast')}
           >
-            Home
+            Forecast
           </NavLink>
           <NavLink
             href="#polls"
@@ -220,7 +220,7 @@ function Homepage() {
         </Nav>
       </Header>
       <MainContent>
-        {(activeTab === 'home' || activeTab === 'polls') && (
+        {(activeTab === 'forecast' || activeTab === 'polls') && (
           <Sidebar isSticky={isHeaderVisible}>
             <SidebarTitle>Regions</SidebarTitle>
             <RegionList>
@@ -254,8 +254,8 @@ function Homepage() {
             </RegionList>
           </Sidebar>
         )}
-        <Content hasSidebar={activeTab === 'home' || activeTab === 'polls'}>
-          {activeTab === 'home' && (
+        <Content hasSidebar={activeTab === 'forecast' || activeTab === 'polls'}>
+          {activeTab === 'forecast' && (
             <>
               <DataSection>
                 <SectionTitle>Who will form the next government?</SectionTitle>
@@ -281,4 +281,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Forecast;

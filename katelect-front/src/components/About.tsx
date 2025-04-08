@@ -87,13 +87,13 @@ const About = () => {
         </Section>
 
         <Section>
-          <SectionTitle>About: Katelect</SectionTitle>
+          <SectionTitle>About: polikat</SectionTitle>
           <Paragraph>
-            Katelect is a project by{' '}
+            polikat is a project by{' '}
             <a href="https://github.com/ninkat">ninkat</a>, an undergraduate
             computer science student with interests in visualization and
             (occasionally) politics. Unfortunately, he doesn't specialize in
-            statistics or machine learning, so if you want to help, he would be
+            statistics or machine learning. If you want to help, he would be
             happy to hear you out.
           </Paragraph>
         </Section>
