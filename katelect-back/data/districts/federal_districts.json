@@ -1,0 +1,1400 @@
+{
+  "Newfoundland and Labrador": [
+    {
+      "code": "10001",
+      "name": "Avalon"
+    },
+    {
+      "code": "10002",
+      "name": "Cape Spear"
+    },
+    {
+      "code": "10003",
+      "name": "Central Newfoundland"
+    },
+    {
+      "code": "10004",
+      "name": "Labrador"
+    },
+    {
+      "code": "10005",
+      "name": "Long Range Mountains"
+    },
+    {
+      "code": "10006",
+      "name": "St. John's East"
+    },
+    {
+      "code": "10007",
+      "name": "Terra Nova—The Peninsulas"
+    }
+  ],
+  "Prince Edward Island": [
+    {
+      "code": "11001",
+      "name": "Cardigan"
+    },
+    {
+      "code": "11002",
+      "name": "Charlottetown"
+    },
+    {
+      "code": "11003",
+      "name": "Egmont"
+    },
+    {
+      "code": "11004",
+      "name": "Malpeque"
+    }
+  ],
+  "Nova Scotia": [
+    {
+      "code": "12001",
+      "name": "Acadie—Annapolis"
+    },
+    {
+      "code": "12002",
+      "name": "Cape Breton—Canso—Antigonish"
+    },
+    {
+      "code": "12003",
+      "name": "Central Nova"
+    },
+    {
+      "code": "12004",
+      "name": "Cumberland—Colchester"
+    },
+    {
+      "code": "12005",
+      "name": "Dartmouth—Cole Harbour"
+    },
+    {
+      "code": "12006",
+      "name": "Halifax"
+    },
+    {
+      "code": "12007",
+      "name": "Halifax West"
+    },
+    {
+      "code": "12008",
+      "name": "Kings—Hants"
+    },
+    {
+      "code": "12009",
+      "name": "Sackville—Bedford—Preston"
+    },
+    {
+      "code": "12010",
+      "name": "South Shore—St. Margarets"
+    },
+    {
+      "code": "12011",
+      "name": "Sydney—Glace Bay"
+    }
+  ],
+  "New Brunswick": [
+    {
+      "code": "13001",
+      "name": "Acadie—Bathurst"
+    },
+    {
+      "code": "13002",
+      "name": "Beauséjour"
+    },
+    {
+      "code": "13003",
+      "name": "Fredericton—Oromocto"
+    },
+    {
+      "code": "13004",
+      "name": "Fundy Royal"
+    },
+    {
+      "code": "13005",
+      "name": "Madawaska—Restigouche"
+    },
+    {
+      "code": "13006",
+      "name": "Miramichi—Grand Lake"
+    },
+    {
+      "code": "13007",
+      "name": "Moncton—Dieppe"
+    },
+    {
+      "code": "13008",
+      "name": "Saint John—Kennebecasis"
+    },
+    {
+      "code": "13009",
+      "name": "Saint John—St. Croix"
+    },
+    {
+      "code": "13010",
+      "name": "Tobique—Mactaquac"
+    }
+  ],
+  "Quebec": [
+    {
+      "code": "24001",
+      "name": "Abitibi—Baie-James—Nunavik—Eeyou"
+    },
+    {
+      "code": "24002",
+      "name": "Abitibi—Témiscamingue"
+    },
+    {
+      "code": "24003",
+      "name": "Ahuntsic-Cartierville"
+    },
+    {
+      "code": "24004",
+      "name": "Alfred-Pellan"
+    },
+    {
+      "code": "24005",
+      "name": "Argenteuil—La Petite-Nation"
+    },
+    {
+      "code": "24006",
+      "name": "Beauce"
+    },
+    {
+      "code": "24007",
+      "name": "Beauharnois—Salaberry—Soulanges—Huntingdon"
+    },
+    {
+      "code": "24008",
+      "name": "Beauport—Limoilou"
+    },
+    {
+      "code": "24009",
+      "name": "Bécancour—Nicolet—Saurel—Alnôbak"
+    },
+    {
+      "code": "24010",
+      "name": "Bellechasse—Les Etchemins—Lévis"
+    },
+    {
+      "code": "24011",
+      "name": "Beloeil—Chambly"
+    },
+    {
+      "code": "24012",
+      "name": "Berthier—Maskinongé"
+    },
+    {
+      "code": "24013",
+      "name": "Bourassa"
+    },
+    {
+      "code": "24014",
+      "name": "Brome—Missisquoi"
+    },
+    {
+      "code": "24015",
+      "name": "Brossard—Saint-Lambert"
+    },
+    {
+      "code": "24016",
+      "name": "Charlesbourg—Haute-Saint-Charles"
+    },
+    {
+      "code": "24017",
+      "name": "Châteauguay—Les Jardins-de-Napierville"
+    },
+    {
+      "code": "24018",
+      "name": "Chicoutimi—Le Fjord"
+    },
+    {
+      "code": "24019",
+      "name": "Compton—Stanstead"
+    },
+    {
+      "code": "24020",
+      "name": "Côte-du-Sud—Rivière-du-Loup—Kataskomiq—Témiscouata"
+    },
+    {
+      "code": "24021",
+      "name": "Côte-Nord—Kawawachikamach—Nitassinan"
+    },
+    {
+      "code": "24022",
+      "name": "Dorval—Lachine—LaSalle"
+    },
+    {
+      "code": "24023",
+      "name": "Drummond"
+    },
+    {
+      "code": "24024",
+      "name": "Gaspésie—Les Îles-de-la-Madeleine—Listuguj"
+    },
+    {
+      "code": "24025",
+      "name": "Gatineau"
+    },
+    {
+      "code": "24026",
+      "name": "Hochelaga—Rosemont-Est"
+    },
+    {
+      "code": "24027",
+      "name": "Honoré-Mercier"
+    },
+    {
+      "code": "24028",
+      "name": "Hull—Aylmer"
+    },
+    {
+      "code": "24029",
+      "name": "Joliette—Manawan"
+    },
+    {
+      "code": "24030",
+      "name": "Jonquière"
+    },
+    {
+      "code": "24031",
+      "name": "La Pointe-de-l'Île"
+    },
+    {
+      "code": "24032",
+      "name": "La Prairie—Atateken"
+    },
+    {
+      "code": "24033",
+      "name": "Lac-Saint-Jean"
+    },
+    {
+      "code": "24034",
+      "name": "Lac-Saint-Louis"
+    },
+    {
+      "code": "24035",
+      "name": "LaSalle—Émard—Verdun"
+    },
+    {
+      "code": "24036",
+      "name": "Laurentides—Labelle"
+    },
+    {
+      "code": "24037",
+      "name": "Laurier—Sainte-Marie"
+    },
+    {
+      "code": "24038",
+      "name": "Laval—Les Îles"
+    },
+    {
+      "code": "24039",
+      "name": "Les Pays-d'en-Haut"
+    },
+    {
+      "code": "24040",
+      "name": "Lévis—Lotbinière"
+    },
+    {
+      "code": "24041",
+      "name": "Longueuil—Charles-LeMoyne"
+    },
+    {
+      "code": "24042",
+      "name": "Longueuil—Saint-Hubert"
+    },
+    {
+      "code": "24043",
+      "name": "Louis-Hébert"
+    },
+    {
+      "code": "24044",
+      "name": "Louis-Saint-Laurent—Akiawenhrahk"
+    },
+    {
+      "code": "24045",
+      "name": "Marc-Aurèle-Fortin"
+    },
+    {
+      "code": "24046",
+      "name": "Mégantic—L'Érable—Lotbinière"
+    },
+    {
+      "code": "24047",
+      "name": "Mirabel"
+    },
+    {
+      "code": "24048",
+      "name": "Mount Royal"
+    },
+    {
+      "code": "24049",
+      "name": "Mont-Saint-Bruno—L'Acadie"
+    },
+    {
+      "code": "24050",
+      "name": "Montcalm"
+    },
+    {
+      "code": "24051",
+      "name": "Montmorency—Charlevoix"
+    },
+    {
+      "code": "24052",
+      "name": "Notre-Dame-de-Grâce—Westmount"
+    },
+    {
+      "code": "24053",
+      "name": "Outremont"
+    },
+    {
+      "code": "24054",
+      "name": "Papineau"
+    },
+    {
+      "code": "24055",
+      "name": "Pierre-Boucher—Les Patriotes—Verchères"
+    },
+    {
+      "code": "24056",
+      "name": "Pierrefonds—Dollard"
+    },
+    {
+      "code": "24057",
+      "name": "Pontiac—Kitigan Zibi"
+    },
+    {
+      "code": "24058",
+      "name": "Portneuf—Jacques-Cartier"
+    },
+    {
+      "code": "24059",
+      "name": "Québec Centre"
+    },
+    {
+      "code": "24060",
+      "name": "Repentigny"
+    },
+    {
+      "code": "24061",
+      "name": "Richmond—Arthabaska"
+    },
+    {
+      "code": "24062",
+      "name": "Rimouski—La Matapédia"
+    },
+    {
+      "code": "24063",
+      "name": "Rivière-des-Mille-Îles"
+    },
+    {
+      "code": "24064",
+      "name": "Rivière-du-Nord"
+    },
+    {
+      "code": "24065",
+      "name": "Rosemont—La Petite-Patrie"
+    },
+    {
+      "code": "24066",
+      "name": "Saint-Hyacinthe—Bagot—Acton"
+    },
+    {
+      "code": "24067",
+      "name": "Saint-Jean"
+    },
+    {
+      "code": "24068",
+      "name": "Saint-Laurent"
+    },
+    {
+      "code": "24069",
+      "name": "Saint-Léonard—Saint-Michel"
+    },
+    {
+      "code": "24070",
+      "name": "Saint-Maurice—Champlain"
+    },
+    {
+      "code": "24071",
+      "name": "Shefford"
+    },
+    {
+      "code": "24072",
+      "name": "Sherbrooke"
+    },
+    {
+      "code": "24073",
+      "name": "Terrebonne"
+    },
+    {
+      "code": "24074",
+      "name": "Thérèse-De Blainville"
+    },
+    {
+      "code": "24075",
+      "name": "Trois-Rivières"
+    },
+    {
+      "code": "24076",
+      "name": "Vaudreuil"
+    },
+    {
+      "code": "24077",
+      "name": "Ville-Marie—Le Sud-Ouest—Île-des-Sœurs"
+    },
+    {
+      "code": "24078",
+      "name": "Vimy"
+    }
+  ],
+  "Ontario": [
+    {
+      "code": "35001",
+      "name": "Ajax"
+    },
+    {
+      "code": "35002",
+      "name": "Algonquin—Renfrew—Pembroke"
+    },
+    {
+      "code": "35003",
+      "name": "Aurora—Oak Ridges—Richmond Hill"
+    },
+    {
+      "code": "35004",
+      "name": "Barrie South—Innisfil"
+    },
+    {
+      "code": "35005",
+      "name": "Barrie—Springwater—Oro-Medonte"
+    },
+    {
+      "code": "35006",
+      "name": "Bay of Quinte"
+    },
+    {
+      "code": "35007",
+      "name": "Beaches—East York"
+    },
+    {
+      "code": "35008",
+      "name": "Bowmanville—Oshawa North"
+    },
+    {
+      "code": "35009",
+      "name": "Brampton Centre"
+    },
+    {
+      "code": "35010",
+      "name": "Brampton—Chinguacousy Park"
+    },
+    {
+      "code": "35011",
+      "name": "Brampton East"
+    },
+    {
+      "code": "35012",
+      "name": "Brampton North—Caledon"
+    },
+    {
+      "code": "35013",
+      "name": "Brampton South"
+    },
+    {
+      "code": "35014",
+      "name": "Brampton West"
+    },
+    {
+      "code": "35015",
+      "name": "Brantford—Brant South—Six Nations"
+    },
+    {
+      "code": "35016",
+      "name": "Bruce—Grey—Owen Sound"
+    },
+    {
+      "code": "35017",
+      "name": "Burlington"
+    },
+    {
+      "code": "35018",
+      "name": "Burlington North—Milton West"
+    },
+    {
+      "code": "35019",
+      "name": "Cambridge"
+    },
+    {
+      "code": "35020",
+      "name": "Carleton"
+    },
+    {
+      "code": "35021",
+      "name": "Chatham-Kent—Leamington"
+    },
+    {
+      "code": "35022",
+      "name": "Davenport"
+    },
+    {
+      "code": "35023",
+      "name": "Don Valley North"
+    },
+    {
+      "code": "35024",
+      "name": "Don Valley West"
+    },
+    {
+      "code": "35025",
+      "name": "Dufferin—Caledon"
+    },
+    {
+      "code": "35026",
+      "name": "Eglinton—Lawrence"
+    },
+    {
+      "code": "35027",
+      "name": "Elgin—St. Thomas—London South"
+    },
+    {
+      "code": "35028",
+      "name": "Essex"
+    },
+    {
+      "code": "35029",
+      "name": "Etobicoke Centre"
+    },
+    {
+      "code": "35030",
+      "name": "Etobicoke—Lakeshore"
+    },
+    {
+      "code": "35031",
+      "name": "Etobicoke North"
+    },
+    {
+      "code": "35032",
+      "name": "Flamborough—Glanbrook—Brant North"
+    },
+    {
+      "code": "35033",
+      "name": "Guelph"
+    },
+    {
+      "code": "35034",
+      "name": "Haldimand—Norfolk"
+    },
+    {
+      "code": "35035",
+      "name": "Haliburton—Kawartha Lakes"
+    },
+    {
+      "code": "35036",
+      "name": "Hamilton Centre"
+    },
+    {
+      "code": "35037",
+      "name": "Hamilton East—Stoney Creek"
+    },
+    {
+      "code": "35038",
+      "name": "Hamilton Mountain"
+    },
+    {
+      "code": "35039",
+      "name": "Hamilton West—Ancaster—Dundas"
+    },
+    {
+      "code": "35040",
+      "name": "Hastings—Lennox and Addington—Tyendinaga"
+    },
+    {
+      "code": "35041",
+      "name": "Humber River—Black Creek"
+    },
+    {
+      "code": "35042",
+      "name": "Huron—Bruce"
+    },
+    {
+      "code": "35043",
+      "name": "Kanata"
+    },
+    {
+      "code": "35044",
+      "name": "Kapuskasing—Timmins—Mushkegowuk"
+    },
+    {
+      "code": "35045",
+      "name": "Kenora—Kiiwetinoong"
+    },
+    {
+      "code": "35046",
+      "name": "Kingston and the Islands"
+    },
+    {
+      "code": "35047",
+      "name": "King—Vaughan"
+    },
+    {
+      "code": "35048",
+      "name": "Kitchener Centre"
+    },
+    {
+      "code": "35049",
+      "name": "Kitchener—Conestoga"
+    },
+    {
+      "code": "35050",
+      "name": "Kitchener South—Hespeler"
+    },
+    {
+      "code": "35051",
+      "name": "Lanark—Frontenac"
+    },
+    {
+      "code": "35052",
+      "name": "Leeds—Grenville—Thousand Islands—Rideau Lakes"
+    },
+    {
+      "code": "35053",
+      "name": "London Centre"
+    },
+    {
+      "code": "35054",
+      "name": "London—Fanshawe"
+    },
+    {
+      "code": "35055",
+      "name": "London West"
+    },
+    {
+      "code": "35056",
+      "name": "Markham—Stouffville"
+    },
+    {
+      "code": "35057",
+      "name": "Markham—Thornhill"
+    },
+    {
+      "code": "35058",
+      "name": "Markham—Unionville"
+    },
+    {
+      "code": "35059",
+      "name": "Middlesex—London"
+    },
+    {
+      "code": "35060",
+      "name": "Milton East—Halton Hills South"
+    },
+    {
+      "code": "35061",
+      "name": "Mississauga Centre"
+    },
+    {
+      "code": "35062",
+      "name": "Mississauga East—Cooksville"
+    },
+    {
+      "code": "35063",
+      "name": "Mississauga—Erin Mills"
+    },
+    {
+      "code": "35064",
+      "name": "Mississauga—Lakeshore"
+    },
+    {
+      "code": "35065",
+      "name": "Mississauga—Malton"
+    },
+    {
+      "code": "35066",
+      "name": "Mississauga—Streetsville"
+    },
+    {
+      "code": "35067",
+      "name": "Nepean"
+    },
+    {
+      "code": "35068",
+      "name": "Newmarket—Aurora"
+    },
+    {
+      "code": "35069",
+      "name": "New Tecumseth—Gwillimbury"
+    },
+    {
+      "code": "35070",
+      "name": "Niagara Falls—Niagara-on-the-Lake"
+    },
+    {
+      "code": "35071",
+      "name": "Niagara South"
+    },
+    {
+      "code": "35072",
+      "name": "Niagara West"
+    },
+    {
+      "code": "35073",
+      "name": "Nipissing—Timiskaming"
+    },
+    {
+      "code": "35074",
+      "name": "Northumberland—Clarke"
+    },
+    {
+      "code": "35075",
+      "name": "Oakville East"
+    },
+    {
+      "code": "35076",
+      "name": "Oakville West"
+    },
+    {
+      "code": "35077",
+      "name": "Orléans"
+    },
+    {
+      "code": "35078",
+      "name": "Oshawa"
+    },
+    {
+      "code": "35079",
+      "name": "Ottawa Centre"
+    },
+    {
+      "code": "35080",
+      "name": "Ottawa South"
+    },
+    {
+      "code": "35081",
+      "name": "Ottawa—Vanier—Gloucester"
+    },
+    {
+      "code": "35082",
+      "name": "Ottawa West—Nepean"
+    },
+    {
+      "code": "35083",
+      "name": "Oxford"
+    },
+    {
+      "code": "35084",
+      "name": "Parry Sound—Muskoka"
+    },
+    {
+      "code": "35085",
+      "name": "Perth—Wellington"
+    },
+    {
+      "code": "35086",
+      "name": "Peterborough"
+    },
+    {
+      "code": "35087",
+      "name": "Pickering—Brooklin"
+    },
+    {
+      "code": "35088",
+      "name": "Prescott—Russell—Cumberland"
+    },
+    {
+      "code": "35089",
+      "name": "Richmond Hill South"
+    },
+    {
+      "code": "35090",
+      "name": "Sarnia—Lambton—Bkejwanong"
+    },
+    {
+      "code": "35091",
+      "name": "Sault Ste. Marie—Algoma"
+    },
+    {
+      "code": "35092",
+      "name": "Scarborough—Agincourt"
+    },
+    {
+      "code": "35093",
+      "name": "Scarborough Centre—Don Valley East"
+    },
+    {
+      "code": "35094",
+      "name": "Scarborough—Guildwood—Rouge Park"
+    },
+    {
+      "code": "35095",
+      "name": "Scarborough North"
+    },
+    {
+      "code": "35096",
+      "name": "Scarborough Southwest"
+    },
+    {
+      "code": "35097",
+      "name": "Scarborough—Woburn"
+    },
+    {
+      "code": "35098",
+      "name": "Simcoe—Grey"
+    },
+    {
+      "code": "35099",
+      "name": "Simcoe North"
+    },
+    {
+      "code": "35100",
+      "name": "Spadina—Harbourfront"
+    },
+    {
+      "code": "35101",
+      "name": "St. Catharines"
+    },
+    {
+      "code": "35102",
+      "name": "Stormont—Dundas—Glengarry"
+    },
+    {
+      "code": "35103",
+      "name": "Sudbury"
+    },
+    {
+      "code": "35104",
+      "name": "Sudbury East—Manitoulin—Nickel Belt"
+    },
+    {
+      "code": "35105",
+      "name": "Taiaiako'n—Parkdale—High Park"
+    },
+    {
+      "code": "35106",
+      "name": "Thornhill"
+    },
+    {
+      "code": "35107",
+      "name": "Thunder Bay—Rainy River"
+    },
+    {
+      "code": "35108",
+      "name": "Thunder Bay—Superior North"
+    },
+    {
+      "code": "35109",
+      "name": "Toronto Centre"
+    },
+    {
+      "code": "35110",
+      "name": "Toronto—Danforth"
+    },
+    {
+      "code": "35111",
+      "name": "Toronto—St. Paul's"
+    },
+    {
+      "code": "35112",
+      "name": "University—Rosedale"
+    },
+    {
+      "code": "35113",
+      "name": "Vaughan—Woodbridge"
+    },
+    {
+      "code": "35114",
+      "name": "Waterloo"
+    },
+    {
+      "code": "35115",
+      "name": "Wellington—Halton Hills North"
+    },
+    {
+      "code": "35116",
+      "name": "Whitby"
+    },
+    {
+      "code": "35117",
+      "name": "Willowdale"
+    },
+    {
+      "code": "35118",
+      "name": "Windsor—Tecumseh—Lakeshore"
+    },
+    {
+      "code": "35119",
+      "name": "Windsor West"
+    },
+    {
+      "code": "35120",
+      "name": "York Centre"
+    },
+    {
+      "code": "35121",
+      "name": "York—Durham"
+    },
+    {
+      "code": "35122",
+      "name": "York South—Weston—Etobicoke"
+    }
+  ],
+  "Manitoba": [
+    {
+      "code": "46001",
+      "name": "Brandon—Souris"
+    },
+    {
+      "code": "46002",
+      "name": "Churchill—Keewatinook Aski"
+    },
+    {
+      "code": "46003",
+      "name": "Elmwood—Transcona"
+    },
+    {
+      "code": "46004",
+      "name": "Kildonan—St. Paul"
+    },
+    {
+      "code": "46005",
+      "name": "Portage—Lisgar"
+    },
+    {
+      "code": "46006",
+      "name": "Provencher"
+    },
+    {
+      "code": "46007",
+      "name": "Riding Mountain"
+    },
+    {
+      "code": "46008",
+      "name": "St. Boniface—St. Vital"
+    },
+    {
+      "code": "46009",
+      "name": "Selkirk—Interlake—Eastman"
+    },
+    {
+      "code": "46010",
+      "name": "Winnipeg Centre"
+    },
+    {
+      "code": "46011",
+      "name": "Winnipeg North"
+    },
+    {
+      "code": "46012",
+      "name": "Winnipeg South"
+    },
+    {
+      "code": "46013",
+      "name": "Winnipeg South Centre"
+    },
+    {
+      "code": "46014",
+      "name": "Winnipeg West"
+    }
+  ],
+  "Saskatchewan": [
+    {
+      "code": "47001",
+      "name": "Battlefords—Lloydminster—Meadow Lake"
+    },
+    {
+      "code": "47002",
+      "name": "Carlton Trail—Eagle Creek"
+    },
+    {
+      "code": "47003",
+      "name": "Desnethé—Missinippi—Churchill River"
+    },
+    {
+      "code": "47004",
+      "name": "Moose Jaw—Lake Centre—Lanigan"
+    },
+    {
+      "code": "47005",
+      "name": "Prince Albert"
+    },
+    {
+      "code": "47006",
+      "name": "Regina—Lewvan"
+    },
+    {
+      "code": "47007",
+      "name": "Regina—Qu'Appelle"
+    },
+    {
+      "code": "47008",
+      "name": "Regina—Wascana"
+    },
+    {
+      "code": "47009",
+      "name": "Saskatoon South"
+    },
+    {
+      "code": "47010",
+      "name": "Saskatoon—University"
+    },
+    {
+      "code": "47011",
+      "name": "Saskatoon West"
+    },
+    {
+      "code": "47012",
+      "name": "Souris—Moose Mountain"
+    },
+    {
+      "code": "47013",
+      "name": "Swift Current—Grasslands—Kindersley"
+    },
+    {
+      "code": "47014",
+      "name": "Yorkton—Melville"
+    }
+  ],
+  "Alberta": [
+    {
+      "code": "48001",
+      "name": "Airdrie—Cochrane"
+    },
+    {
+      "code": "48002",
+      "name": "Battle River—Crowfoot"
+    },
+    {
+      "code": "48003",
+      "name": "Bow River"
+    },
+    {
+      "code": "48004",
+      "name": "Calgary Centre"
+    },
+    {
+      "code": "48005",
+      "name": "Calgary Confederation"
+    },
+    {
+      "code": "48006",
+      "name": "Calgary Crowfoot"
+    },
+    {
+      "code": "48007",
+      "name": "Calgary East"
+    },
+    {
+      "code": "48008",
+      "name": "Calgary Heritage"
+    },
+    {
+      "code": "48009",
+      "name": "Calgary McKnight"
+    },
+    {
+      "code": "48010",
+      "name": "Calgary Midnapore"
+    },
+    {
+      "code": "48011",
+      "name": "Calgary Nose Hill"
+    },
+    {
+      "code": "48012",
+      "name": "Calgary Shepard"
+    },
+    {
+      "code": "48013",
+      "name": "Calgary Signal Hill"
+    },
+    {
+      "code": "48014",
+      "name": "Calgary Skyview"
+    },
+    {
+      "code": "48015",
+      "name": "Edmonton Centre"
+    },
+    {
+      "code": "48016",
+      "name": "Edmonton Gateway"
+    },
+    {
+      "code": "48017",
+      "name": "Edmonton Griesbach"
+    },
+    {
+      "code": "48018",
+      "name": "Edmonton Manning"
+    },
+    {
+      "code": "48019",
+      "name": "Edmonton Northwest"
+    },
+    {
+      "code": "48020",
+      "name": "Edmonton Riverbend"
+    },
+    {
+      "code": "48021",
+      "name": "Edmonton Southeast"
+    },
+    {
+      "code": "48022",
+      "name": "Edmonton Strathcona"
+    },
+    {
+      "code": "48023",
+      "name": "Edmonton West"
+    },
+    {
+      "code": "48024",
+      "name": "Foothills"
+    },
+    {
+      "code": "48025",
+      "name": "Fort McMurray—Cold Lake"
+    },
+    {
+      "code": "48026",
+      "name": "Grande Prairie"
+    },
+    {
+      "code": "48027",
+      "name": "Lakeland"
+    },
+    {
+      "code": "48028",
+      "name": "Leduc—Wetaskiwin"
+    },
+    {
+      "code": "48029",
+      "name": "Lethbridge"
+    },
+    {
+      "code": "48030",
+      "name": "Medicine Hat—Cardston—Warner"
+    },
+    {
+      "code": "48031",
+      "name": "Parkland"
+    },
+    {
+      "code": "48032",
+      "name": "Peace River—Westlock"
+    },
+    {
+      "code": "48033",
+      "name": "Ponoka—Didsbury"
+    },
+    {
+      "code": "48034",
+      "name": "Red Deer"
+    },
+    {
+      "code": "48035",
+      "name": "Sherwood Park—Fort Saskatchewan"
+    },
+    {
+      "code": "48036",
+      "name": "St. Albert—Sturgeon River"
+    },
+    {
+      "code": "48037",
+      "name": "Yellowhead"
+    }
+  ],
+  "British Columbia": [
+    {
+      "code": "59001",
+      "name": "Abbotsford—South Langley"
+    },
+    {
+      "code": "59002",
+      "name": "Burnaby Central"
+    },
+    {
+      "code": "59003",
+      "name": "Burnaby North—Seymour"
+    },
+    {
+      "code": "59004",
+      "name": "Cariboo—Prince George"
+    },
+    {
+      "code": "59005",
+      "name": "Chilliwack—Hope"
+    },
+    {
+      "code": "59006",
+      "name": "Cloverdale—Langley City"
+    },
+    {
+      "code": "59007",
+      "name": "Columbia—Kootenay—Southern Rockies"
+    },
+    {
+      "code": "59008",
+      "name": "Coquitlam—Port Coquitlam"
+    },
+    {
+      "code": "59009",
+      "name": "Courtenay—Alberni"
+    },
+    {
+      "code": "59010",
+      "name": "Cowichan—Malahat—Langford"
+    },
+    {
+      "code": "59011",
+      "name": "Delta"
+    },
+    {
+      "code": "59012",
+      "name": "Esquimalt—Saanich—Sooke"
+    },
+    {
+      "code": "59013",
+      "name": "Fleetwood—Port Kells"
+    },
+    {
+      "code": "59014",
+      "name": "Kamloops—Shuswap—Central Rockies"
+    },
+    {
+      "code": "59015",
+      "name": "Kamloops—Thompson—Nicola"
+    },
+    {
+      "code": "59016",
+      "name": "Kelowna"
+    },
+    {
+      "code": "59017",
+      "name": "Langley Township—Fraser Heights"
+    },
+    {
+      "code": "59018",
+      "name": "Mission—Matsqui—Abbotsford"
+    },
+    {
+      "code": "59019",
+      "name": "Nanaimo—Ladysmith"
+    },
+    {
+      "code": "59020",
+      "name": "New Westminster—Burnaby—Maillardville"
+    },
+    {
+      "code": "59021",
+      "name": "North Island—Powell River"
+    },
+    {
+      "code": "59022",
+      "name": "North Vancouver—Capilano"
+    },
+    {
+      "code": "59023",
+      "name": "Okanagan Lake West—South Kelowna"
+    },
+    {
+      "code": "59024",
+      "name": "Pitt Meadows—Maple Ridge"
+    },
+    {
+      "code": "59025",
+      "name": "Port Moody—Coquitlam"
+    },
+    {
+      "code": "59026",
+      "name": "Prince George—Peace River—Northern Rockies"
+    },
+    {
+      "code": "59027",
+      "name": "Richmond Centre—Marpole"
+    },
+    {
+      "code": "59028",
+      "name": "Richmond East—Steveston"
+    },
+    {
+      "code": "59029",
+      "name": "Saanich—Gulf Islands"
+    },
+    {
+      "code": "59030",
+      "name": "Similkameen—South Okanagan—West Kootenay"
+    },
+    {
+      "code": "59031",
+      "name": "Skeena—Bulkley Valley"
+    },
+    {
+      "code": "59032",
+      "name": "South Surrey—White Rock"
+    },
+    {
+      "code": "59033",
+      "name": "Surrey Centre"
+    },
+    {
+      "code": "59034",
+      "name": "Surrey Newton"
+    },
+    {
+      "code": "59035",
+      "name": "Vancouver Centre"
+    },
+    {
+      "code": "59036",
+      "name": "Vancouver East"
+    },
+    {
+      "code": "59037",
+      "name": "Vancouver Fraserview—South Burnaby"
+    },
+    {
+      "code": "59038",
+      "name": "Vancouver Granville"
+    },
+    {
+      "code": "59039",
+      "name": "Vancouver Kingsway"
+    },
+    {
+      "code": "59040",
+      "name": "Vancouver Quadra"
+    },
+    {
+      "code": "59041",
+      "name": "Vernon—Lake Country—Monashee"
+    },
+    {
+      "code": "59042",
+      "name": "Victoria"
+    },
+    {
+      "code": "59043",
+      "name": "West Vancouver—Sunshine Coast—Sea to Sky Country"
+    }
+  ],
+  "Yukon": [
+    {
+      "code": "60001",
+      "name": "Yukon"
+    }
+  ],
+  "Northwest Territories": [
+    {
+      "code": "61001",
+      "name": "Northwest Territories"
+    }
+  ],
+  "Nunavut": [
+    {
+      "code": "62001",
+      "name": "Nunavut"
+    }
+  ]
+}

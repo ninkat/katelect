@@ -1,0 +1,6945 @@
+{
+  "Newfoundland and Labrador": [
+    {
+      "code": "10001",
+      "name": "Avalon",
+      "results": {
+        "2019": {
+          "lpc": 47.3,
+          "cpc": 30.6,
+          "ndp": 17.2,
+          "ppc": 0.1,
+          "gpc": 4.8
+        },
+        "2021": {
+          "lpc": 50.9,
+          "cpc": 33.0,
+          "ndp": 14.3,
+          "ppc": 1.8
+        }
+      }
+    },
+    {
+      "code": "10002",
+      "name": "Cape Spear",
+      "results": {
+        "2019": {
+          "lpc": 48.6,
+          "cpc": 19.6,
+          "ndp": 28.7,
+          "ppc": 0.7,
+          "gpc": 2.2
+        },
+        "2021": {
+          "lpc": 54.7,
+          "cpc": 20.4,
+          "ndp": 23.1,
+          "ppc": 1.8
+        }
+      }
+    },
+    {
+      "code": "10003",
+      "name": "Central Newfoundland",
+      "results": {
+        "2019": {
+          "lpc": 48.3,
+          "cpc": 35.3,
+          "ndp": 12.4,
+          "gpc": 4.0
+        },
+        "2021": {
+          "lpc": 46.0,
+          "cpc": 46.9,
+          "ndp": 7.1
+        }
+      }
+    },
+    {
+      "code": "10004",
+      "name": "Labrador",
+      "results": {
+        "2019": {
+          "lpc": 42.5,
+          "cpc": 31.1,
+          "ndp": 24.5,
+          "gpc": 2.0
+        },
+        "2021": {
+          "lpc": 42.7,
+          "cpc": 30.4,
+          "ndp": 23.8,
+          "ppc": 3.2
+        }
+      }
+    },
+    {
+      "code": "10005",
+      "name": "Long Range Mountains",
+      "results": {
+        "2019": {
+          "lpc": 47.4,
+          "cpc": 28.3,
+          "ndp": 19.8,
+          "gpc": 3.5
+        },
+        "2021": {
+          "lpc": 44.4,
+          "cpc": 39.4,
+          "ndp": 11.9,
+          "ppc": 4.3
+        }
+      }
+    },
+    {
+      "code": "10006",
+      "name": "St. John's East",
+      "results": {
+        "2019": {
+          "lpc": 33.7,
+          "cpc": 17.8,
+          "ndp": 46.6,
+          "gpc": 1.9
+        },
+        "2021": {
+          "lpc": 45.1,
+          "cpc": 18.1,
+          "ndp": 34.8,
+          "ppc": 1.9
+        }
+      }
+    },
+    {
+      "code": "10007",
+      "name": "Terra Nova—The Peninsulas",
+      "results": {
+        "2019": {
+          "lpc": 46.3,
+          "cpc": 39.0,
+          "ndp": 11.7,
+          "gpc": 3.0
+        },
+        "2021": {
+          "lpc": 47.3,
+          "cpc": 40.4,
+          "ndp": 8.3,
+          "ppc": 4.0
+        }
+      }
+    }
+  ],
+  "Prince Edward Island": [
+    {
+      "code": "11001",
+      "name": "Cardigan",
+      "results": {
+        "2019": {
+          "lpc": 49.3,
+          "cpc": 29.1,
+          "ndp": 6.6,
+          "gpc": 13.8
+        },
+        "2021": {
+          "lpc": 50.6,
+          "cpc": 30.9,
+          "ndp": 9.8,
+          "gpc": 4.8,
+          "ppc": 3.3
+        }
+      }
+    },
+    {
+      "code": "11002",
+      "name": "Charlottetown",
+      "results": {
+        "2019": {
+          "lpc": 44.3,
+          "cpc": 20.3,
+          "ndp": 11.2,
+          "gpc": 23.3
+        },
+        "2021": {
+          "lpc": 46.7,
+          "cpc": 31.1,
+          "ndp": 10.7,
+          "gpc": 9.6,
+          "ppc": 1.9
+        }
+      }
+    },
+    {
+      "code": "11003",
+      "name": "Egmont",
+      "results": {
+        "2019": {
+          "lpc": 40.0,
+          "cpc": 33.9,
+          "ndp": 6.1,
+          "gpc": 20.1
+        },
+        "2021": {
+          "lpc": 45.9,
+          "cpc": 31.0,
+          "ndp": 8.7,
+          "gpc": 9.4,
+          "ppc": 5.0
+        }
+      }
+    },
+    {
+      "code": "11004",
+      "name": "Malpeque",
+      "results": {
+        "2019": {
+          "lpc": 41.4,
+          "cpc": 25.7,
+          "gpc": 26.4,
+          "ndp": 6.6
+        },
+        "2021": {
+          "lpc": 42.0,
+          "cpc": 33.1,
+          "gpc": 14.0,
+          "ndp": 8.0,
+          "ppc": 2.8
+        }
+      }
+    }
+  ],
+  "Nova Scotia": [
+    {
+      "code": "12001",
+      "name": "Acadie—Annapolis",
+      "results": {
+        "2019": {
+          "cpc": 39.8,
+          "lpc": 36.3,
+          "ndp": 10.4,
+          "gpc": 12.6
+        },
+        "2021": {
+          "cpc": 51.3,
+          "lpc": 30.7,
+          "ndp": 12.7,
+          "ppc": 5.3
+        }
+      }
+    },
+    {
+      "code": "12002",
+      "name": "Cape Breton—Canso—Antigonish",
+      "results": {
+        "2019": {
+          "lpc": 41.4,
+          "cpc": 30.9,
+          "ndp": 14.0,
+          "ppc": 1.8,
+          "gpc": 8.0
+        },
+        "2021": {
+          "lpc": 45.4,
+          "cpc": 35.1,
+          "ndp": 14.7,
+          "ppc": 4.0,
+          "gpc": 0.5
+        }
+      }
+    },
+    {
+      "code": "12003",
+      "name": "Central Nova",
+      "results": {
+        "2019": {
+          "lpc": 44.2,
+          "cpc": 29.4,
+          "ndp": 14.3,
+          "ppc": 2.2,
+          "gpc": 9.3
+        },
+        "2021": {
+          "lpc": 44.3,
+          "cpc": 32.8,
+          "ndp": 16.1,
+          "ppc": 4.0,
+          "gpc": 1.5
+        }
+      }
+    },
+    {
+      "code": "12004",
+      "name": "Cumberland—Colchester",
+      "results": {
+        "2019": {
+          "cpc": 35.7,
+          "lpc": 36.7,
+          "ndp": 12.0,
+          "gpc": 13.2,
+          "ppc": 1.3
+        },
+        "2021": {
+          "cpc": 46.0,
+          "lpc": 34.2,
+          "ndp": 12.3,
+          "gpc": 2.6,
+          "ppc": 4.2
+        }
+      }
+    },
+    {
+      "code": "12005",
+      "name": "Dartmouth—Cole Harbour",
+      "results": {
+        "2019": {
+          "lpc": 44.5,
+          "cpc": 16.8,
+          "ndp": 27.1,
+          "ppc": 1.7,
+          "gpc": 10.0
+        },
+        "2021": {
+          "lpc": 51.5,
+          "cpc": 2.9,
+          "ndp": 33.0,
+          "ppc": 9.7,
+          "gpc": 2.9
+        }
+      }
+    },
+    {
+      "code": "12006",
+      "name": "Halifax",
+      "results": {
+        "2019": {
+          "lpc": 42.0,
+          "ndp": 30.5,
+          "cpc": 11.5,
+          "gpc": 14.5,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 42.2,
+          "ndp": 40.3,
+          "cpc": 12.7,
+          "gpc": 2.2,
+          "ppc": 2.1
+        }
+      }
+    },
+    {
+      "code": "12007",
+      "name": "Halifax West",
+      "results": {
+        "2019": {
+          "lpc": 48.3,
+          "cpc": 18.1,
+          "ndp": 20.4,
+          "gpc": 12.5,
+          "ppc": 0.4
+        },
+        "2021": {
+          "lpc": 47.6,
+          "cpc": 21.5,
+          "ndp": 26.0,
+          "gpc": 2.4,
+          "ppc": 2.3
+        }
+      }
+    },
+    {
+      "code": "12008",
+      "name": "Kings—Hants",
+      "results": {
+        "2019": {
+          "lpc": 42.8,
+          "cpc": 25.5,
+          "ndp": 16.9,
+          "ppc": 1.5,
+          "gpc": 12.7
+        },
+        "2021": {
+          "lpc": 44.4,
+          "cpc": 30.2,
+          "ndp": 18.9,
+          "ppc": 4.5,
+          "gpc": 1.9
+        }
+      }
+    },
+    {
+      "code": "12009",
+      "name": "Sackville—Bedford—Preston",
+      "results": {
+        "2019": {
+          "lpc": 44.3,
+          "cpc": 22.0,
+          "ndp": 21.5,
+          "ppc": 1.0,
+          "gpc": 11.2
+        },
+        "2021": {
+          "lpc": 44.7,
+          "cpc": 25.0,
+          "ndp": 24.8,
+          "ppc": 3.5,
+          "gpc": 2.0
+        }
+      }
+    },
+    {
+      "code": "12010",
+      "name": "South Shore—St. Margarets",
+      "results": {
+        "2019": {
+          "lpc": 41.0,
+          "cpc": 29.7,
+          "ndp": 15.4,
+          "gpc": 11.2,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 35.6,
+          "cpc": 43.4,
+          "ndp": 18.2,
+          "gpc": 2.8
+        }
+      }
+    },
+    {
+      "code": "12011",
+      "name": "Sydney—Glace Bay",
+      "results": {
+        "2019": {
+          "lpc": 31.7,
+          "cpc": 30.3,
+          "ndp": 20.4,
+          "ppc": 0.4,
+          "gpc": 5.3
+        },
+        "2021": {
+          "lpc": 41.9,
+          "cpc": 34.2,
+          "ndp": 19.8,
+          "ppc": 3.3,
+          "gpc": 0.6
+        }
+      }
+    }
+  ],
+  "New Brunswick": [
+    {
+      "code": "13001",
+      "name": "Acadie—Bathurst",
+      "results": {
+        "2019": {
+          "lpc": 55.2,
+          "cpc": 21.3,
+          "ndp": 14.3,
+          "gpc": 8.9
+        },
+        "2021": {
+          "lpc": 65.0,
+          "cpc": 13.9,
+          "ndp": 11.3,
+          "ppc": 5.9,
+          "gpc": 2.8
+        }
+      }
+    },
+    {
+      "code": "13002",
+      "name": "Beauséjour",
+      "results": {
+        "2019": {
+          "lpc": 46.5,
+          "cpc": 17.6,
+          "ndp": 7.3,
+          "gpc": 26.7,
+          "ppc": 2.0
+        },
+        "2021": {
+          "lpc": 55.5,
+          "cpc": 19.4,
+          "ndp": 11.0,
+          "gpc": 5.7,
+          "ppc": 7.6
+        }
+      }
+    },
+    {
+      "code": "13003",
+      "name": "Fredericton—Oromocto",
+      "results": {
+        "2019": {
+          "lpc": 28.8,
+          "cpc": 28.9,
+          "gpc": 33.7,
+          "ndp": 6.2,
+          "ppc": 1.5
+        },
+        "2021": {
+          "lpc": 37.8,
+          "cpc": 34.5,
+          "gpc": 12.9,
+          "ndp": 13.0,
+          "ppc": 0.3
+        }
+      }
+    },
+    {
+      "code": "13004",
+      "name": "Fundy Royal",
+      "results": {
+        "2019": {
+          "cpc": 44.4,
+          "lpc": 25.4,
+          "ndp": 10.1,
+          "gpc": 16.1,
+          "ppc": 2.8
+        },
+        "2021": {
+          "cpc": 46.3,
+          "lpc": 25.6,
+          "ndp": 14.5,
+          "gpc": 5.0,
+          "ppc": 8.6
+        }
+      }
+    },
+    {
+      "code": "13005",
+      "name": "Madawaska—Restigouche",
+      "results": {
+        "2019": {
+          "lpc": 49.6,
+          "cpc": 29.8,
+          "ndp": 6.4,
+          "ppc": 0.4,
+          "gpc": 13.8
+        },
+        "2021": {
+          "lpc": 52.0,
+          "cpc": 27.8,
+          "ndp": 6.2,
+          "ppc": 7.5,
+          "gpc": 2.7
+        }
+      }
+    },
+    {
+      "code": "13006",
+      "name": "Miramichi—Grand Lake",
+      "results": {
+        "2019": {
+          "lpc": 34.3,
+          "cpc": 37.4,
+          "ndp": 8.1,
+          "gpc": 12.6,
+          "ppc": 3.4
+        },
+        "2021": {
+          "lpc": 37.0,
+          "cpc": 45.5,
+          "ndp": 7.4,
+          "gpc": 4.7,
+          "ppc": 5.4
+        }
+      }
+    },
+    {
+      "code": "13007",
+      "name": "Moncton—Dieppe",
+      "results": {
+        "2019": {
+          "lpc": 44.2,
+          "cpc": 22.8,
+          "ndp": 11.8,
+          "gpc": 17.5,
+          "ppc": 2.4
+        },
+        "2021": {
+          "lpc": 50.0,
+          "cpc": 22.6,
+          "ndp": 16.8,
+          "gpc": 4.3,
+          "ppc": 6.3
+        }
+      }
+    },
+    {
+      "code": "13008",
+      "name": "Saint John—Kennebecasis",
+      "results": {
+        "2019": {
+          "lpc": 36.1,
+          "cpc": 37.1,
+          "ndp": 11.9,
+          "ppc": 1.9,
+          "gpc": 10.3
+        },
+        "2021": {
+          "lpc": 42.6,
+          "cpc": 36.4,
+          "ndp": 13.2,
+          "ppc": 4.9,
+          "gpc": 2.9
+        }
+      }
+    },
+    {
+      "code": "13009",
+      "name": "Saint John—St. Croix",
+      "results": {
+        "2019": {
+          "cpc": 46.7,
+          "lpc": 27.5,
+          "ndp": 9.1,
+          "ppc": 2.9,
+          "gpc": 12.7
+        },
+        "2021": {
+          "cpc": 47.0,
+          "lpc": 28.1,
+          "ndp": 13.1,
+          "ppc": 7.6,
+          "gpc": 4.0
+        }
+      }
+    },
+    {
+      "code": "13010",
+      "name": "Tobique—Mactaquac",
+      "results": {
+        "2019": {
+          "cpc": 52.0,
+          "lpc": 22.4,
+          "ndp": 7.7,
+          "gpc": 15.3,
+          "ppc": 2.4
+        },
+        "2021": {
+          "cpc": 52.8,
+          "lpc": 22.6,
+          "ndp": 11.5,
+          "gpc": 4.9,
+          "ppc": 7.2
+        }
+      }
+    }
+  ],
+  "Quebec": [
+    {
+      "code": "24001",
+      "name": "Abitibi—Baie-James—Nunavik—Eeyou",
+      "results": {
+        "2019": {
+          "lpc": 28.3,
+          "bq": 36.1,
+          "cpc": 16.6,
+          "ndp": 13.0,
+          "gpc": 3.6,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 26.0,
+          "bq": 37.9,
+          "cpc": 15.9,
+          "ndp": 11.7,
+          "gpc": 1.6,
+          "ppc": 3.8
+        }
+      }
+    },
+    {
+      "code": "24002",
+      "name": "Abitibi—Témiscamingue",
+      "results": {
+        "2019": {
+          "bq": 45.5,
+          "lpc": 24.8,
+          "cpc": 15.0,
+          "ndp": 10.2,
+          "gpc": 3.6,
+          "ppc": 1.0
+        },
+        "2021": {
+          "bq": 50.6,
+          "lpc": 24.1,
+          "cpc": 11.7,
+          "ndp": 6.1,
+          "gpc": 1.6,
+          "ppc": 3.4
+        }
+      }
+    },
+    {
+      "code": "24003",
+      "name": "Ahuntsic-Cartierville",
+      "results": {
+        "2019": {
+          "lpc": 51.9,
+          "cpc": 7.0,
+          "bq": 22.4,
+          "ndp": 11.5,
+          "gpc": 6.2,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 51.9,
+          "cpc": 8.2,
+          "bq": 22.6,
+          "ndp": 11.7,
+          "gpc": 3.0,
+          "ppc": 2.6
+        }
+      }
+    },
+    {
+      "code": "24004",
+      "name": "Alfred-Pellan",
+      "results": {
+        "2019": {
+          "lpc": 47.5,
+          "bq": 29.3,
+          "cpc": 10.5,
+          "ndp": 7.6,
+          "gpc": 3.7,
+          "ppc": 0.9
+        },
+        "2021": {
+          "lpc": 47.7,
+          "bq": 26.6,
+          "cpc": 13.3,
+          "ndp": 7.8,
+          "gpc": 1.7,
+          "ppc": 0.3
+        }
+      }
+    },
+    {
+      "code": "24005",
+      "name": "Argenteuil—La Petite-Nation",
+      "results": {
+        "2019": {
+          "lpc": 39.7,
+          "bq": 33.4,
+          "cpc": 12.6,
+          "ndp": 8.1,
+          "ppc": 1.4,
+          "gpc": 4.7
+        },
+        "2021": {
+          "lpc": 39.2,
+          "bq": 32.8,
+          "cpc": 13.5,
+          "ndp": 7.1,
+          "ppc": 5.8,
+          "gpc": 0.4
+        }
+      }
+    },
+    {
+      "code": "24006",
+      "name": "Beauce",
+      "results": {
+        "2019": {
+          "cpc": 38.5,
+          "lpc": 11.7,
+          "bq": 14.2,
+          "ppc": 28.3,
+          "gpc": 2.5,
+          "ndp": 3.1
+        },
+        "2021": {
+          "cpc": 48.3,
+          "lpc": 12.3,
+          "bq": 15.2,
+          "ppc": 18.2,
+          "gpc": 0.9,
+          "ndp": 2.9
+        }
+      }
+    },
+    {
+      "code": "24007",
+      "name": "Beauharnois—Salaberry—Soulanges—Huntingdon",
+      "results": {
+        "2019": {
+          "bq": 48.3,
+          "lpc": 29.5,
+          "cpc": 9.3,
+          "ndp": 8.1,
+          "ppc": 1.2,
+          "gpc": 3.2
+        },
+        "2021": {
+          "bq": 48.3,
+          "lpc": 27.3,
+          "cpc": 11.8,
+          "ndp": 7.4,
+          "ppc": 3.3,
+          "gpc": 0.2
+        }
+      }
+    },
+    {
+      "code": "24008",
+      "name": "Beauport—Limoilou",
+      "results": {
+        "2019": {
+          "cpc": 27.2,
+          "lpc": 25.2,
+          "bq": 30.2,
+          "ndp": 10.6,
+          "gpc": 4.1,
+          "ppc": 2.1
+        },
+        "2021": {
+          "cpc": 30.5,
+          "lpc": 24.6,
+          "bq": 31.1,
+          "ndp": 9.7,
+          "gpc": 2.0,
+          "ppc": 0.3
+        }
+      }
+    },
+    {
+      "code": "24009",
+      "name": "Bécancour—Nicolet—Saurel—Alnôbak",
+      "results": {
+        "2019": {
+          "bq": 56.7,
+          "lpc": 17.8,
+          "cpc": 16.1,
+          "ndp": 5.2,
+          "gpc": 3.2,
+          "ppc": 0.9
+        },
+        "2021": {
+          "bq": 54.8,
+          "lpc": 16.9,
+          "cpc": 16.8,
+          "ndp": 5.1,
+          "gpc": 1.5,
+          "ppc": 2.4
+        }
+      }
+    },
+    {
+      "code": "24010",
+      "name": "Bellechasse—Les Etchemins—Lévis",
+      "results": {
+        "2019": {
+          "cpc": 51.3,
+          "lpc": 16.0,
+          "bq": 22.4,
+          "ndp": 5.0,
+          "gpc": 3.0,
+          "ppc": 2.0
+        },
+        "2021": {
+          "cpc": 52.0,
+          "lpc": 15.5,
+          "bq": 22.8,
+          "ndp": 4.9,
+          "gpc": 1.4
+        }
+      }
+    },
+    {
+      "code": "24011",
+      "name": "Beloeil—Chambly",
+      "results": {
+        "2019": {
+          "bq": 50.8,
+          "lpc": 22.6,
+          "cpc": 6.1,
+          "ndp": 14.8,
+          "gpc": 4.7,
+          "ppc": 0.7
+        },
+        "2021": {
+          "bq": 53.5,
+          "lpc": 23.4,
+          "cpc": 8.4,
+          "ndp": 8.5,
+          "gpc": 2.0,
+          "ppc": 2.0
+        }
+      }
+    },
+    {
+      "code": "24012",
+      "name": "Berthier—Maskinongé",
+      "results": {
+        "2019": {
+          "bq": 38.4,
+          "lpc": 14.0,
+          "ndp": 34.0,
+          "cpc": 10.3,
+          "ppc": 0.8,
+          "gpc": 1.9
+        },
+        "2021": {
+          "bq": 35.9,
+          "lpc": 15.4,
+          "ndp": 32.7,
+          "cpc": 10.9,
+          "ppc": 2.6,
+          "gpc": 1.0
+        }
+      }
+    },
+    {
+      "code": "24013",
+      "name": "Bourassa",
+      "results": {
+        "2019": {
+          "lpc": 57.6,
+          "bq": 22.4,
+          "cpc": 7.2,
+          "ndp": 7.9,
+          "gpc": 3.3,
+          "ppc": 0.9
+        },
+        "2021": {
+          "lpc": 60.4,
+          "bq": 18.7,
+          "cpc": 7.0,
+          "ndp": 8.0,
+          "gpc": 1.8,
+          "ppc": 3.7
+        }
+      }
+    },
+    {
+      "code": "24014",
+      "name": "Brome—Missisquoi",
+      "results": {
+        "2019": {
+          "lpc": 38.2,
+          "cpc": 12.5,
+          "bq": 34.4,
+          "ndp": 8.0,
+          "gpc": 5.4,
+          "ppc": 0.7
+        },
+        "2021": {
+          "lpc": 35.0,
+          "cpc": 16.2,
+          "bq": 34.6,
+          "ndp": 6.2,
+          "gpc": 2.4,
+          "ppc": 3.2
+        }
+      }
+    },
+    {
+      "code": "24015",
+      "name": "Brossard—Saint-Lambert",
+      "results": {
+        "2019": {
+          "lpc": 53.9,
+          "cpc": 10.8,
+          "bq": 19.6,
+          "ndp": 9.5,
+          "ppc": 0.9,
+          "gpc": 5.2
+        },
+        "2021": {
+          "lpc": 54.1,
+          "cpc": 12.0,
+          "bq": 19.9,
+          "ndp": 10.4,
+          "ppc": 2.5
+        }
+      }
+    },
+    {
+      "code": "24016",
+      "name": "Charlesbourg—Haute-Saint-Charles",
+      "results": {
+        "2019": {
+          "cpc": 38.4,
+          "lpc": 21.3,
+          "bq": 27.0,
+          "ndp": 7.5,
+          "gpc": 3.4,
+          "ppc": 2.3
+        },
+        "2021": {
+          "cpc": 45.0,
+          "lpc": 19.7,
+          "bq": 24.6,
+          "ndp": 5.9,
+          "gpc": 1.7,
+          "ppc": 2.2
+        }
+      }
+    },
+    {
+      "code": "24017",
+      "name": "Châteauguay—Les Jardins-de-Napierville",
+      "results": {
+        "2019": {
+          "lpc": 38.0,
+          "bq": 37.0,
+          "cpc": 11.5,
+          "ndp": 7.8,
+          "ppc": 1.1,
+          "gpc": 3.7
+        },
+        "2021": {
+          "lpc": 36.5,
+          "bq": 36.6,
+          "cpc": 12.2,
+          "ndp": 7.8,
+          "ppc": 3.8,
+          "gpc": 1.5
+        }
+      }
+    },
+    {
+      "code": "24018",
+      "name": "Chicoutimi—Le Fjord",
+      "results": {
+        "2019": {
+          "cpc": 35.7,
+          "lpc": 16.7,
+          "bq": 35.0,
+          "ndp": 8.1,
+          "gpc": 3.1,
+          "ppc": 0.9
+        },
+        "2021": {
+          "cpc": 40.4,
+          "lpc": 18.2,
+          "bq": 34.1,
+          "ndp": 4.7,
+          "gpc": 1.2,
+          "ppc": 1.4
+        }
+      }
+    },
+    {
+      "code": "24019",
+      "name": "Compton—Stanstead",
+      "results": {
+        "2019": {
+          "lpc": 37.1,
+          "bq": 31.7,
+          "cpc": 14.5,
+          "ndp": 9.9,
+          "gpc": 5.2,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 36.7,
+          "bq": 30.5,
+          "cpc": 17.4,
+          "ndp": 7.5,
+          "gpc": 2.8,
+          "ppc": 3.8
+        }
+      }
+    },
+    {
+      "code": "24020",
+      "name": "Côte-du-Sud—Rivière-du-Loup—Kataskomiq—Témiscouata",
+      "results": {
+        "2019": {
+          "cpc": 37.3,
+          "lpc": 17.2,
+          "bq": 32.9,
+          "ndp": 9.8,
+          "gpc": 2.0,
+          "ppc": 0.8
+        },
+        "2021": {
+          "cpc": 44.9,
+          "lpc": 19.1,
+          "bq": 29.8,
+          "ndp": 3.4,
+          "ppc": 0.4
+        }
+      }
+    },
+    {
+      "code": "24021",
+      "name": "Côte-Nord—Kawawachikamach—Nitassinan",
+      "results": {
+        "2019": {
+          "bq": 53.9,
+          "cpc": 19.2,
+          "lpc": 19.3,
+          "ndp": 3.7,
+          "gpc": 3.2,
+          "ppc": 0.7
+        },
+        "2021": {
+          "bq": 52.6,
+          "cpc": 21.8,
+          "lpc": 18.7,
+          "ndp": 4.3
+        }
+      }
+    },
+    {
+      "code": "24022",
+      "name": "Dorval—Lachine—LaSalle",
+      "results": {
+        "2019": {
+          "lpc": 52.7,
+          "cpc": 10.5,
+          "bq": 17.2,
+          "ndp": 11.9,
+          "gpc": 5.6,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 52.2,
+          "cpc": 11.9,
+          "bq": 15.7,
+          "ndp": 13.1,
+          "gpc": 2.8,
+          "ppc": 4.2
+        }
+      }
+    },
+    {
+      "code": "24023",
+      "name": "Drummond",
+      "results": {
+        "2019": {
+          "bq": 44.8,
+          "cpc": 16.6,
+          "lpc": 17.4,
+          "ndp": 15.9,
+          "gpc": 3.4,
+          "ppc": 1.0
+        },
+        "2021": {
+          "bq": 46.6,
+          "cpc": 17.9,
+          "lpc": 18.8,
+          "ndp": 11.2
+        }
+      }
+    },
+    {
+      "code": "24024",
+      "name": "Gaspésie—Les Îles-de-la-Madeleine—Listuguj",
+      "results": {
+        "2019": {
+          "lpc": 41.7,
+          "bq": 42.0,
+          "cpc": 7.7,
+          "ndp": 4.5,
+          "ppc": 0.5,
+          "gpc": 2.8
+        },
+        "2021": {
+          "lpc": 39.8,
+          "bq": 44.3,
+          "cpc": 8.3,
+          "ndp": 4.3,
+          "ppc": 2.0
+        }
+      }
+    },
+    {
+      "code": "24025",
+      "name": "Gatineau",
+      "results": {
+        "2019": {
+          "lpc": 52.3,
+          "bq": 21.3,
+          "cpc": 10.2,
+          "ndp": 10.9,
+          "ppc": 1.0,
+          "gpc": 4.2
+        },
+        "2021": {
+          "lpc": 50.1,
+          "bq": 23.4,
+          "cpc": 11.1,
+          "ndp": 8.6,
+          "ppc": 4.1,
+          "gpc": 1.6
+        }
+      }
+    },
+    {
+      "code": "24026",
+      "name": "Hochelaga—Rosemont-Est",
+      "results": {
+        "2019": {
+          "lpc": 34.2,
+          "bq": 33.2,
+          "ndp": 21.5,
+          "cpc": 4.5,
+          "gpc": 4.9,
+          "ppc": 0.7
+        },
+        "2021": {
+          "lpc": 38.4,
+          "bq": 31.4,
+          "ndp": 20.3,
+          "cpc": 4.7,
+          "gpc": 2.0,
+          "ppc": 2.3
+        }
+      }
+    },
+    {
+      "code": "24027",
+      "name": "Honoré-Mercier",
+      "results": {
+        "2019": {
+          "lpc": 58.6,
+          "cpc": 9.6,
+          "bq": 19.7,
+          "ndp": 8.2,
+          "ppc": 0.9,
+          "gpc": 2.7
+        },
+        "2021": {
+          "lpc": 60.0,
+          "cpc": 10.5,
+          "bq": 16.3,
+          "ndp": 7.3,
+          "ppc": 4.2,
+          "gpc": 1.5
+        }
+      }
+    },
+    {
+      "code": "24028",
+      "name": "Hull—Aylmer",
+      "results": {
+        "2019": {
+          "lpc": 54.0,
+          "cpc": 9.2,
+          "bq": 14.5,
+          "ndp": 13.6,
+          "gpc": 7.0,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 52.5,
+          "cpc": 10.8,
+          "bq": 16.1,
+          "ndp": 12.7,
+          "gpc": 2.8,
+          "ppc": 3.7
+        }
+      }
+    },
+    {
+      "code": "24029",
+      "name": "Joliette—Manawan",
+      "results": {
+        "2019": {
+          "bq": 58.3,
+          "lpc": 22.5,
+          "cpc": 8.9,
+          "ndp": 4.7,
+          "ppc": 0.9,
+          "gpc": 4.0
+        },
+        "2021": {
+          "bq": 55.1,
+          "lpc": 22.3,
+          "cpc": 9.5,
+          "ndp": 5.8,
+          "ppc": 3.0,
+          "gpc": 2.0
+        }
+      }
+    },
+    {
+      "code": "24030",
+      "name": "Jonquière",
+      "results": {
+        "2019": {
+          "bq": 36.8,
+          "cpc": 21.1,
+          "lpc": 16.8,
+          "ndp": 22.5,
+          "gpc": 2.0,
+          "ppc": 0.9
+        },
+        "2021": {
+          "bq": 43.1,
+          "cpc": 28.3,
+          "lpc": 20.8,
+          "ndp": 5.4,
+          "gpc": 1.7
+        }
+      }
+    },
+    {
+      "code": "24031",
+      "name": "La Pointe-de-l'Île",
+      "results": {
+        "2019": {
+          "lpc": 30.4,
+          "bq": 46.8,
+          "cpc": 7.2,
+          "ndp": 10.9,
+          "ppc": 0.7,
+          "gpc": 3.4
+        },
+        "2021": {
+          "lpc": 32.3,
+          "bq": 46.7,
+          "cpc": 6.7,
+          "ndp": 9.7,
+          "ppc": 2.7
+        }
+      }
+    },
+    {
+      "code": "24032",
+      "name": "La Prairie—Atateken",
+      "results": {
+        "2019": {
+          "lpc": 36.6,
+          "bq": 41.8,
+          "cpc": 9.0,
+          "ndp": 7.7,
+          "gpc": 4.2,
+          "ppc": 0.6
+        },
+        "2021": {
+          "lpc": 34.6,
+          "bq": 43.7,
+          "cpc": 9.9,
+          "ndp": 7.3,
+          "gpc": 1.7,
+          "ppc": 2.6
+        }
+      }
+    },
+    {
+      "code": "24033",
+      "name": "Lac-Saint-Jean",
+      "results": {
+        "2019": {
+          "bq": 44.0,
+          "cpc": 22.4,
+          "lpc": 25.8,
+          "ndp": 5.2,
+          "gpc": 1.9,
+          "ppc": 0.8
+        },
+        "2021": {
+          "bq": 50.9,
+          "cpc": 25.3,
+          "lpc": 19.0,
+          "ndp": 3.3,
+          "gpc": 1.6
+        }
+      }
+    },
+    {
+      "code": "24034",
+      "name": "Lac-Saint-Louis",
+      "results": {
+        "2019": {
+          "lpc": 58.2,
+          "cpc": 15.3,
+          "ndp": 12.2,
+          "bq": 5.3,
+          "gpc": 7.0,
+          "ppc": 1.4
+        },
+        "2021": {
+          "lpc": 56.3,
+          "cpc": 18.9,
+          "ndp": 13.3,
+          "bq": 5.3,
+          "gpc": 3.2,
+          "ppc": 3.0
+        }
+      }
+    },
+    {
+      "code": "24035",
+      "name": "LaSalle—Émard—Verdun",
+      "results": {
+        "2019": {
+          "lpc": 44.1,
+          "bq": 23.7,
+          "cpc": 7.2,
+          "ndp": 16.2,
+          "gpc": 6.7,
+          "ppc": 0.9
+        },
+        "2021": {
+          "lpc": 43.4,
+          "bq": 21.8,
+          "cpc": 7.6,
+          "ndp": 19.0,
+          "gpc": 3.0,
+          "ppc": 3.4
+        }
+      }
+    },
+    {
+      "code": "24036",
+      "name": "Laurentides—Labelle",
+      "results": {
+        "2019": {
+          "bq": 48.1,
+          "lpc": 31.7,
+          "cpc": 7.9,
+          "ndp": 6.4,
+          "ppc": 0.6,
+          "gpc": 4.6
+        },
+        "2021": {
+          "bq": 52.3,
+          "lpc": 23.5,
+          "cpc": 10.5,
+          "ndp": 5.6,
+          "ppc": 3.6,
+          "gpc": 2.4
+        }
+      }
+    },
+    {
+      "code": "24037",
+      "name": "Laurier—Sainte-Marie",
+      "results": {
+        "2019": {
+          "lpc": 42.7,
+          "ndp": 23.9,
+          "bq": 22.6,
+          "cpc": 3.4,
+          "gpc": 5.9,
+          "ppc": 0.6
+        },
+        "2021": {
+          "lpc": 39.5,
+          "ndp": 30.4,
+          "bq": 20.1,
+          "cpc": 4.5,
+          "gpc": 2.2,
+          "ppc": 1.8
+        }
+      }
+    },
+    {
+      "code": "24038",
+      "name": "Laval—Les Îles",
+      "results": {
+        "2019": {
+          "lpc": 48.2,
+          "cpc": 16.3,
+          "bq": 20.6,
+          "ndp": 8.9,
+          "gpc": 4.3,
+          "ppc": 1.6
+        },
+        "2021": {
+          "lpc": 48.9,
+          "cpc": 17.7,
+          "bq": 19.1,
+          "ndp": 7.7,
+          "gpc": 1.5,
+          "ppc": 5.1
+        }
+      }
+    },
+    {
+      "code": "24039",
+      "name": "Les Pays-d'en-Haut",
+      "results": {
+        "2019": {
+          "lpc": 28.7,
+          "bq": 48.7,
+          "cpc": 8.8,
+          "ndp": 6.3,
+          "ppc": 0.9,
+          "gpc": 6.0
+        },
+        "2021": {
+          "lpc": 25.9,
+          "bq": 47.5,
+          "cpc": 11.7,
+          "ndp": 6.9,
+          "ppc": 4.3,
+          "gpc": 1.5
+        }
+      }
+    },
+    {
+      "code": "24040",
+      "name": "Lévis—Lotbinière",
+      "results": {
+        "2019": {
+          "cpc": 42.4,
+          "lpc": 18.0,
+          "bq": 25.8,
+          "ndp": 7.1,
+          "ppc": 3.5,
+          "gpc": 3.1
+        },
+        "2021": {
+          "cpc": 49.7,
+          "lpc": 15.4,
+          "bq": 22.8,
+          "ndp": 7.3,
+          "ppc": 2.4,
+          "gpc": 1.4
+        }
+      }
+    },
+    {
+      "code": "24041",
+      "name": "Longueuil—Charles-LeMoyne",
+      "results": {
+        "2019": {
+          "lpc": 39.0,
+          "bq": 36.5,
+          "cpc": 7.4,
+          "ndp": 10.3,
+          "gpc": 5.8,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 40.4,
+          "bq": 35.3,
+          "cpc": 8.3,
+          "ndp": 10.3,
+          "gpc": 2.4,
+          "ppc": 2.9
+        }
+      }
+    },
+    {
+      "code": "24042",
+      "name": "Longueuil—Saint-Hubert",
+      "results": {
+        "2019": {
+          "lpc": 34.2,
+          "bq": 38.5,
+          "cpc": 6.3,
+          "ndp": 8.5,
+          "gpc": 11.2,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 38.3,
+          "bq": 41.2,
+          "cpc": 6.9,
+          "ndp": 8.0,
+          "gpc": 2.8,
+          "ppc": 2.4
+        }
+      }
+    },
+    {
+      "code": "24043",
+      "name": "Louis-Hébert",
+      "results": {
+        "2019": {
+          "lpc": 40.3,
+          "cpc": 18.0,
+          "bq": 27.9,
+          "ndp": 7.8,
+          "gpc": 3.9,
+          "ppc": 1.7
+        },
+        "2021": {
+          "lpc": 38.2,
+          "cpc": 24.3,
+          "bq": 27.0,
+          "ndp": 7.2,
+          "gpc": 2.6
+        }
+      }
+    },
+    {
+      "code": "24044",
+      "name": "Louis-Saint-Laurent—Akiawenhrahk",
+      "results": {
+        "2019": {
+          "cpc": 44.9,
+          "lpc": 20.6,
+          "bq": 22.1,
+          "ndp": 6.7,
+          "gpc": 3.3,
+          "ppc": 2.4
+        },
+        "2021": {
+          "cpc": 52.0,
+          "lpc": 17.3,
+          "bq": 20.1,
+          "ndp": 5.3,
+          "gpc": 1.4,
+          "ppc": 2.1
+        }
+      }
+    },
+    {
+      "code": "24045",
+      "name": "Marc-Aurèle-Fortin",
+      "results": {
+        "2019": {
+          "lpc": 44.5,
+          "bq": 32.4,
+          "cpc": 9.7,
+          "ndp": 8.5,
+          "ppc": 0.8,
+          "gpc": 3.8
+        },
+        "2021": {
+          "lpc": 44.1,
+          "bq": 30.8,
+          "cpc": 11.7,
+          "ndp": 8.6,
+          "ppc": 2.9
+        }
+      }
+    },
+    {
+      "code": "24046",
+      "name": "Mégantic—L'Érable—Lotbinière",
+      "results": {
+        "2019": {
+          "cpc": 50.1,
+          "lpc": 15.2,
+          "bq": 25.2,
+          "ndp": 4.1,
+          "ppc": 1.8,
+          "gpc": 2.6
+        },
+        "2021": {
+          "cpc": 56.7,
+          "lpc": 13.5,
+          "bq": 19.6,
+          "ndp": 3.1,
+          "ppc": 3.5,
+          "gpc": 1.3
+        }
+      }
+    },
+    {
+      "code": "24047",
+      "name": "Mirabel",
+      "results": {
+        "2019": {
+          "bq": 49.6,
+          "lpc": 26.1,
+          "cpc": 9.1,
+          "ndp": 8.4,
+          "gpc": 5.3,
+          "ppc": 1.0
+        },
+        "2021": {
+          "bq": 45.8,
+          "lpc": 24.4,
+          "cpc": 13.3,
+          "ndp": 8.6,
+          "gpc": 2.2,
+          "ppc": 3.8
+        }
+      }
+    },
+    {
+      "code": "24048",
+      "name": "Mount Royal",
+      "results": {
+        "2019": {
+          "lpc": 56.1,
+          "cpc": 24.3,
+          "ndp": 8.7,
+          "bq": 4.1,
+          "ppc": 0.8,
+          "gpc": 5.7
+        },
+        "2021": {
+          "lpc": 57.4,
+          "cpc": 24.1,
+          "ndp": 8.8,
+          "bq": 4.1,
+          "ppc": 2.6,
+          "gpc": 2.7
+        }
+      }
+    },
+    {
+      "code": "24049",
+      "name": "Mont-Saint-Bruno—L'Acadie",
+      "results": {
+        "2019": {
+          "lpc": 35.0,
+          "bq": 43.2,
+          "cpc": 7.0,
+          "ndp": 8.7,
+          "ppc": 0.8,
+          "gpc": 5.0
+        },
+        "2021": {
+          "lpc": 34.1,
+          "bq": 45.5,
+          "cpc": 9.7,
+          "ndp": 8.3,
+          "ppc": 2.1,
+          "gpc": 0.2
+        }
+      }
+    },
+    {
+      "code": "24050",
+      "name": "Montcalm",
+      "results": {
+        "2019": {
+          "bq": 58.0,
+          "lpc": 20.7,
+          "cpc": 8.9,
+          "ndp": 6.5,
+          "ppc": 0.9,
+          "gpc": 4.4
+        },
+        "2021": {
+          "bq": 53.2,
+          "lpc": 20.0,
+          "cpc": 11.7,
+          "ndp": 6.3,
+          "ppc": 4.3,
+          "gpc": 2.6
+        }
+      }
+    },
+    {
+      "code": "24051",
+      "name": "Montmorency—Charlevoix",
+      "results": {
+        "2019": {
+          "cpc": 31.6,
+          "bq": 36.3,
+          "lpc": 21.8,
+          "ndp": 5.8,
+          "ppc": 2.2,
+          "gpc": 0.2
+        },
+        "2021": {
+          "cpc": 33.9,
+          "bq": 36.7,
+          "lpc": 20.2,
+          "ndp": 4.6,
+          "ppc": 1.9,
+          "gpc": 1.2
+        }
+      }
+    },
+    {
+      "code": "24052",
+      "name": "Notre-Dame-de-Grâce—Westmount",
+      "results": {
+        "2019": {
+          "lpc": 55.1,
+          "cpc": 10.8,
+          "ndp": 16.3,
+          "gpc": 10.6,
+          "bq": 5.7,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 52.8,
+          "cpc": 13.5,
+          "ndp": 20.1,
+          "gpc": 4.0,
+          "bq": 6.0,
+          "ppc": 3.3
+        }
+      }
+    },
+    {
+      "code": "24053",
+      "name": "Outremont",
+      "results": {
+        "2019": {
+          "lpc": 46.0,
+          "ndp": 20.7,
+          "cpc": 6.1,
+          "bq": 14.5,
+          "gpc": 11.5,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 44.4,
+          "ndp": 27.3,
+          "cpc": 7.3,
+          "bq": 15.4,
+          "gpc": 3.1,
+          "ppc": 2.1
+        }
+      }
+    },
+    {
+      "code": "24054",
+      "name": "Papineau",
+      "results": {
+        "2019": {
+          "lpc": 51.1,
+          "ndp": 19.2,
+          "bq": 16.0,
+          "cpc": 4.2,
+          "gpc": 7.4,
+          "ppc": 0.6
+        },
+        "2021": {
+          "lpc": 50.3,
+          "ndp": 22.7,
+          "bq": 15.0,
+          "cpc": 4.8,
+          "gpc": 3.2,
+          "ppc": 2.3
+        }
+      }
+    },
+    {
+      "code": "24055",
+      "name": "Pierre-Boucher—Les Patriotes—Verchères",
+      "results": {
+        "2019": {
+          "lpc": 28.5,
+          "bq": 51.0,
+          "cpc": 8.1,
+          "ndp": 6.9,
+          "ppc": 0.6,
+          "gpc": 4.9
+        },
+        "2021": {
+          "lpc": 25.9,
+          "bq": 54.3,
+          "cpc": 8.8,
+          "ndp": 7.7,
+          "ppc": 2.0
+        }
+      }
+    },
+    {
+      "code": "24056",
+      "name": "Pierrefonds—Dollard",
+      "results": {
+        "2019": {
+          "lpc": 56.4,
+          "cpc": 17.7,
+          "ndp": 10.3,
+          "bq": 8.1,
+          "ppc": 1.3,
+          "gpc": 5.2
+        },
+        "2021": {
+          "lpc": 56.0,
+          "cpc": 20.8,
+          "ndp": 11.5,
+          "bq": 7.9,
+          "ppc": 3.7
+        }
+      }
+    },
+    {
+      "code": "24057",
+      "name": "Pontiac—Kitigan Zibi",
+      "results": {
+        "2019": {
+          "lpc": 49.2,
+          "cpc": 17.7,
+          "bq": 14.5,
+          "ndp": 10.8,
+          "gpc": 6.2,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 43.9,
+          "cpc": 21.4,
+          "bq": 15.2,
+          "ndp": 11.3,
+          "gpc": 2.9,
+          "ppc": 4.5
+        }
+      }
+    },
+    {
+      "code": "24058",
+      "name": "Portneuf—Jacques-Cartier",
+      "results": {
+        "2019": {
+          "cpc": 44.4,
+          "lpc": 19.5,
+          "bq": 24.1,
+          "ndp": 5.6,
+          "ppc": 2.9,
+          "gpc": 3.4
+        },
+        "2021": {
+          "cpc": 52.3,
+          "lpc": 15.1,
+          "bq": 23.7,
+          "ndp": 4.7,
+          "ppc": 2.4
+        }
+      }
+    },
+    {
+      "code": "24059",
+      "name": "Québec Centre",
+      "results": {
+        "2019": {
+          "lpc": 34.0,
+          "cpc": 14.8,
+          "bq": 32.5,
+          "ndp": 11.3,
+          "gpc": 5.5,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 35.7,
+          "cpc": 18.0,
+          "bq": 29.0,
+          "ndp": 12.7,
+          "gpc": 2.4,
+          "ppc": 1.6
+        }
+      }
+    },
+    {
+      "code": "24060",
+      "name": "Repentigny",
+      "results": {
+        "2019": {
+          "lpc": 28.2,
+          "bq": 52.8,
+          "cpc": 7.4,
+          "ndp": 6.8,
+          "gpc": 3.5,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 28.1,
+          "bq": 51.4,
+          "cpc": 8.8,
+          "ndp": 7.5
+        }
+      }
+    },
+    {
+      "code": "24061",
+      "name": "Richmond—Arthabaska",
+      "results": {
+        "2019": {
+          "cpc": 45.3,
+          "bq": 28.2,
+          "lpc": 15.1,
+          "ndp": 4.9,
+          "ppc": 1.2,
+          "gpc": 5.3
+        },
+        "2021": {
+          "cpc": 49.9,
+          "bq": 24.8,
+          "lpc": 14.9,
+          "ndp": 4.5,
+          "ppc": 3.6
+        }
+      }
+    },
+    {
+      "code": "24062",
+      "name": "Rimouski—La Matapédia",
+      "results": {
+        "2019": {
+          "bq": 44.9,
+          "lpc": 24.0,
+          "cpc": 7.5,
+          "ndp": 20.9,
+          "ppc": 0.6,
+          "gpc": 1.7
+        },
+        "2021": {
+          "bq": 54.3,
+          "lpc": 22.1,
+          "cpc": 11.2,
+          "ndp": 5.9,
+          "ppc": 2.1
+        }
+      }
+    },
+    {
+      "code": "24063",
+      "name": "Rivière-des-Mille-Îles",
+      "results": {
+        "2019": {
+          "lpc": 36.2,
+          "bq": 40.6,
+          "cpc": 8.0,
+          "ndp": 8.5,
+          "gpc": 5.1,
+          "ppc": 1.5
+        },
+        "2021": {
+          "lpc": 35.4,
+          "bq": 40.5,
+          "cpc": 10.2,
+          "ndp": 7.2,
+          "gpc": 1.8,
+          "ppc": 2.7
+        }
+      }
+    },
+    {
+      "code": "24064",
+      "name": "Rivière-du-Nord",
+      "results": {
+        "2019": {
+          "bq": 52.9,
+          "lpc": 21.9,
+          "cpc": 11.9,
+          "ndp": 7.0,
+          "ppc": 0.7,
+          "gpc": 5.1
+        },
+        "2021": {
+          "bq": 51.6,
+          "lpc": 22.5,
+          "cpc": 12.0,
+          "ndp": 6.9,
+          "ppc": 3.8,
+          "gpc": 0.3
+        }
+      }
+    },
+    {
+      "code": "24065",
+      "name": "Rosemont—La Petite-Patrie",
+      "results": {
+        "2019": {
+          "ndp": 42.5,
+          "lpc": 24.2,
+          "bq": 23.8,
+          "cpc": 2.3,
+          "gpc": 5.9,
+          "ppc": 0.5
+        },
+        "2021": {
+          "ndp": 48.6,
+          "lpc": 23.2,
+          "bq": 21.4,
+          "cpc": 4.0,
+          "gpc": 2.4
+        }
+      }
+    },
+    {
+      "code": "24066",
+      "name": "Saint-Hyacinthe—Bagot—Acton",
+      "results": {
+        "2019": {
+          "bq": 41.4,
+          "lpc": 21.3,
+          "cpc": 14.4,
+          "ndp": 18.4,
+          "ppc": 0.9,
+          "gpc": 3.6
+        },
+        "2021": {
+          "bq": 47.5,
+          "lpc": 22.7,
+          "cpc": 13.5,
+          "ndp": 11.6,
+          "ppc": 2.7
+        }
+      }
+    },
+    {
+      "code": "24067",
+      "name": "Saint-Jean",
+      "results": {
+        "2019": {
+          "lpc": 30.6,
+          "bq": 44.8,
+          "cpc": 10.7,
+          "ndp": 7.7,
+          "gpc": 5.1,
+          "ppc": 0.6
+        },
+        "2021": {
+          "lpc": 28.1,
+          "bq": 46.0,
+          "cpc": 12.7,
+          "ndp": 7.3,
+          "gpc": 2.1
+        }
+      }
+    },
+    {
+      "code": "24068",
+      "name": "Saint-Laurent",
+      "results": {
+        "2019": {
+          "lpc": 58.9,
+          "cpc": 17.3,
+          "ndp": 10.1,
+          "bq": 7.0,
+          "ppc": 1.2,
+          "gpc": 5.2
+        },
+        "2021": {
+          "lpc": 59.3,
+          "cpc": 18.3,
+          "ndp": 10.8,
+          "bq": 7.9,
+          "ppc": 3.2,
+          "gpc": 0.1
+        }
+      }
+    },
+    {
+      "code": "24069",
+      "name": "Saint-Léonard—Saint-Michel",
+      "results": {
+        "2019": {
+          "lpc": 61.5,
+          "cpc": 12.0,
+          "bq": 9.4,
+          "ndp": 6.4,
+          "ppc": 1.1,
+          "gpc": 2.6
+        },
+        "2021": {
+          "lpc": 69.6,
+          "cpc": 10.5,
+          "bq": 8.0,
+          "ndp": 8.2,
+          "ppc": 3.8
+        }
+      }
+    },
+    {
+      "code": "24070",
+      "name": "Saint-Maurice—Champlain",
+      "results": {
+        "2019": {
+          "lpc": 39.6,
+          "cpc": 16.3,
+          "bq": 34.2,
+          "ndp": 5.3,
+          "gpc": 3.1,
+          "ppc": 1.6
+        },
+        "2021": {
+          "lpc": 42.4,
+          "cpc": 18.0,
+          "bq": 30.1,
+          "ndp": 5.1,
+          "gpc": 1.3
+        }
+      }
+    },
+    {
+      "code": "24071",
+      "name": "Shefford",
+      "results": {
+        "2019": {
+          "lpc": 37.1,
+          "bq": 38.6,
+          "cpc": 12.3,
+          "ndp": 6.1,
+          "gpc": 4.6,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 33.5,
+          "bq": 41.9,
+          "cpc": 12.1,
+          "ndp": 5.3,
+          "gpc": 1.8,
+          "ppc": 3.5
+        }
+      }
+    },
+    {
+      "code": "24072",
+      "name": "Sherbrooke",
+      "results": {
+        "2019": {
+          "lpc": 29.3,
+          "bq": 26.0,
+          "cpc": 10.6,
+          "ndp": 28.3,
+          "gpc": 4.5
+        },
+        "2021": {
+          "lpc": 37.5,
+          "bq": 29.0,
+          "cpc": 12.8,
+          "ndp": 13.9,
+          "gpc": 2.9,
+          "ppc": 2.5
+        }
+      }
+    },
+    {
+      "code": "24073",
+      "name": "Terrebonne",
+      "results": {
+        "2019": {
+          "lpc": 28.8,
+          "bq": 51.0,
+          "cpc": 7.5,
+          "ndp": 7.6,
+          "ppc": 0.7,
+          "gpc": 3.7
+        },
+        "2021": {
+          "lpc": 29.4,
+          "bq": 41.4,
+          "cpc": 10.5,
+          "ndp": 6.6,
+          "ppc": 2.7,
+          "gpc": 1.4
+        }
+      }
+    },
+    {
+      "code": "24074",
+      "name": "Thérèse-De Blainville",
+      "results": {
+        "2019": {
+          "lpc": 36.0,
+          "bq": 41.8,
+          "cpc": 9.0,
+          "ndp": 7.5,
+          "ppc": 0.6,
+          "gpc": 4.6
+        },
+        "2021": {
+          "lpc": 35.2,
+          "bq": 40.9,
+          "cpc": 11.0,
+          "ndp": 7.3,
+          "ppc": 2.7,
+          "gpc": 1.9
+        }
+      }
+    },
+    {
+      "code": "24075",
+      "name": "Trois-Rivières",
+      "results": {
+        "2019": {
+          "lpc": 26.1,
+          "bq": 28.5,
+          "cpc": 25.2,
+          "ndp": 16.7,
+          "gpc": 2.5,
+          "ppc": 0.9
+        },
+        "2021": {
+          "lpc": 28.6,
+          "bq": 29.5,
+          "cpc": 29.3,
+          "ndp": 8.1,
+          "gpc": 1.3,
+          "ppc": 1.9
+        }
+      }
+    },
+    {
+      "code": "24076",
+      "name": "Vaudreuil",
+      "results": {
+        "2019": {
+          "lpc": 48.5,
+          "cpc": 11.6,
+          "bq": 23.0,
+          "ndp": 10.8,
+          "gpc": 5.0,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 47.5,
+          "cpc": 16.5,
+          "bq": 21.0,
+          "ndp": 10.6,
+          "gpc": 2.5
+        }
+      }
+    },
+    {
+      "code": "24077",
+      "name": "Ville-Marie—Le Sud-Ouest—Île-des-Sœurs",
+      "results": {
+        "2019": {
+          "lpc": 54.6,
+          "cpc": 9.3,
+          "ndp": 15.0,
+          "bq": 12.3,
+          "gpc": 6.9,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 51.4,
+          "cpc": 12.8,
+          "ndp": 18.1,
+          "bq": 11.9,
+          "gpc": 2.7,
+          "ppc": 2.6
+        }
+      }
+    },
+    {
+      "code": "24078",
+      "name": "Vimy",
+      "results": {
+        "2019": {
+          "lpc": 48.2,
+          "cpc": 11.2,
+          "bq": 26.9,
+          "ndp": 8.7,
+          "ppc": 1.4,
+          "gpc": 3.8
+        },
+        "2021": {
+          "lpc": 50.1,
+          "cpc": 13.8,
+          "bq": 22.3,
+          "ndp": 9.3,
+          "ppc": 4.3
+        }
+      }
+    }
+  ],
+  "Ontario": [
+    {
+      "code": "35001",
+      "name": "Ajax",
+      "results": {
+        "2019": {
+          "lpc": 57.7,
+          "cpc": 26.0,
+          "ndp": 11.5,
+          "gpc": 3.3,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 56.8,
+          "cpc": 26.6,
+          "ndp": 14.0,
+          "gpc": 2.5
+        }
+      }
+    },
+    {
+      "code": "35002",
+      "name": "Algonquin—Renfrew—Pembroke",
+      "results": {
+        "2019": {
+          "cpc": 52.7,
+          "lpc": 19.6,
+          "ndp": 14.9,
+          "gpc": 5.5,
+          "ppc": 2.5
+        },
+        "2021": {
+          "cpc": 49.5,
+          "lpc": 19.4,
+          "ndp": 21.0,
+          "gpc": 1.9,
+          "ppc": 7.6
+        }
+      }
+    },
+    {
+      "code": "35003",
+      "name": "Aurora—Oak Ridges—Richmond Hill",
+      "results": {
+        "2019": {
+          "lpc": 42.9,
+          "cpc": 43.4,
+          "ndp": 7.3,
+          "gpc": 4.4,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 44.8,
+          "cpc": 42.1,
+          "ndp": 8.0,
+          "gpc": 0.2,
+          "ppc": 3.9
+        }
+      }
+    },
+    {
+      "code": "35004",
+      "name": "Barrie South—Innisfil",
+      "results": {
+        "2019": {
+          "cpc": 43.8,
+          "lpc": 29.3,
+          "ndp": 16.4,
+          "ppc": 1.9,
+          "gpc": 8.7
+        },
+        "2021": {
+          "cpc": 47.7,
+          "lpc": 28.9,
+          "ndp": 15.8,
+          "ppc": 7.7
+        }
+      }
+    },
+    {
+      "code": "35005",
+      "name": "Barrie—Springwater—Oro-Medonte",
+      "results": {
+        "2019": {
+          "cpc": 40.3,
+          "lpc": 30.7,
+          "ndp": 14.4,
+          "ppc": 1.8,
+          "gpc": 12.8
+        },
+        "2021": {
+          "cpc": 45.8,
+          "lpc": 30.4,
+          "ndp": 16.6,
+          "ppc": 6.9,
+          "gpc": 0.2
+        }
+      }
+    },
+    {
+      "code": "35006",
+      "name": "Bay of Quinte",
+      "results": {
+        "2019": {
+          "cpc": 36.3,
+          "lpc": 39.4,
+          "ndp": 16.2,
+          "gpc": 6.1,
+          "ppc": 1.9
+        },
+        "2021": {
+          "cpc": 40.6,
+          "lpc": 37.0,
+          "ndp": 15.3,
+          "gpc": 2.2,
+          "ppc": 4.9
+        }
+      }
+    },
+    {
+      "code": "35007",
+      "name": "Beaches—East York",
+      "results": {
+        "2019": {
+          "lpc": 57.2,
+          "cpc": 14.1,
+          "ndp": 21.4,
+          "gpc": 5.9,
+          "ppc": 1.5
+        },
+        "2021": {
+          "lpc": 56.6,
+          "cpc": 14.4,
+          "ndp": 22.5,
+          "gpc": 2.7,
+          "ppc": 3.2
+        }
+      }
+    },
+    {
+      "code": "35008",
+      "name": "Bowmanville—Oshawa North",
+      "results": {
+        "2019": {
+          "cpc": 40.4,
+          "lpc": 33.3,
+          "ndp": 19.3,
+          "ppc": 2.0,
+          "gpc": 5.0
+        },
+        "2021": {
+          "cpc": 44.7,
+          "lpc": 30.8,
+          "ndp": 18.4,
+          "ppc": 5.4
+        }
+      }
+    },
+    {
+      "code": "35009",
+      "name": "Brampton Centre",
+      "results": {
+        "2019": {
+          "lpc": 48.5,
+          "cpc": 27.7,
+          "ndp": 16.9,
+          "ppc": 1.2,
+          "gpc": 4.9
+        },
+        "2021": {
+          "lpc": 48.3,
+          "cpc": 31.4,
+          "ndp": 15.8,
+          "ppc": 3.6
+        }
+      }
+    },
+    {
+      "code": "35010",
+      "name": "Brampton—Chinguacousy Park",
+      "results": {
+        "2019": {
+          "lpc": 49.0,
+          "cpc": 27.1,
+          "ndp": 18.6,
+          "gpc": 3.8,
+          "ppc": 1.4
+        },
+        "2021": {
+          "lpc": 50.8,
+          "cpc": 31.0,
+          "ndp": 16.8
+        }
+      }
+    },
+    {
+      "code": "35011",
+      "name": "Brampton East",
+      "results": {
+        "2019": {
+          "lpc": 47.2,
+          "cpc": 24.2,
+          "ndp": 26.2,
+          "ppc": 0.5,
+          "gpc": 1.3
+        },
+        "2021": {
+          "lpc": 53.2,
+          "cpc": 28.6,
+          "ndp": 15.6,
+          "ppc": 2.6
+        }
+      }
+    },
+    {
+      "code": "35012",
+      "name": "Brampton North—Caledon",
+      "results": {
+        "2019": {
+          "lpc": 49.2,
+          "cpc": 29.2,
+          "ndp": 17.6,
+          "ppc": 0.9,
+          "gpc": 3.0
+        },
+        "2021": {
+          "lpc": 51.4,
+          "cpc": 33.2,
+          "ndp": 14.0,
+          "ppc": 1.0,
+          "gpc": 0.4
+        }
+      }
+    },
+    {
+      "code": "35013",
+      "name": "Brampton South",
+      "results": {
+        "2019": {
+          "lpc": 51.4,
+          "cpc": 26.6,
+          "ndp": 18.0,
+          "ppc": 0.7,
+          "gpc": 2.4
+        },
+        "2021": {
+          "lpc": 53.9,
+          "cpc": 29.5,
+          "ndp": 13.5,
+          "ppc": 2.9
+        }
+      }
+    },
+    {
+      "code": "35014",
+      "name": "Brampton West",
+      "results": {
+        "2019": {
+          "lpc": 54.1,
+          "cpc": 23.3,
+          "ndp": 18.6,
+          "ppc": 0.9,
+          "gpc": 2.2
+        },
+        "2021": {
+          "lpc": 56.3,
+          "cpc": 27.7,
+          "ndp": 12.8,
+          "ppc": 2.5
+        }
+      }
+    },
+    {
+      "code": "35015",
+      "name": "Brantford—Brant South—Six Nations",
+      "results": {
+        "2019": {
+          "cpc": 40.4,
+          "lpc": 30.2,
+          "ndp": 20.3,
+          "ppc": 2.1,
+          "gpc": 5.9
+        },
+        "2021": {
+          "cpc": 40.1,
+          "lpc": 27.7,
+          "ndp": 20.3,
+          "ppc": 8.8,
+          "gpc": 2.6
+        }
+      }
+    },
+    {
+      "code": "35016",
+      "name": "Bruce—Grey—Owen Sound",
+      "results": {
+        "2019": {
+          "cpc": 46.1,
+          "lpc": 30.1,
+          "ndp": 11.7,
+          "gpc": 8.8,
+          "ppc": 2.8
+        },
+        "2021": {
+          "cpc": 49.2,
+          "lpc": 25.2,
+          "ndp": 13.6,
+          "gpc": 3.1,
+          "ppc": 8.0
+        }
+      }
+    },
+    {
+      "code": "35017",
+      "name": "Burlington",
+      "results": {
+        "2019": {
+          "lpc": 48.6,
+          "cpc": 33.2,
+          "ndp": 10.2,
+          "gpc": 6.6,
+          "ppc": 1.3
+        },
+        "2021": {
+          "lpc": 45.7,
+          "cpc": 37.3,
+          "ndp": 10.9,
+          "gpc": 2.0,
+          "ppc": 4.0
+        }
+      }
+    },
+    {
+      "code": "35018",
+      "name": "Burlington North—Milton West",
+      "results": {
+        "2019": {
+          "lpc": 49.5,
+          "cpc": 37.0,
+          "ndp": 7.8,
+          "gpc": 4.7,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 47.9,
+          "cpc": 36.6,
+          "ndp": 9.6,
+          "gpc": 1.9,
+          "ppc": 4.0
+        }
+      }
+    },
+    {
+      "code": "35019",
+      "name": "Cambridge",
+      "results": {
+        "2019": {
+          "lpc": 39.7,
+          "cpc": 29.8,
+          "ndp": 19.4,
+          "gpc": 7.4,
+          "ppc": 3.2
+        },
+        "2021": {
+          "lpc": 38.2,
+          "cpc": 34.1,
+          "ndp": 17.1,
+          "gpc": 3.4,
+          "ppc": 7.2
+        }
+      }
+    },
+    {
+      "code": "35020",
+      "name": "Carleton",
+      "results": {
+        "2019": {
+          "cpc": 48.8,
+          "lpc": 35.1,
+          "ndp": 9.3,
+          "gpc": 5.5,
+          "ppc": 1.3
+        },
+        "2021": {
+          "cpc": 51.9,
+          "lpc": 31.9,
+          "ndp": 11.4,
+          "gpc": 2.1,
+          "ppc": 2.8
+        }
+      }
+    },
+    {
+      "code": "35021",
+      "name": "Chatham-Kent—Leamington",
+      "results": {
+        "2019": {
+          "cpc": 48.0,
+          "lpc": 29.1,
+          "ndp": 15.3,
+          "ppc": 2.7,
+          "gpc": 4.3
+        },
+        "2021": {
+          "cpc": 42.4,
+          "lpc": 26.7,
+          "ndp": 14.6,
+          "ppc": 14.7,
+          "gpc": 1.5
+        }
+      }
+    },
+    {
+      "code": "35022",
+      "name": "Davenport",
+      "results": {
+        "2019": {
+          "lpc": 45.4,
+          "cpc": 9.9,
+          "ndp": 38.7,
+          "gpc": 4.5,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 43.6,
+          "cpc": 10.9,
+          "ndp": 39.6,
+          "gpc": 2.4,
+          "ppc": 3.3
+        }
+      }
+    },
+    {
+      "code": "35023",
+      "name": "Don Valley North",
+      "results": {
+        "2019": {
+          "lpc": 49.8,
+          "cpc": 36.7,
+          "ndp": 8.6,
+          "gpc": 3.8,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 52.8,
+          "cpc": 32.5,
+          "ndp": 9.9,
+          "gpc": 1.8,
+          "ppc": 2.9
+        }
+      }
+    },
+    {
+      "code": "35024",
+      "name": "Don Valley West",
+      "results": {
+        "2019": {
+          "lpc": 59.2,
+          "cpc": 27.1,
+          "ndp": 8.3,
+          "ppc": 0.9,
+          "gpc": 4.1
+        },
+        "2021": {
+          "lpc": 57.2,
+          "cpc": 29.9,
+          "ndp": 9.2,
+          "ppc": 2.5,
+          "gpc": 1.1
+        }
+      }
+    },
+    {
+      "code": "35025",
+      "name": "Dufferin—Caledon",
+      "results": {
+        "2019": {
+          "cpc": 43.0,
+          "lpc": 31.6,
+          "ndp": 10.9,
+          "gpc": 11.6,
+          "ppc": 2.4
+        },
+        "2021": {
+          "cpc": 49.0,
+          "lpc": 28.6,
+          "ndp": 10.4,
+          "gpc": 4.5,
+          "ppc": 7.1
+        }
+      }
+    },
+    {
+      "code": "35026",
+      "name": "Eglinton—Lawrence",
+      "results": {
+        "2019": {
+          "lpc": 53.3,
+          "cpc": 33.1,
+          "ndp": 8.5,
+          "gpc": 4.1,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 48.5,
+          "cpc": 36.4,
+          "ndp": 9.2,
+          "gpc": 3.0,
+          "ppc": 2.9
+        }
+      }
+    },
+    {
+      "code": "35027",
+      "name": "Elgin—St. Thomas—London South",
+      "results": {
+        "2019": {
+          "cpc": 50.0,
+          "lpc": 23.2,
+          "ndp": 18.0,
+          "ppc": 1.5,
+          "gpc": 5.7
+        },
+        "2021": {
+          "cpc": 49.2,
+          "lpc": 19.7,
+          "ndp": 16.2,
+          "ppc": 12.2,
+          "gpc": 2.2
+        }
+      }
+    },
+    {
+      "code": "35028",
+      "name": "Essex",
+      "results": {
+        "2019": {
+          "cpc": 41.6,
+          "lpc": 19.0,
+          "ndp": 34.3,
+          "ppc": 1.9,
+          "gpc": 3.2
+        },
+        "2021": {
+          "cpc": 41.0,
+          "lpc": 15.5,
+          "ndp": 31.7,
+          "ppc": 10.2,
+          "gpc": 1.2
+        }
+      }
+    },
+    {
+      "code": "35029",
+      "name": "Etobicoke Centre",
+      "results": {
+        "2019": {
+          "lpc": 52.1,
+          "cpc": 33.4,
+          "ndp": 8.5,
+          "ppc": 1.1,
+          "gpc": 4.6
+        },
+        "2021": {
+          "lpc": 48.1,
+          "cpc": 34.1,
+          "ndp": 10.8,
+          "ppc": 6.6,
+          "gpc": 0.3
+        }
+      }
+    },
+    {
+      "code": "35030",
+      "name": "Etobicoke—Lakeshore",
+      "results": {
+        "2019": {
+          "lpc": 51.5,
+          "cpc": 29.0,
+          "ndp": 11.9,
+          "gpc": 6.1,
+          "ppc": 1.3
+        },
+        "2021": {
+          "lpc": 47.1,
+          "cpc": 32.5,
+          "ndp": 13.5,
+          "gpc": 2.1,
+          "ppc": 4.4
+        }
+      }
+    },
+    {
+      "code": "35031",
+      "name": "Etobicoke North",
+      "results": {
+        "2019": {
+          "lpc": 61.1,
+          "cpc": 22.9,
+          "ndp": 10.6,
+          "ppc": 2.7,
+          "gpc": 2.5
+        },
+        "2021": {
+          "lpc": 58.9,
+          "cpc": 25.4,
+          "ndp": 10.5,
+          "ppc": 4.3
+        }
+      }
+    },
+    {
+      "code": "35032",
+      "name": "Flamborough—Glanbrook—Brant North",
+      "results": {
+        "2019": {
+          "cpc": 42.9,
+          "lpc": 33.6,
+          "ndp": 14.3,
+          "gpc": 7.4,
+          "ppc": 1.6
+        },
+        "2021": {
+          "cpc": 43.8,
+          "lpc": 32.5,
+          "ndp": 14.6,
+          "gpc": 2.4,
+          "ppc": 6.5
+        }
+      }
+    },
+    {
+      "code": "35033",
+      "name": "Guelph",
+      "results": {
+        "2019": {
+          "lpc": 39.6,
+          "cpc": 18.6,
+          "ndp": 12.8,
+          "gpc": 26.3,
+          "ppc": 1.5
+        },
+        "2021": {
+          "lpc": 41.4,
+          "cpc": 23.4,
+          "ndp": 22.0,
+          "gpc": 7.8,
+          "ppc": 4.7
+        }
+      }
+    },
+    {
+      "code": "35034",
+      "name": "Haldimand—Norfolk",
+      "results": {
+        "2019": {
+          "cpc": 46.8,
+          "lpc": 24.5,
+          "ndp": 15.3,
+          "ppc": 2.1,
+          "gpc": 8.1
+        },
+        "2021": {
+          "cpc": 47.4,
+          "lpc": 27.5,
+          "ndp": 13.3,
+          "ppc": 10.5
+        }
+      }
+    },
+    {
+      "code": "35035",
+      "name": "Haliburton—Kawartha Lakes",
+      "results": {
+        "2019": {
+          "cpc": 48.6,
+          "lpc": 26.7,
+          "ndp": 14.5,
+          "gpc": 8.2,
+          "ppc": 1.9
+        },
+        "2021": {
+          "cpc": 52.0,
+          "lpc": 23.9,
+          "ndp": 14.2,
+          "gpc": 2.5,
+          "ppc": 6.8
+        }
+      }
+    },
+    {
+      "code": "35036",
+      "name": "Hamilton Centre",
+      "results": {
+        "2019": {
+          "lpc": 28.7,
+          "ndp": 45.0,
+          "cpc": 15.6,
+          "gpc": 7.6,
+          "ppc": 2.0
+        },
+        "2021": {
+          "lpc": 26.7,
+          "ndp": 47.0,
+          "cpc": 16.5,
+          "gpc": 2.7,
+          "ppc": 6.6
+        }
+      }
+    },
+    {
+      "code": "35037",
+      "name": "Hamilton East—Stoney Creek",
+      "results": {
+        "2019": {
+          "lpc": 40.7,
+          "cpc": 27.4,
+          "ndp": 25.0,
+          "ppc": 1.9,
+          "gpc": 5.0
+        },
+        "2021": {
+          "lpc": 39.1,
+          "cpc": 30.1,
+          "ndp": 21.7,
+          "ppc": 7.3,
+          "gpc": 1.9
+        }
+      }
+    },
+    {
+      "code": "35038",
+      "name": "Hamilton Mountain",
+      "results": {
+        "2019": {
+          "lpc": 31.1,
+          "cpc": 25.9,
+          "ndp": 35.1,
+          "ppc": 1.4,
+          "gpc": 5.8
+        },
+        "2021": {
+          "lpc": 34.5,
+          "cpc": 25.0,
+          "ndp": 31.6,
+          "ppc": 6.3,
+          "gpc": 2.0
+        }
+      }
+    },
+    {
+      "code": "35039",
+      "name": "Hamilton West—Ancaster—Dundas",
+      "results": {
+        "2019": {
+          "lpc": 46.5,
+          "cpc": 26.9,
+          "ndp": 17.7,
+          "gpc": 7.3,
+          "ppc": 1.4
+        },
+        "2021": {
+          "lpc": 44.3,
+          "cpc": 29.1,
+          "ndp": 19.7,
+          "gpc": 2.6,
+          "ppc": 4.1
+        }
+      }
+    },
+    {
+      "code": "35040",
+      "name": "Hastings—Lennox and Addington—Tyendinaga",
+      "results": {
+        "2019": {
+          "cpc": 41.6,
+          "lpc": 37.0,
+          "ndp": 13.1,
+          "ppc": 2.4,
+          "gpc": 5.8
+        },
+        "2021": {
+          "cpc": 45.6,
+          "lpc": 34.5,
+          "ndp": 11.0,
+          "ppc": 5.7,
+          "gpc": 1.8
+        }
+      }
+    },
+    {
+      "code": "35041",
+      "name": "Humber River—Black Creek",
+      "results": {
+        "2019": {
+          "lpc": 61.1,
+          "cpc": 16.2,
+          "ndp": 19.0,
+          "gpc": 2.1,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 60.7,
+          "cpc": 17.4,
+          "ndp": 16.4,
+          "gpc": 1.2,
+          "ppc": 3.9
+        }
+      }
+    },
+    {
+      "code": "35042",
+      "name": "Huron—Bruce",
+      "results": {
+        "2019": {
+          "cpc": 48.5,
+          "lpc": 33.1,
+          "ndp": 12.2,
+          "ppc": 1.8,
+          "gpc": 4.4
+        },
+        "2021": {
+          "cpc": 50.9,
+          "lpc": 26.2,
+          "ndp": 14.8,
+          "ppc": 7.2
+        }
+      }
+    },
+    {
+      "code": "35043",
+      "name": "Kanata",
+      "results": {
+        "2019": {
+          "lpc": 44.3,
+          "cpc": 34.8,
+          "ndp": 13.0,
+          "gpc": 6.5,
+          "ppc": 1.4
+        },
+        "2021": {
+          "lpc": 43.2,
+          "cpc": 36.8,
+          "ndp": 14.7,
+          "gpc": 2.5,
+          "ppc": 2.8
+        }
+      }
+    },
+    {
+      "code": "35044",
+      "name": "Kapuskasing—Timmins—Mushkegowuk",
+      "results": {
+        "2019": {
+          "lpc": 28.7,
+          "ndp": 39.7,
+          "cpc": 24.8,
+          "ppc": 3.1,
+          "gpc": 3.5
+        },
+        "2021": {
+          "lpc": 26.2,
+          "ndp": 35.8,
+          "cpc": 25.2,
+          "ppc": 12.3,
+          "gpc": 0.4
+        }
+      }
+    },
+    {
+      "code": "35045",
+      "name": "Kenora—Kiiwetinoong",
+      "results": {
+        "2019": {
+          "cpc": 35.0,
+          "lpc": 30.1,
+          "ndp": 27.2,
+          "ppc": 1.4,
+          "gpc": 5.6
+        },
+        "2021": {
+          "cpc": 43.3,
+          "lpc": 19.8,
+          "ndp": 29.1,
+          "ppc": 6.3,
+          "gpc": 1.4
+        }
+      }
+    },
+    {
+      "code": "35046",
+      "name": "Kingston and the Islands",
+      "results": {
+        "2019": {
+          "lpc": 45.2,
+          "cpc": 20.5,
+          "ndp": 22.9,
+          "gpc": 8.8,
+          "ppc": 2.6
+        },
+        "2021": {
+          "lpc": 40.7,
+          "cpc": 24.6,
+          "ndp": 28.8,
+          "gpc": 2.5,
+          "ppc": 3.5
+        }
+      }
+    },
+    {
+      "code": "35047",
+      "name": "King—Vaughan",
+      "results": {
+        "2019": {
+          "cpc": 42.2,
+          "lpc": 45.5,
+          "ndp": 6.9,
+          "ppc": 1.2,
+          "gpc": 4.2
+        },
+        "2021": {
+          "cpc": 44.9,
+          "lpc": 42.9,
+          "ndp": 6.6,
+          "ppc": 4.4,
+          "gpc": 1.3
+        }
+      }
+    },
+    {
+      "code": "35048",
+      "name": "Kitchener Centre",
+      "results": {
+        "2019": {
+          "gpc": 25.5,
+          "lpc": 36.7,
+          "cpc": 24.1,
+          "ndp": 11.5,
+          "ppc": 1.9
+        },
+        "2021": {
+          "gpc": 33.4,
+          "lpc": 17.4,
+          "cpc": 24.8,
+          "ndp": 17.5,
+          "ppc": 6.6
+        }
+      }
+    },
+    {
+      "code": "35049",
+      "name": "Kitchener—Conestoga",
+      "results": {
+        "2019": {
+          "lpc": 39.8,
+          "cpc": 38.4,
+          "ndp": 10.1,
+          "gpc": 10.2,
+          "ppc": 1.5
+        },
+        "2021": {
+          "lpc": 38.3,
+          "cpc": 37.6,
+          "ndp": 11.9,
+          "gpc": 4.9,
+          "ppc": 7.2
+        }
+      }
+    },
+    {
+      "code": "35050",
+      "name": "Kitchener South—Hespeler",
+      "results": {
+        "2019": {
+          "lpc": 40.2,
+          "cpc": 33.5,
+          "ndp": 13.3,
+          "gpc": 10.9,
+          "ppc": 1.9
+        },
+        "2021": {
+          "lpc": 37.5,
+          "cpc": 35.5,
+          "ndp": 16.3,
+          "gpc": 3.4,
+          "ppc": 6.7
+        }
+      }
+    },
+    {
+      "code": "35051",
+      "name": "Lanark—Frontenac",
+      "results": {
+        "2019": {
+          "cpc": 49.1,
+          "lpc": 23.7,
+          "ndp": 13.9,
+          "gpc": 11.4,
+          "ppc": 1.8
+        },
+        "2021": {
+          "cpc": 49.7,
+          "lpc": 25.8,
+          "ndp": 15.2,
+          "gpc": 2.7,
+          "ppc": 6.2
+        }
+      }
+    },
+    {
+      "code": "35052",
+      "name": "Leeds—Grenville—Thousand Islands—Rideau Lakes",
+      "results": {
+        "2019": {
+          "cpc": 49.0,
+          "lpc": 26.5,
+          "ndp": 14.0,
+          "gpc": 8.8,
+          "ppc": 1.7
+        },
+        "2021": {
+          "cpc": 50.5,
+          "lpc": 25.2,
+          "ndp": 15.0,
+          "gpc": 3.6,
+          "ppc": 5.7
+        }
+      }
+    },
+    {
+      "code": "35053",
+      "name": "London Centre",
+      "results": {
+        "2019": {
+          "lpc": 41.9,
+          "cpc": 21.0,
+          "ndp": 26.5,
+          "ppc": 2.3,
+          "gpc": 8.1
+        },
+        "2021": {
+          "lpc": 37.5,
+          "cpc": 24.8,
+          "ndp": 30.4,
+          "ppc": 5.2,
+          "gpc": 2.0
+        }
+      }
+    },
+    {
+      "code": "35054",
+      "name": "London—Fanshawe",
+      "results": {
+        "2019": {
+          "ndp": 40.8,
+          "lpc": 26.9,
+          "cpc": 24.8,
+          "ppc": 2.0,
+          "gpc": 5.0
+        },
+        "2021": {
+          "ndp": 43.5,
+          "lpc": 23.0,
+          "cpc": 24.3,
+          "ppc": 9.2
+        }
+      }
+    },
+    {
+      "code": "35055",
+      "name": "London West",
+      "results": {
+        "2019": {
+          "lpc": 42.7,
+          "cpc": 29.7,
+          "ndp": 20.1,
+          "ppc": 1.7,
+          "gpc": 5.1
+        },
+        "2021": {
+          "lpc": 36.9,
+          "cpc": 34.1,
+          "ndp": 22.9,
+          "ppc": 5.0
+        }
+      }
+    },
+    {
+      "code": "35056",
+      "name": "Markham—Stouffville",
+      "results": {
+        "2019": {
+          "lpc": 39.0,
+          "cpc": 31.1,
+          "ndp": 6.7,
+          "gpc": 2.6,
+          "ppc": 0.9
+        },
+        "2021": {
+          "lpc": 51.5,
+          "cpc": 34.8,
+          "ndp": 8.8,
+          "gpc": 2.0,
+          "ppc": 2.9
+        }
+      }
+    },
+    {
+      "code": "35057",
+      "name": "Markham—Thornhill",
+      "results": {
+        "2019": {
+          "lpc": 53.8,
+          "cpc": 33.7,
+          "ndp": 7.3,
+          "gpc": 2.6,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 61.5,
+          "cpc": 26.4,
+          "ndp": 8.4,
+          "gpc": 2.0,
+          "ppc": 1.7
+        }
+      }
+    },
+    {
+      "code": "35058",
+      "name": "Markham—Unionville",
+      "results": {
+        "2019": {
+          "lpc": 38.0,
+          "cpc": 49.4,
+          "ndp": 6.5,
+          "gpc": 4.5,
+          "ppc": 1.6
+        },
+        "2021": {
+          "lpc": 48.2,
+          "cpc": 42.4,
+          "ndp": 6.6,
+          "gpc": 2.8
+        }
+      }
+    },
+    {
+      "code": "35059",
+      "name": "Middlesex—London",
+      "results": {
+        "2019": {
+          "cpc": 43.5,
+          "lpc": 32.3,
+          "ndp": 15.5,
+          "ppc": 2.1,
+          "gpc": 6.0
+        },
+        "2021": {
+          "cpc": 45.3,
+          "lpc": 27.2,
+          "ndp": 17.8,
+          "ppc": 7.8,
+          "gpc": 1.8
+        }
+      }
+    },
+    {
+      "code": "35060",
+      "name": "Milton East—Halton Hills South",
+      "results": {
+        "2019": {
+          "lpc": 43.1,
+          "cpc": 40.8,
+          "ndp": 7.7,
+          "gpc": 7.0,
+          "ppc": 1.5
+        },
+        "2021": {
+          "lpc": 41.7,
+          "cpc": 41.2,
+          "ndp": 9.6,
+          "gpc": 2.6,
+          "ppc": 4.9
+        }
+      }
+    },
+    {
+      "code": "35061",
+      "name": "Mississauga Centre",
+      "results": {
+        "2019": {
+          "lpc": 55.6,
+          "cpc": 30.0,
+          "ndp": 9.6,
+          "ppc": 1.5,
+          "gpc": 2.8
+        },
+        "2021": {
+          "lpc": 53.9,
+          "cpc": 28.9,
+          "ndp": 11.3,
+          "ppc": 4.2,
+          "gpc": 1.6
+        }
+      }
+    },
+    {
+      "code": "35062",
+      "name": "Mississauga East—Cooksville",
+      "results": {
+        "2019": {
+          "lpc": 53.2,
+          "cpc": 32.8,
+          "ndp": 9.0,
+          "ppc": 1.3,
+          "gpc": 3.2
+        },
+        "2021": {
+          "lpc": 50.3,
+          "cpc": 31.6,
+          "ndp": 10.5,
+          "ppc": 6.5,
+          "gpc": 0.3
+        }
+      }
+    },
+    {
+      "code": "35063",
+      "name": "Mississauga—Erin Mills",
+      "results": {
+        "2019": {
+          "lpc": 53.8,
+          "cpc": 32.3,
+          "ndp": 9.1,
+          "gpc": 3.7,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 51.2,
+          "cpc": 33.5,
+          "ndp": 10.3,
+          "gpc": 1.6,
+          "ppc": 3.4
+        }
+      }
+    },
+    {
+      "code": "35064",
+      "name": "Mississauga—Lakeshore",
+      "results": {
+        "2019": {
+          "lpc": 48.6,
+          "cpc": 37.2,
+          "ndp": 8.3,
+          "gpc": 4.5,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 45.0,
+          "cpc": 38.6,
+          "ndp": 9.8,
+          "gpc": 2.2,
+          "ppc": 4.3
+        }
+      }
+    },
+    {
+      "code": "35065",
+      "name": "Mississauga—Malton",
+      "results": {
+        "2019": {
+          "lpc": 57.0,
+          "cpc": 26.4,
+          "ndp": 12.5,
+          "gpc": 2.7,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 52.7,
+          "cpc": 30.8,
+          "ndp": 13.7,
+          "gpc": 1.9,
+          "ppc": 0.3
+        }
+      }
+    },
+    {
+      "code": "35066",
+      "name": "Mississauga—Streetsville",
+      "results": {
+        "2019": {
+          "lpc": 50.2,
+          "cpc": 33.6,
+          "ndp": 10.0,
+          "gpc": 4.6,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 47.3,
+          "cpc": 34.3,
+          "ndp": 12.1,
+          "gpc": 2.1,
+          "ppc": 3.7
+        }
+      }
+    },
+    {
+      "code": "35067",
+      "name": "Nepean",
+      "results": {
+        "2019": {
+          "lpc": 46.8,
+          "cpc": 33.2,
+          "ndp": 12.9,
+          "gpc": 6.0,
+          "ppc": 0.9
+        },
+        "2021": {
+          "lpc": 45.7,
+          "cpc": 33.4,
+          "ndp": 16.2,
+          "gpc": 1.9,
+          "ppc": 2.7
+        }
+      }
+    },
+    {
+      "code": "35068",
+      "name": "Newmarket—Aurora",
+      "results": {
+        "2019": {
+          "lpc": 43.0,
+          "cpc": 37.9,
+          "ndp": 10.8,
+          "gpc": 5.7,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 43.8,
+          "cpc": 38.2,
+          "ndp": 11.6,
+          "gpc": 1.8,
+          "ppc": 4.2
+        }
+      }
+    },
+    {
+      "code": "35069",
+      "name": "New Tecumseth—Gwillimbury",
+      "results": {
+        "2019": {
+          "cpc": 44.9,
+          "lpc": 30.6,
+          "ndp": 12.1,
+          "ppc": 1.7,
+          "gpc": 8.8
+        },
+        "2021": {
+          "cpc": 47.7,
+          "lpc": 30.3,
+          "ndp": 13.0,
+          "ppc": 7.5,
+          "gpc": 1.2
+        }
+      }
+    },
+    {
+      "code": "35070",
+      "name": "Niagara Falls—Niagara-on-the-Lake",
+      "results": {
+        "2019": {
+          "cpc": 34.3,
+          "lpc": 34.1,
+          "ndp": 17.2,
+          "ppc": 1.3,
+          "gpc": 4.7
+        },
+        "2021": {
+          "cpc": 37.4,
+          "lpc": 35.2,
+          "ndp": 17.9,
+          "ppc": 7.6,
+          "gpc": 1.9
+        }
+      }
+    },
+    {
+      "code": "35071",
+      "name": "Niagara South",
+      "results": {
+        "2019": {
+          "lpc": 32.7,
+          "cpc": 33.3,
+          "ndp": 25.5,
+          "ppc": 1.4,
+          "gpc": 5.3
+        },
+        "2021": {
+          "lpc": 33.0,
+          "cpc": 33.4,
+          "ndp": 22.8,
+          "ppc": 8.9,
+          "gpc": 1.9
+        }
+      }
+    },
+    {
+      "code": "35072",
+      "name": "Niagara West",
+      "results": {
+        "2019": {
+          "cpc": 43.6,
+          "lpc": 33.0,
+          "ndp": 13.6,
+          "gpc": 6.6,
+          "ppc": 1.6
+        },
+        "2021": {
+          "cpc": 44.0,
+          "lpc": 31.1,
+          "ndp": 14.0,
+          "gpc": 2.8,
+          "ppc": 7.1
+        }
+      }
+    },
+    {
+      "code": "35073",
+      "name": "Nipissing—Timiskaming",
+      "results": {
+        "2019": {
+          "lpc": 38.5,
+          "cpc": 27.5,
+          "ndp": 22.6,
+          "ppc": 5.2,
+          "gpc": 6.3
+        },
+        "2021": {
+          "lpc": 36.9,
+          "cpc": 31.9,
+          "ndp": 23.3,
+          "ppc": 7.9
+        }
+      }
+    },
+    {
+      "code": "35074",
+      "name": "Northumberland—Clarke",
+      "results": {
+        "2019": {
+          "cpc": 39.3,
+          "lpc": 36.7,
+          "ndp": 13.8,
+          "gpc": 8.0,
+          "ppc": 2.2
+        },
+        "2021": {
+          "cpc": 44.0,
+          "lpc": 34.0,
+          "ndp": 13.9,
+          "gpc": 2.6,
+          "ppc": 5.5
+        }
+      }
+    },
+    {
+      "code": "35075",
+      "name": "Oakville East",
+      "results": {
+        "2019": {
+          "lpc": 46.6,
+          "cpc": 39.5,
+          "ndp": 7.8,
+          "gpc": 4.9,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 46.2,
+          "cpc": 39.4,
+          "ndp": 9.4,
+          "gpc": 1.6,
+          "ppc": 3.3
+        }
+      }
+    },
+    {
+      "code": "35076",
+      "name": "Oakville West",
+      "results": {
+        "2019": {
+          "lpc": 48.0,
+          "cpc": 38.1,
+          "ndp": 7.5,
+          "gpc": 5.2,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 47.5,
+          "cpc": 38.5,
+          "ndp": 8.7,
+          "gpc": 1.7,
+          "ppc": 3.6
+        }
+      }
+    },
+    {
+      "code": "35077",
+      "name": "Orléans",
+      "results": {
+        "2019": {
+          "lpc": 54.9,
+          "cpc": 27.9,
+          "ndp": 11.5,
+          "gpc": 4.5,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 52.3,
+          "cpc": 28.7,
+          "ndp": 14.4,
+          "gpc": 1.6,
+          "ppc": 2.6
+        }
+      }
+    },
+    {
+      "code": "35078",
+      "name": "Oshawa",
+      "results": {
+        "2019": {
+          "cpc": 38.9,
+          "lpc": 25.4,
+          "ndp": 28.5,
+          "ppc": 2.0,
+          "gpc": 5.1
+        },
+        "2021": {
+          "cpc": 39.7,
+          "lpc": 23.1,
+          "ndp": 28.5,
+          "ppc": 7.1,
+          "gpc": 1.5
+        }
+      }
+    },
+    {
+      "code": "35079",
+      "name": "Ottawa Centre",
+      "results": {
+        "2019": {
+          "lpc": 48.6,
+          "cpc": 13.3,
+          "ndp": 28.5,
+          "gpc": 7.4,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 45.2,
+          "cpc": 16.3,
+          "ndp": 32.7,
+          "gpc": 2.8,
+          "ppc": 2.2
+        }
+      }
+    },
+    {
+      "code": "35080",
+      "name": "Ottawa South",
+      "results": {
+        "2019": {
+          "lpc": 53.5,
+          "cpc": 24.8,
+          "ndp": 15.0,
+          "gpc": 5.2,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 49.4,
+          "cpc": 27.0,
+          "ndp": 18.1,
+          "gpc": 2.2,
+          "ppc": 3.1
+        }
+      }
+    },
+    {
+      "code": "35081",
+      "name": "Ottawa—Vanier—Gloucester",
+      "results": {
+        "2019": {
+          "lpc": 51.1,
+          "cpc": 18.1,
+          "ndp": 20.6,
+          "gpc": 7.5,
+          "ppc": 1.6
+        },
+        "2021": {
+          "lpc": 49.0,
+          "cpc": 20.5,
+          "ndp": 23.3,
+          "gpc": 3.0,
+          "ppc": 3.2
+        }
+      }
+    },
+    {
+      "code": "35082",
+      "name": "Ottawa West—Nepean",
+      "results": {
+        "2019": {
+          "lpc": 45.8,
+          "cpc": 26.1,
+          "ndp": 19.5,
+          "gpc": 6.4,
+          "ppc": 1.3
+        },
+        "2021": {
+          "lpc": 45.4,
+          "cpc": 27.7,
+          "ndp": 20.2,
+          "gpc": 2.9,
+          "ppc": 3.2
+        }
+      }
+    },
+    {
+      "code": "35083",
+      "name": "Oxford",
+      "results": {
+        "2019": {
+          "cpc": 47.9,
+          "lpc": 19.3,
+          "ndp": 20.4,
+          "ppc": 2.9,
+          "gpc": 7.8
+        },
+        "2021": {
+          "cpc": 46.8,
+          "lpc": 20.7,
+          "ndp": 18.4,
+          "ppc": 10.6,
+          "gpc": 2.7
+        }
+      }
+    },
+    {
+      "code": "35084",
+      "name": "Parry Sound—Muskoka",
+      "results": {
+        "2019": {
+          "cpc": 41.8,
+          "lpc": 30.4,
+          "ndp": 11.7,
+          "gpc": 15.4
+        },
+        "2021": {
+          "cpc": 47.9,
+          "lpc": 21.6,
+          "ndp": 16.8,
+          "gpc": 5.6,
+          "ppc": 7.5
+        }
+      }
+    },
+    {
+      "code": "35085",
+      "name": "Perth—Wellington",
+      "results": {
+        "2019": {
+          "cpc": 46.3,
+          "lpc": 27.1,
+          "ndp": 14.6,
+          "ppc": 1.6,
+          "gpc": 9.0
+        },
+        "2021": {
+          "cpc": 48.6,
+          "lpc": 24.6,
+          "ndp": 17.2,
+          "ppc": 9.6
+        }
+      }
+    },
+    {
+      "code": "35086",
+      "name": "Peterborough",
+      "results": {
+        "2019": {
+          "lpc": 39.0,
+          "cpc": 34.9,
+          "ndp": 17.2,
+          "ppc": 1.3,
+          "gpc": 7.2
+        },
+        "2021": {
+          "lpc": 34.8,
+          "cpc": 39.2,
+          "ndp": 19.2,
+          "ppc": 4.3,
+          "gpc": 2.2
+        }
+      }
+    },
+    {
+      "code": "35087",
+      "name": "Pickering—Brooklin",
+      "results": {
+        "2019": {
+          "lpc": 51.5,
+          "cpc": 29.0,
+          "ndp": 12.5,
+          "ppc": 1.9,
+          "gpc": 5.1
+        },
+        "2021": {
+          "lpc": 48.2,
+          "cpc": 34.3,
+          "ndp": 13.5,
+          "ppc": 3.8,
+          "gpc": 0.2
+        }
+      }
+    },
+    {
+      "code": "35088",
+      "name": "Prescott—Russell—Cumberland",
+      "results": {
+        "2019": {
+          "lpc": 48.8,
+          "cpc": 34.8,
+          "ndp": 10.4,
+          "ppc": 1.7,
+          "gpc": 3.3
+        },
+        "2021": {
+          "lpc": 47.2,
+          "cpc": 32.4,
+          "ndp": 10.8,
+          "ppc": 6.4,
+          "gpc": 2.0
+        }
+      }
+    },
+    {
+      "code": "35089",
+      "name": "Richmond Hill South",
+      "results": {
+        "2019": {
+          "lpc": 43.0,
+          "cpc": 43.4,
+          "ndp": 8.8,
+          "ppc": 1.0,
+          "gpc": 3.4
+        },
+        "2021": {
+          "lpc": 47.8,
+          "cpc": 38.8,
+          "ndp": 8.8,
+          "ppc": 3.0
+        }
+      }
+    },
+    {
+      "code": "35090",
+      "name": "Sarnia—Lambton—Bkejwanong",
+      "results": {
+        "2019": {
+          "cpc": 49.8,
+          "lpc": 21.4,
+          "ndp": 20.7,
+          "ppc": 2.7,
+          "gpc": 4.5
+        },
+        "2021": {
+          "cpc": 46.5,
+          "lpc": 19.4,
+          "ndp": 21.0,
+          "ppc": 11.0,
+          "gpc": 1.5
+        }
+      }
+    },
+    {
+      "code": "35091",
+      "name": "Sault Ste. Marie—Algoma",
+      "results": {
+        "2019": {
+          "cpc": 31.6,
+          "lpc": 33.9,
+          "ndp": 27.7,
+          "ppc": 1.9,
+          "gpc": 4.8
+        },
+        "2021": {
+          "cpc": 35.6,
+          "lpc": 32.4,
+          "ndp": 25.9,
+          "ppc": 5.2,
+          "gpc": 0.6
+        }
+      }
+    },
+    {
+      "code": "35092",
+      "name": "Scarborough—Agincourt",
+      "results": {
+        "2019": {
+          "lpc": 50.5,
+          "cpc": 36.8,
+          "ndp": 8.8,
+          "gpc": 2.7,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 56.2,
+          "cpc": 29.2,
+          "ndp": 10.1,
+          "gpc": 1.7,
+          "ppc": 2.8
+        }
+      }
+    },
+    {
+      "code": "35093",
+      "name": "Scarborough Centre—Don Valley East",
+      "results": {
+        "2019": {
+          "lpc": 55.1,
+          "cpc": 24.2,
+          "ndp": 11.9,
+          "ppc": 2.0,
+          "gpc": 3.6
+        },
+        "2021": {
+          "lpc": 56.3,
+          "cpc": 25.3,
+          "ndp": 13.7,
+          "ppc": 4.3
+        }
+      }
+    },
+    {
+      "code": "35094",
+      "name": "Scarborough—Guildwood—Rouge Park",
+      "results": {
+        "2019": {
+          "lpc": 61.0,
+          "cpc": 21.2,
+          "ndp": 11.4,
+          "ppc": 1.1,
+          "gpc": 4.7
+        },
+        "2021": {
+          "lpc": 61.3,
+          "cpc": 22.1,
+          "ndp": 13.4,
+          "ppc": 3.0
+        }
+      }
+    },
+    {
+      "code": "35095",
+      "name": "Scarborough North",
+      "results": {
+        "2019": {
+          "lpc": 56.3,
+          "cpc": 27.5,
+          "ndp": 12.8,
+          "ppc": 0.9,
+          "gpc": 2.1
+        },
+        "2021": {
+          "lpc": 67.0,
+          "cpc": 18.1,
+          "ndp": 11.6,
+          "ppc": 2.4
+        }
+      }
+    },
+    {
+      "code": "35096",
+      "name": "Scarborough Southwest",
+      "results": {
+        "2019": {
+          "lpc": 57.8,
+          "cpc": 20.6,
+          "ndp": 15.2,
+          "gpc": 4.7,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 58.0,
+          "cpc": 20.6,
+          "ndp": 16.0,
+          "gpc": 2.3,
+          "ppc": 2.9
+        }
+      }
+    },
+    {
+      "code": "35097",
+      "name": "Scarborough—Woburn",
+      "results": {
+        "2019": {
+          "lpc": 58.8,
+          "cpc": 22.5,
+          "ndp": 11.2,
+          "ppc": 2.2,
+          "gpc": 2.6
+        },
+        "2021": {
+          "lpc": 60.4,
+          "cpc": 22.5,
+          "ndp": 13.2,
+          "ppc": 3.1
+        }
+      }
+    },
+    {
+      "code": "35098",
+      "name": "Simcoe—Grey",
+      "results": {
+        "2019": {
+          "cpc": 43.2,
+          "lpc": 31.5,
+          "ndp": 11.1,
+          "gpc": 12.1,
+          "ppc": 1.8
+        },
+        "2021": {
+          "cpc": 47.4,
+          "lpc": 27.9,
+          "ndp": 13.2,
+          "gpc": 4.2,
+          "ppc": 6.9
+        }
+      }
+    },
+    {
+      "code": "35099",
+      "name": "Simcoe North",
+      "results": {
+        "2019": {
+          "cpc": 42.5,
+          "lpc": 31.3,
+          "ndp": 14.4,
+          "gpc": 9.4,
+          "ppc": 1.9
+        },
+        "2021": {
+          "cpc": 42.2,
+          "lpc": 30.8,
+          "ndp": 16.0,
+          "gpc": 3.0,
+          "ppc": 7.6
+        }
+      }
+    },
+    {
+      "code": "35100",
+      "name": "Spadina—Harbourfront",
+      "results": {
+        "2019": {
+          "lpc": 56.2,
+          "cpc": 19.4,
+          "ndp": 18.0,
+          "gpc": 5.1,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 38.2,
+          "cpc": 21.7,
+          "ndp": 33.8,
+          "gpc": 3.2,
+          "ppc": 3.0
+        }
+      }
+    },
+    {
+      "code": "35101",
+      "name": "St. Catharines",
+      "results": {
+        "2019": {
+          "lpc": 40.2,
+          "cpc": 31.4,
+          "ndp": 20.9,
+          "ppc": 1.4,
+          "gpc": 6.1
+        },
+        "2021": {
+          "lpc": 37.9,
+          "cpc": 32.4,
+          "ndp": 21.3,
+          "ppc": 6.6,
+          "gpc": 1.9
+        }
+      }
+    },
+    {
+      "code": "35102",
+      "name": "Stormont—Dundas—Glengarry",
+      "results": {
+        "2019": {
+          "cpc": 53.4,
+          "lpc": 26.5,
+          "ndp": 14.0,
+          "ppc": 2.2,
+          "gpc": 3.9
+        },
+        "2021": {
+          "cpc": 54.3,
+          "lpc": 24.7,
+          "ndp": 10.9,
+          "ppc": 7.7,
+          "gpc": 2.3
+        }
+      }
+    },
+    {
+      "code": "35103",
+      "name": "Sudbury",
+      "results": {
+        "2019": {
+          "lpc": 40.7,
+          "cpc": 21.0,
+          "ndp": 29.0,
+          "ppc": 1.9,
+          "gpc": 6.6
+        },
+        "2021": {
+          "lpc": 35.0,
+          "cpc": 27.8,
+          "ndp": 28.9,
+          "ppc": 6.1,
+          "gpc": 2.0
+        }
+      }
+    },
+    {
+      "code": "35104",
+      "name": "Sudbury East—Manitoulin—Nickel Belt",
+      "results": {
+        "2019": {
+          "lpc": 34.4,
+          "cpc": 22.0,
+          "ndp": 35.7,
+          "ppc": 2.3,
+          "gpc": 5.5
+        },
+        "2021": {
+          "lpc": 32.0,
+          "cpc": 26.9,
+          "ndp": 30.3,
+          "ppc": 8.9,
+          "gpc": 1.7
+        }
+      }
+    },
+    {
+      "code": "35105",
+      "name": "Taiaiako'n—Parkdale—High Park",
+      "results": {
+        "2019": {
+          "lpc": 47.6,
+          "cpc": 13.3,
+          "ndp": 31.2,
+          "gpc": 6.4,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 42.8,
+          "cpc": 13.3,
+          "ndp": 38.4,
+          "gpc": 1.9,
+          "ppc": 3.2
+        }
+      }
+    },
+    {
+      "code": "35106",
+      "name": "Thornhill",
+      "results": {
+        "2019": {
+          "cpc": 55.3,
+          "lpc": 34.8,
+          "ndp": 6.3,
+          "gpc": 3.0,
+          "ppc": 0.1
+        },
+        "2021": {
+          "cpc": 51.7,
+          "lpc": 36.1,
+          "ndp": 6.0,
+          "gpc": 1.6,
+          "ppc": 4.6
+        }
+      }
+    },
+    {
+      "code": "35107",
+      "name": "Thunder Bay—Rainy River",
+      "results": {
+        "2019": {
+          "lpc": 35.3,
+          "cpc": 29.3,
+          "ndp": 29.1,
+          "ppc": 1.8,
+          "gpc": 4.5
+        },
+        "2021": {
+          "lpc": 34.3,
+          "cpc": 29.3,
+          "ndp": 28.5,
+          "ppc": 6.6,
+          "gpc": 1.4
+        }
+      }
+    },
+    {
+      "code": "35108",
+      "name": "Thunder Bay—Superior North",
+      "results": {
+        "2019": {
+          "lpc": 42.6,
+          "cpc": 25.1,
+          "ndp": 22.0,
+          "ppc": 1.7,
+          "gpc": 8.3
+        },
+        "2021": {
+          "lpc": 40.4,
+          "cpc": 24.0,
+          "ndp": 27.7,
+          "ppc": 5.9,
+          "gpc": 1.8
+        }
+      }
+    },
+    {
+      "code": "35109",
+      "name": "Toronto Centre",
+      "results": {
+        "2019": {
+          "lpc": 57.8,
+          "cpc": 12.6,
+          "ndp": 21.6,
+          "gpc": 6.8,
+          "ppc": 0.1
+        },
+        "2021": {
+          "lpc": 49.8,
+          "cpc": 12.9,
+          "ndp": 26.2,
+          "gpc": 8.1,
+          "ppc": 2.3
+        }
+      }
+    },
+    {
+      "code": "35110",
+      "name": "Toronto—Danforth",
+      "results": {
+        "2019": {
+          "lpc": 47.7,
+          "cpc": 10.5,
+          "ndp": 33.2,
+          "gpc": 6.5,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 48.4,
+          "cpc": 12.6,
+          "ndp": 33.7,
+          "gpc": 2.0,
+          "ppc": 2.5
+        }
+      }
+    },
+    {
+      "code": "35111",
+      "name": "Toronto—St. Paul's",
+      "results": {
+        "2019": {
+          "lpc": 55.1,
+          "cpc": 22.2,
+          "ndp": 14.3,
+          "gpc": 6.8,
+          "ppc": 1.5
+        },
+        "2021": {
+          "lpc": 49.5,
+          "cpc": 26.5,
+          "ndp": 15.9,
+          "gpc": 5.6,
+          "ppc": 2.5
+        }
+      }
+    },
+    {
+      "code": "35112",
+      "name": "University—Rosedale",
+      "results": {
+        "2019": {
+          "lpc": 51.6,
+          "cpc": 15.7,
+          "ndp": 23.3,
+          "gpc": 7.9,
+          "ppc": 0.9
+        },
+        "2021": {
+          "lpc": 46.5,
+          "cpc": 17.9,
+          "ndp": 28.1,
+          "gpc": 4.4,
+          "ppc": 2.6
+        }
+      }
+    },
+    {
+      "code": "35113",
+      "name": "Vaughan—Woodbridge",
+      "results": {
+        "2019": {
+          "lpc": 51.2,
+          "cpc": 36.6,
+          "ndp": 7.7,
+          "ppc": 1.6,
+          "gpc": 2.6
+        },
+        "2021": {
+          "lpc": 46.1,
+          "cpc": 40.3,
+          "ndp": 6.9,
+          "ppc": 5.4,
+          "gpc": 1.0
+        }
+      }
+    },
+    {
+      "code": "35114",
+      "name": "Waterloo",
+      "results": {
+        "2019": {
+          "lpc": 49.2,
+          "cpc": 24.1,
+          "ndp": 15.3,
+          "gpc": 9.7,
+          "ppc": 1.7
+        },
+        "2021": {
+          "lpc": 45.5,
+          "cpc": 27.4,
+          "ndp": 19.1,
+          "gpc": 3.4,
+          "ppc": 4.6
+        }
+      }
+    },
+    {
+      "code": "35115",
+      "name": "Wellington—Halton Hills North",
+      "results": {
+        "2019": {
+          "cpc": 42.2,
+          "lpc": 30.1,
+          "ndp": 9.6,
+          "gpc": 15.8,
+          "ppc": 2.0
+        },
+        "2021": {
+          "cpc": 46.8,
+          "lpc": 30.3,
+          "ndp": 12.0,
+          "gpc": 4.7,
+          "ppc": 6.2
+        }
+      }
+    },
+    {
+      "code": "35116",
+      "name": "Whitby",
+      "results": {
+        "2019": {
+          "lpc": 44.5,
+          "cpc": 34.4,
+          "ndp": 14.4,
+          "ppc": 1.3,
+          "gpc": 5.5
+        },
+        "2021": {
+          "lpc": 45.1,
+          "cpc": 34.5,
+          "ndp": 14.4,
+          "ppc": 4.4,
+          "gpc": 1.6
+        }
+      }
+    },
+    {
+      "code": "35117",
+      "name": "Willowdale",
+      "results": {
+        "2019": {
+          "lpc": 49.0,
+          "cpc": 36.2,
+          "ndp": 9.3,
+          "gpc": 3.7,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 51.2,
+          "cpc": 33.9,
+          "ndp": 10.3,
+          "gpc": 2.0,
+          "ppc": 2.7
+        }
+      }
+    },
+    {
+      "code": "35118",
+      "name": "Windsor—Tecumseh—Lakeshore",
+      "results": {
+        "2019": {
+          "lpc": 32.8,
+          "cpc": 28.9,
+          "ndp": 32.1,
+          "ppc": 2.2,
+          "gpc": 3.8
+        },
+        "2021": {
+          "lpc": 30.9,
+          "cpc": 27.0,
+          "ndp": 30.3,
+          "ppc": 10.3,
+          "gpc": 1.2
+        }
+      }
+    },
+    {
+      "code": "35119",
+      "name": "Windsor West",
+      "results": {
+        "2019": {
+          "ndp": 40.0,
+          "lpc": 36.3,
+          "cpc": 19.1,
+          "ppc": 1.8,
+          "gpc": 2.5
+        },
+        "2021": {
+          "ndp": 44.2,
+          "lpc": 27.8,
+          "cpc": 19.3,
+          "ppc": 8.3
+        }
+      }
+    },
+    {
+      "code": "35120",
+      "name": "York Centre",
+      "results": {
+        "2019": {
+          "lpc": 50.2,
+          "cpc": 36.7,
+          "ndp": 9.8,
+          "gpc": 3.2
+        },
+        "2021": {
+          "lpc": 47.3,
+          "cpc": 37.8,
+          "ndp": 10.2,
+          "ppc": 4.7
+        }
+      }
+    },
+    {
+      "code": "35121",
+      "name": "York—Durham",
+      "results": {
+        "2019": {
+          "cpc": 45.8,
+          "lpc": 27.7,
+          "ndp": 13.0,
+          "ppc": 1.7,
+          "gpc": 8.1
+        },
+        "2021": {
+          "cpc": 51.8,
+          "lpc": 28.5,
+          "ndp": 12.6,
+          "ppc": 6.4,
+          "gpc": 0.6
+        }
+      }
+    },
+    {
+      "code": "35122",
+      "name": "York South—Weston—Etobicoke",
+      "results": {
+        "2019": {
+          "lpc": 58.4,
+          "cpc": 21.2,
+          "ndp": 15.1,
+          "ppc": 1.5,
+          "gpc": 3.6
+        },
+        "2021": {
+          "lpc": 55.6,
+          "cpc": 22.5,
+          "ndp": 15.1,
+          "ppc": 4.9,
+          "gpc": 1.9
+        }
+      }
+    }
+  ],
+  "Manitoba": [
+    {
+      "code": "46001",
+      "name": "Brandon—Souris",
+      "results": {
+        "2019": {
+          "cpc": 63.6,
+          "lpc": 12.0,
+          "ndp": 13.9,
+          "ppc": 1.7,
+          "gpc": 7.3
+        },
+        "2021": {
+          "cpc": 59.4,
+          "lpc": 11.9,
+          "ndp": 20.4,
+          "ppc": 8.2
+        }
+      }
+    },
+    {
+      "code": "46002",
+      "name": "Churchill—Keewatinook Aski",
+      "results": {
+        "2019": {
+          "ndp": 50.2,
+          "lpc": 23.6,
+          "cpc": 20.1,
+          "gpc": 4.8,
+          "ppc": 1.2
+        },
+        "2021": {
+          "ndp": 42.6,
+          "lpc": 25.2,
+          "cpc": 24.2,
+          "gpc": 3.1,
+          "ppc": 5.0
+        }
+      }
+    },
+    {
+      "code": "46003",
+      "name": "Elmwood—Transcona",
+      "results": {
+        "2019": {
+          "ndp": 45.0,
+          "cpc": 38.0,
+          "lpc": 12.3,
+          "ppc": 1.2,
+          "gpc": 3.5
+        },
+        "2021": {
+          "ndp": 49.1,
+          "cpc": 28.5,
+          "lpc": 14.9,
+          "ppc": 6.0,
+          "gpc": 1.6
+        }
+      }
+    },
+    {
+      "code": "46004",
+      "name": "Kildonan—St. Paul",
+      "results": {
+        "2019": {
+          "cpc": 45.4,
+          "lpc": 26.4,
+          "ndp": 22.0,
+          "ppc": 1.2,
+          "gpc": 4.3
+        },
+        "2021": {
+          "cpc": 42.4,
+          "lpc": 27.9,
+          "ndp": 23.8,
+          "ppc": 5.4,
+          "gpc": 0.3
+        }
+      }
+    },
+    {
+      "code": "46005",
+      "name": "Portage—Lisgar",
+      "results": {
+        "2019": {
+          "cpc": 70.9,
+          "lpc": 10.6,
+          "ndp": 8.7,
+          "ppc": 2.6,
+          "gpc": 5.2
+        },
+        "2021": {
+          "cpc": 52.1,
+          "lpc": 11.0,
+          "ndp": 13.4,
+          "ppc": 21.9
+        }
+      }
+    },
+    {
+      "code": "46006",
+      "name": "Provencher",
+      "results": {
+        "2019": {
+          "cpc": 66.6,
+          "lpc": 12.8,
+          "ndp": 12.4,
+          "ppc": 2.3,
+          "gpc": 5.9
+        },
+        "2021": {
+          "cpc": 48.3,
+          "lpc": 16.5,
+          "ndp": 12.2,
+          "ppc": 17.5,
+          "gpc": 2.6
+        }
+      }
+    },
+    {
+      "code": "46007",
+      "name": "Riding Mountain",
+      "results": {
+        "2019": {
+          "cpc": 64.4,
+          "lpc": 13.3,
+          "ndp": 13.9,
+          "gpc": 5.4,
+          "ppc": 1.8
+        },
+        "2021": {
+          "cpc": 59.2,
+          "lpc": 12.7,
+          "ndp": 14.5,
+          "gpc": 2.1,
+          "ppc": 10.5
+        }
+      }
+    },
+    {
+      "code": "46008",
+      "name": "St. Boniface—St. Vital",
+      "results": {
+        "2019": {
+          "lpc": 42.9,
+          "cpc": 32.8,
+          "ndp": 16.9,
+          "gpc": 5.7,
+          "ppc": 1.2
+        },
+        "2021": {
+          "lpc": 43.9,
+          "cpc": 28.3,
+          "ndp": 21.2,
+          "gpc": 1.5,
+          "ppc": 4.3
+        }
+      }
+    },
+    {
+      "code": "46009",
+      "name": "Selkirk—Interlake—Eastman",
+      "results": {
+        "2019": {
+          "cpc": 62.6,
+          "lpc": 12.1,
+          "ndp": 18.0,
+          "gpc": 5.9,
+          "ppc": 1.4
+        },
+        "2021": {
+          "cpc": 57.0,
+          "lpc": 13.2,
+          "ndp": 19.4,
+          "gpc": 2.7,
+          "ppc": 7.7
+        }
+      }
+    },
+    {
+      "code": "46010",
+      "name": "Winnipeg Centre",
+      "results": {
+        "2019": {
+          "ndp": 41.1,
+          "lpc": 33.7,
+          "cpc": 17.5,
+          "gpc": 5.2,
+          "ppc": 1.5
+        },
+        "2021": {
+          "ndp": 49.7,
+          "lpc": 29.0,
+          "cpc": 12.8,
+          "gpc": 2.4,
+          "ppc": 4.3
+        }
+      }
+    },
+    {
+      "code": "46011",
+      "name": "Winnipeg North",
+      "results": {
+        "2019": {
+          "lpc": 48.4,
+          "cpc": 21.2,
+          "ndp": 24.9,
+          "gpc": 2.6,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 53.2,
+          "cpc": 13.5,
+          "ndp": 27.7,
+          "gpc": 1.2,
+          "ppc": 4.0
+        }
+      }
+    },
+    {
+      "code": "46012",
+      "name": "Winnipeg South",
+      "results": {
+        "2019": {
+          "lpc": 42.9,
+          "cpc": 37.7,
+          "ndp": 14.2,
+          "gpc": 4.3,
+          "ppc": 0.9
+        },
+        "2021": {
+          "lpc": 48.1,
+          "cpc": 32.7,
+          "ndp": 14.3,
+          "gpc": 1.5,
+          "ppc": 3.3
+        }
+      }
+    },
+    {
+      "code": "46013",
+      "name": "Winnipeg South Centre",
+      "results": {
+        "2019": {
+          "lpc": 44.4,
+          "cpc": 30.2,
+          "ndp": 18.0,
+          "gpc": 6.2,
+          "ppc": 1.1
+        },
+        "2021": {
+          "lpc": 45.3,
+          "cpc": 28.1,
+          "ndp": 20.7,
+          "gpc": 2.7,
+          "ppc": 2.8
+        }
+      }
+    },
+    {
+      "code": "46014",
+      "name": "Winnipeg West",
+      "results": {
+        "2019": {
+          "lpc": 35.7,
+          "cpc": 41.5,
+          "ndp": 13.6,
+          "gpc": 4.6,
+          "ppc": 4.0
+        },
+        "2021": {
+          "lpc": 39.2,
+          "cpc": 40.3,
+          "ndp": 14.9,
+          "gpc": 2.1,
+          "ppc": 3.4
+        }
+      }
+    }
+  ],
+  "Saskatchewan": [
+    {
+      "code": "47001",
+      "name": "Battlefords—Lloydminster—Meadow Lake",
+      "results": {
+        "2019": {
+          "cpc": 73.4,
+          "lpc": 8.4,
+          "ndp": 14.8,
+          "gpc": 1.8,
+          "ppc": 1.7
+        },
+        "2021": {
+          "cpc": 67.3,
+          "lpc": 7.3,
+          "ndp": 12.9,
+          "gpc": 0.8,
+          "ppc": 6.0
+        }
+      }
+    },
+    {
+      "code": "47002",
+      "name": "Carlton Trail—Eagle Creek",
+      "results": {
+        "2019": {
+          "cpc": 77.3,
+          "lpc": 5.1,
+          "ndp": 13.1,
+          "ppc": 1.9,
+          "gpc": 2.0
+        },
+        "2021": {
+          "cpc": 68.0,
+          "lpc": 5.5,
+          "ndp": 14.0,
+          "ppc": 9.3,
+          "gpc": 0.9
+        }
+      }
+    },
+    {
+      "code": "47003",
+      "name": "Desnethé—Missinippi—Churchill River",
+      "results": {
+        "2019": {
+          "lpc": 36.1,
+          "cpc": 21.9,
+          "ndp": 39.2,
+          "gpc": 1.9,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 46.3,
+          "cpc": 23.6,
+          "ndp": 24.0,
+          "gpc": 1.2,
+          "ppc": 3.1
+        }
+      }
+    },
+    {
+      "code": "47004",
+      "name": "Moose Jaw—Lake Centre—Lanigan",
+      "results": {
+        "2019": {
+          "cpc": 71.6,
+          "lpc": 5.5,
+          "ndp": 16.6,
+          "ppc": 3.6,
+          "gpc": 2.6
+        },
+        "2021": {
+          "cpc": 61.0,
+          "lpc": 6.0,
+          "ndp": 18.9,
+          "ppc": 11.3,
+          "gpc": 1.0
+        }
+      }
+    },
+    {
+      "code": "47005",
+      "name": "Prince Albert",
+      "results": {
+        "2019": {
+          "cpc": 65.7,
+          "lpc": 12.4,
+          "ndp": 17.6,
+          "gpc": 2.2,
+          "ppc": 1.8
+        },
+        "2021": {
+          "cpc": 64.1,
+          "lpc": 11.8,
+          "ndp": 15.0,
+          "gpc": 1.1,
+          "ppc": 6.9
+        }
+      }
+    },
+    {
+      "code": "47006",
+      "name": "Regina—Lewvan",
+      "results": {
+        "2019": {
+          "cpc": 51.9,
+          "lpc": 13.7,
+          "ndp": 28.7,
+          "gpc": 4.1,
+          "ppc": 1.1
+        },
+        "2021": {
+          "cpc": 46.2,
+          "lpc": 14.3,
+          "ndp": 34.8,
+          "gpc": 1.2,
+          "ppc": 3.5
+        }
+      }
+    },
+    {
+      "code": "47007",
+      "name": "Regina—Qu'Appelle",
+      "results": {
+        "2019": {
+          "cpc": 62.1,
+          "lpc": 11.6,
+          "ndp": 21.0,
+          "gpc": 3.3,
+          "ppc": 1.3
+        },
+        "2021": {
+          "cpc": 60.3,
+          "lpc": 10.2,
+          "ndp": 22.7,
+          "gpc": 1.9,
+          "ppc": 4.9
+        }
+      }
+    },
+    {
+      "code": "47008",
+      "name": "Regina—Wascana",
+      "results": {
+        "2019": {
+          "cpc": 49.4,
+          "lpc": 33.6,
+          "ndp": 12.8,
+          "gpc": 2.9,
+          "ppc": 1.0
+        },
+        "2021": {
+          "cpc": 49.9,
+          "lpc": 26.9,
+          "ndp": 18.1,
+          "gpc": 1.6,
+          "ppc": 3.5
+        }
+      }
+    },
+    {
+      "code": "47009",
+      "name": "Saskatoon South",
+      "results": {
+        "2019": {
+          "cpc": 52.6,
+          "lpc": 17.3,
+          "ndp": 26.1,
+          "gpc": 2.6,
+          "ppc": 1.4
+        },
+        "2021": {
+          "cpc": 49.2,
+          "lpc": 14.4,
+          "ndp": 30.6,
+          "gpc": 1.2,
+          "ppc": 4.5
+        }
+      }
+    },
+    {
+      "code": "47010",
+      "name": "Saskatoon—University",
+      "results": {
+        "2019": {
+          "cpc": 52.1,
+          "lpc": 13.1,
+          "ndp": 29.7,
+          "gpc": 3.0,
+          "ppc": 1.4
+        },
+        "2021": {
+          "cpc": 47.9,
+          "lpc": 10.9,
+          "ndp": 35.4,
+          "gpc": 1.0,
+          "ppc": 4.2
+        }
+      }
+    },
+    {
+      "code": "47011",
+      "name": "Saskatoon West",
+      "results": {
+        "2019": {
+          "cpc": 47.7,
+          "lpc": 7.3,
+          "ndp": 40.3,
+          "gpc": 2.7,
+          "ppc": 2.0
+        },
+        "2021": {
+          "cpc": 45.4,
+          "lpc": 8.2,
+          "ndp": 39.3,
+          "gpc": 1.1,
+          "ppc": 6.1
+        }
+      }
+    },
+    {
+      "code": "47012",
+      "name": "Souris—Moose Mountain",
+      "results": {
+        "2019": {
+          "cpc": 83.9,
+          "lpc": 4.1,
+          "ndp": 8.0,
+          "ppc": 1.8,
+          "gpc": 1.7
+        },
+        "2021": {
+          "cpc": 76.0,
+          "lpc": 4.2,
+          "ndp": 8.0,
+          "ppc": 9.2,
+          "gpc": 0.1
+        }
+      }
+    },
+    {
+      "code": "47013",
+      "name": "Swift Current—Grasslands—Kindersley",
+      "results": {
+        "2019": {
+          "cpc": 82.3,
+          "lpc": 3.9,
+          "ndp": 8.9,
+          "ppc": 2.4,
+          "gpc": 1.9
+        },
+        "2021": {
+          "cpc": 72.5,
+          "lpc": 4.1,
+          "ndp": 10.3,
+          "ppc": 7.6,
+          "gpc": 0.8
+        }
+      }
+    },
+    {
+      "code": "47014",
+      "name": "Yorkton—Melville",
+      "results": {
+        "2019": {
+          "cpc": 78.0,
+          "lpc": 6.6,
+          "ndp": 12.5,
+          "gpc": 0.5,
+          "ppc": 2.4
+        },
+        "2021": {
+          "cpc": 68.8,
+          "lpc": 6.3,
+          "ndp": 12.1,
+          "gpc": 1.7,
+          "ppc": 9.2
+        }
+      }
+    }
+  ],
+  "Alberta": [
+    {
+      "code": "48001",
+      "name": "Airdrie—Cochrane",
+      "results": {
+        "2019": {
+          "cpc": 77.0,
+          "lpc": 8.3,
+          "ndp": 8.5,
+          "ppc": 3.6,
+          "gpc": 2.5
+        },
+        "2021": {
+          "cpc": 59.9,
+          "lpc": 10.2,
+          "ndp": 14.9,
+          "ppc": 8.2,
+          "gpc": 1.3
+        }
+      }
+    },
+    {
+      "code": "48002",
+      "name": "Battle River—Crowfoot",
+      "results": {
+        "2019": {
+          "cpc": 85.6,
+          "lpc": 4.1,
+          "ndp": 5.0,
+          "ppc": 2.6,
+          "gpc": 2.7
+        },
+        "2021": {
+          "cpc": 71.4,
+          "lpc": 4.3,
+          "ndp": 9.7,
+          "ppc": 9.3,
+          "gpc": 0.9
+        }
+      }
+    },
+    {
+      "code": "48003",
+      "name": "Bow River",
+      "results": {
+        "2019": {
+          "cpc": 83.7,
+          "lpc": 5.9,
+          "ndp": 5.7,
+          "ppc": 2.3,
+          "gpc": 1.5
+        },
+        "2021": {
+          "cpc": 69.6,
+          "lpc": 7.9,
+          "ndp": 9.4,
+          "ppc": 9.8
+        }
+      }
+    },
+    {
+      "code": "48004",
+      "name": "Calgary Centre",
+      "results": {
+        "2019": {
+          "lpc": 27.3,
+          "cpc": 56.2,
+          "ndp": 9.9,
+          "gpc": 4.4,
+          "ppc": 1.4
+        },
+        "2021": {
+          "lpc": 30.1,
+          "cpc": 50.9,
+          "ndp": 16.4,
+          "gpc": 1.6
+        }
+      }
+    },
+    {
+      "code": "48005",
+      "name": "Calgary Confederation",
+      "results": {
+        "2019": {
+          "cpc": 55.0,
+          "lpc": 22.4,
+          "ndp": 11.4,
+          "gpc": 8.7,
+          "ppc": 1.8
+        },
+        "2021": {
+          "cpc": 45.7,
+          "lpc": 27.9,
+          "ndp": 17.7,
+          "gpc": 3.7,
+          "ppc": 4.6
+        }
+      }
+    },
+    {
+      "code": "48006",
+      "name": "Calgary Crowfoot",
+      "results": {
+        "2019": {
+          "cpc": 67.9,
+          "lpc": 18.4,
+          "ndp": 8.7,
+          "gpc": 3.0,
+          "ppc": 1.6
+        },
+        "2021": {
+          "cpc": 54.9,
+          "lpc": 21.7,
+          "ndp": 16.2,
+          "gpc": 1.7,
+          "ppc": 4.6
+        }
+      }
+    },
+    {
+      "code": "48007",
+      "name": "Calgary East",
+      "results": {
+        "2019": {
+          "cpc": 67.1,
+          "lpc": 14.4,
+          "ndp": 10.6,
+          "gpc": 3.8,
+          "ppc": 3.0
+        },
+        "2021": {
+          "cpc": 52.9,
+          "lpc": 18.5,
+          "ndp": 18.1,
+          "gpc": 2.1,
+          "ppc": 7.2
+        }
+      }
+    },
+    {
+      "code": "48008",
+      "name": "Calgary Heritage",
+      "results": {
+        "2019": {
+          "cpc": 71.4,
+          "lpc": 13.6,
+          "ndp": 9.0,
+          "gpc": 3.4,
+          "ppc": 2.0
+        },
+        "2021": {
+          "cpc": 58.3,
+          "lpc": 16.2,
+          "ndp": 17.3,
+          "gpc": 1.4,
+          "ppc": 5.1
+        }
+      }
+    },
+    {
+      "code": "48009",
+      "name": "Calgary McKnight",
+      "results": {
+        "2019": {
+          "lpc": 30.8,
+          "cpc": 49.8,
+          "ndp": 14.5,
+          "ppc": 1.5,
+          "gpc": 1.7
+        },
+        "2021": {
+          "lpc": 43.8,
+          "cpc": 34.2,
+          "ndp": 16.2,
+          "ppc": 3.9,
+          "gpc": 1.1
+        }
+      }
+    },
+    {
+      "code": "48010",
+      "name": "Calgary Midnapore",
+      "results": {
+        "2019": {
+          "cpc": 73.9,
+          "lpc": 11.1,
+          "ndp": 9.6,
+          "ppc": 2.3,
+          "gpc": 3.0
+        },
+        "2021": {
+          "cpc": 60.3,
+          "lpc": 12.5,
+          "ndp": 18.5,
+          "ppc": 6.1,
+          "gpc": 1.3
+        }
+      }
+    },
+    {
+      "code": "48011",
+      "name": "Calgary Nose Hill",
+      "results": {
+        "2019": {
+          "cpc": 68.5,
+          "lpc": 15.7,
+          "ndp": 9.9,
+          "gpc": 3.6,
+          "ppc": 2.0
+        },
+        "2021": {
+          "cpc": 55.3,
+          "lpc": 20.2,
+          "ndp": 16.9,
+          "gpc": 1.6,
+          "ppc": 4.8
+        }
+      }
+    },
+    {
+      "code": "48012",
+      "name": "Calgary Shepard",
+      "results": {
+        "2019": {
+          "cpc": 76.4,
+          "lpc": 11.1,
+          "ndp": 8.0,
+          "gpc": 2.7,
+          "ppc": 1.9
+        },
+        "2021": {
+          "cpc": 61.2,
+          "lpc": 13.9,
+          "ndp": 16.0,
+          "gpc": 1.7,
+          "ppc": 5.7
+        }
+      }
+    },
+    {
+      "code": "48013",
+      "name": "Calgary Signal Hill",
+      "results": {
+        "2019": {
+          "cpc": 70.2,
+          "lpc": 16.0,
+          "ndp": 8.0,
+          "gpc": 3.1,
+          "ppc": 1.6
+        },
+        "2021": {
+          "cpc": 59.8,
+          "lpc": 19.4,
+          "ndp": 14.1,
+          "gpc": 1.7,
+          "ppc": 4.0
+        }
+      }
+    },
+    {
+      "code": "48014",
+      "name": "Calgary Skyview",
+      "results": {
+        "2019": {
+          "lpc": 22.3,
+          "cpc": 63.3,
+          "ndp": 10.9,
+          "ppc": 1.1,
+          "gpc": 1.7
+        },
+        "2021": {
+          "lpc": 33.1,
+          "cpc": 45.0,
+          "ndp": 16.5,
+          "ppc": 3.7,
+          "gpc": 0.9
+        }
+      }
+    },
+    {
+      "code": "48015",
+      "name": "Edmonton Centre",
+      "results": {
+        "2019": {
+          "lpc": 30.6,
+          "cpc": 42.6,
+          "ndp": 21.4,
+          "ppc": 1.8,
+          "gpc": 2.7
+        },
+        "2021": {
+          "lpc": 31.2,
+          "cpc": 32.6,
+          "ndp": 30.4,
+          "ppc": 4.9,
+          "gpc": 0.1
+        }
+      }
+    },
+    {
+      "code": "48016",
+      "name": "Edmonton Gateway",
+      "results": {
+        "2019": {
+          "cpc": 57.6,
+          "lpc": 24.3,
+          "ndp": 14.0,
+          "ppc": 1.6,
+          "gpc": 2.3
+        },
+        "2021": {
+          "cpc": 43.1,
+          "lpc": 25.4,
+          "ndp": 25.3,
+          "ppc": 5.7,
+          "gpc": 0.2
+        }
+      }
+    },
+    {
+      "code": "48017",
+      "name": "Edmonton Griesbach",
+      "results": {
+        "2019": {
+          "cpc": 50.8,
+          "ndp": 25.2,
+          "lpc": 18.1,
+          "ppc": 2.1,
+          "gpc": 2.5
+        },
+        "2021": {
+          "cpc": 36.3,
+          "ndp": 40.4,
+          "lpc": 15.2,
+          "ppc": 5.9,
+          "gpc": 1.1
+        }
+      }
+    },
+    {
+      "code": "48018",
+      "name": "Edmonton Manning",
+      "results": {
+        "2019": {
+          "cpc": 56.0,
+          "lpc": 20.6,
+          "ndp": 18.3,
+          "ppc": 2.1,
+          "gpc": 2.4
+        },
+        "2021": {
+          "cpc": 41.1,
+          "lpc": 20.6,
+          "ndp": 31.0,
+          "ppc": 7.0
+        }
+      }
+    },
+    {
+      "code": "48019",
+      "name": "Edmonton Northwest",
+      "results": {
+        "2019": {
+          "cpc": 58.6,
+          "lpc": 21.8,
+          "ndp": 15.1,
+          "ppc": 2.1,
+          "gpc": 2.0
+        },
+        "2021": {
+          "cpc": 43.1,
+          "lpc": 22.9,
+          "ndp": 27.6,
+          "ppc": 6.2
+        }
+      }
+    },
+    {
+      "code": "48020",
+      "name": "Edmonton Riverbend",
+      "results": {
+        "2019": {
+          "cpc": 58.7,
+          "lpc": 22.7,
+          "ndp": 14.6,
+          "gpc": 2.7,
+          "ppc": 1.3
+        },
+        "2021": {
+          "cpc": 45.4,
+          "lpc": 24.9,
+          "ndp": 24.4,
+          "gpc": 1.1,
+          "ppc": 4.0
+        }
+      }
+    },
+    {
+      "code": "48021",
+      "name": "Edmonton Southeast",
+      "results": {
+        "2019": {
+          "lpc": 33.1,
+          "cpc": 50.7,
+          "ndp": 12.5,
+          "ppc": 1.6,
+          "gpc": 1.7
+        },
+        "2021": {
+          "lpc": 34.0,
+          "cpc": 37.7,
+          "ndp": 22.3,
+          "ppc": 5.7
+        }
+      }
+    },
+    {
+      "code": "48022",
+      "name": "Edmonton Strathcona",
+      "results": {
+        "2019": {
+          "ndp": 44.8,
+          "cpc": 38.3,
+          "lpc": 12.7,
+          "ppc": 1.7,
+          "gpc": 2.1
+        },
+        "2021": {
+          "ndp": 58.0,
+          "cpc": 26.8,
+          "lpc": 9.0,
+          "ppc": 4.5,
+          "gpc": 1.2
+        }
+      }
+    },
+    {
+      "code": "48023",
+      "name": "Edmonton West",
+      "results": {
+        "2019": {
+          "cpc": 59.8,
+          "lpc": 22.0,
+          "ndp": 14.3,
+          "ppc": 1.6,
+          "gpc": 2.3
+        },
+        "2021": {
+          "cpc": 45.6,
+          "lpc": 24.4,
+          "ndp": 24.5,
+          "ppc": 5.1,
+          "gpc": 0.1
+        }
+      }
+    },
+    {
+      "code": "48024",
+      "name": "Foothills",
+      "results": {
+        "2019": {
+          "cpc": 81.2,
+          "lpc": 6.2,
+          "ndp": 6.2,
+          "ppc": 2.7,
+          "gpc": 3.7
+        },
+        "2021": {
+          "cpc": 68.4,
+          "lpc": 6.9,
+          "ndp": 11.4,
+          "ppc": 8.2,
+          "gpc": 1.3
+        }
+      }
+    },
+    {
+      "code": "48025",
+      "name": "Fort McMurray—Cold Lake",
+      "results": {
+        "2019": {
+          "cpc": 79.6,
+          "lpc": 9.5,
+          "ndp": 5.9,
+          "ppc": 3.3,
+          "gpc": 1.7
+        },
+        "2021": {
+          "cpc": 67.8,
+          "lpc": 7.1,
+          "ndp": 10.1,
+          "ppc": 12.7,
+          "gpc": 1.0
+        }
+      }
+    },
+    {
+      "code": "48026",
+      "name": "Grande Prairie",
+      "results": {
+        "2019": {
+          "cpc": 84.8,
+          "lpc": 4.1,
+          "ndp": 6.8,
+          "ppc": 2.5,
+          "gpc": 1.8
+        },
+        "2021": {
+          "cpc": 69.0,
+          "lpc": 4.2,
+          "ndp": 11.9,
+          "ppc": 10.2
+        }
+      }
+    },
+    {
+      "code": "48027",
+      "name": "Lakeland",
+      "results": {
+        "2019": {
+          "cpc": 83.9,
+          "lpc": 4.5,
+          "ndp": 6.5,
+          "ppc": 2.5,
+          "gpc": 1.9
+        },
+        "2021": {
+          "cpc": 69.4,
+          "lpc": 5.0,
+          "ndp": 10.5,
+          "ppc": 11.1,
+          "gpc": 0.9
+        }
+      }
+    },
+    {
+      "code": "48028",
+      "name": "Leduc—Wetaskiwin",
+      "results": {
+        "2019": {
+          "cpc": 78.4,
+          "lpc": 6.6,
+          "ndp": 10.3,
+          "ppc": 2.2,
+          "gpc": 2.1
+        },
+        "2021": {
+          "cpc": 63.4,
+          "lpc": 7.1,
+          "ndp": 17.6,
+          "ppc": 11.2
+        }
+      }
+    },
+    {
+      "code": "48029",
+      "name": "Lethbridge",
+      "results": {
+        "2019": {
+          "cpc": 65.8,
+          "lpc": 13.6,
+          "ndp": 14.7,
+          "ppc": 1.6,
+          "gpc": 3.1
+        },
+        "2021": {
+          "cpc": 55.6,
+          "lpc": 15.1,
+          "ndp": 19.3,
+          "ppc": 6.9
+        }
+      }
+    },
+    {
+      "code": "48030",
+      "name": "Medicine Hat—Cardston—Warner",
+      "results": {
+        "2019": {
+          "cpc": 80.0,
+          "lpc": 6.2,
+          "ndp": 8.4,
+          "ppc": 2.6,
+          "gpc": 2.3
+        },
+        "2021": {
+          "cpc": 65.8,
+          "lpc": 7.1,
+          "ndp": 13.9,
+          "ppc": 9.3,
+          "gpc": 1.4
+        }
+      }
+    },
+    {
+      "code": "48031",
+      "name": "Parkland",
+      "results": {
+        "2019": {
+          "cpc": 80.2,
+          "lpc": 6.0,
+          "ndp": 8.6,
+          "ppc": 2.5,
+          "gpc": 2.2
+        },
+        "2021": {
+          "cpc": 63.1,
+          "lpc": 6.2,
+          "ndp": 16.3,
+          "ppc": 11.3
+        }
+      }
+    },
+    {
+      "code": "48032",
+      "name": "Peace River—Westlock",
+      "results": {
+        "2019": {
+          "cpc": 80.1,
+          "lpc": 6.7,
+          "ndp": 7.5,
+          "ppc": 3.0,
+          "gpc": 2.7
+        },
+        "2021": {
+          "cpc": 62.7,
+          "lpc": 5.5,
+          "ndp": 13.2,
+          "ppc": 12.5,
+          "gpc": 0.7
+        }
+      }
+    },
+    {
+      "code": "48033",
+      "name": "Ponoka—Didsbury",
+      "results": {
+        "2019": {
+          "cpc": 84.4,
+          "lpc": 3.9,
+          "ndp": 5.6,
+          "ppc": 3.9,
+          "gpc": 2.2
+        },
+        "2021": {
+          "cpc": 67.9,
+          "lpc": 4.7,
+          "ndp": 11.0,
+          "ppc": 13.4
+        }
+      }
+    },
+    {
+      "code": "48034",
+      "name": "Red Deer",
+      "results": {
+        "2019": {
+          "cpc": 76.4,
+          "lpc": 7.2,
+          "ndp": 9.7,
+          "ppc": 3.6,
+          "gpc": 3.1
+        },
+        "2021": {
+          "cpc": 60.5,
+          "lpc": 8.2,
+          "ndp": 17.4,
+          "ppc": 11.3
+        }
+      }
+    },
+    {
+      "code": "48035",
+      "name": "Sherwood Park—Fort Saskatchewan",
+      "results": {
+        "2019": {
+          "cpc": 73.4,
+          "lpc": 10.1,
+          "ndp": 12.1,
+          "gpc": 2.2,
+          "ppc": 1.8
+        },
+        "2021": {
+          "cpc": 57.6,
+          "lpc": 12.2,
+          "ndp": 20.6,
+          "gpc": 1.0,
+          "ppc": 7.0
+        }
+      }
+    },
+    {
+      "code": "48036",
+      "name": "St. Albert—Sturgeon River",
+      "results": {
+        "2019": {
+          "cpc": 69.6,
+          "lpc": 12.3,
+          "ndp": 12.4,
+          "ppc": 2.2,
+          "gpc": 2.8
+        },
+        "2021": {
+          "cpc": 56.0,
+          "lpc": 11.4,
+          "ndp": 23.6,
+          "ppc": 7.8
+        }
+      }
+    },
+    {
+      "code": "48037",
+      "name": "Yellowhead",
+      "results": {
+        "2019": {
+          "cpc": 72.4,
+          "lpc": 9.7,
+          "ndp": 10.0,
+          "ppc": 2.8,
+          "gpc": 4.8
+        },
+        "2021": {
+          "cpc": 60.2,
+          "lpc": 10.6,
+          "ndp": 14.7,
+          "ppc": 9.3,
+          "gpc": 1.2
+        }
+      }
+    }
+  ],
+  "British Columbia": [
+    {
+      "code": "59001",
+      "name": "Abbotsford—South Langley",
+      "results": {
+        "2019": {
+          "cpc": 48.3,
+          "lpc": 23.6,
+          "ndp": 17.6,
+          "gpc": 7.6,
+          "ppc": 2.2
+        },
+        "2021": {
+          "cpc": 45.6,
+          "lpc": 26.0,
+          "ndp": 18.2,
+          "gpc": 3.1,
+          "ppc": 7.0
+        }
+      }
+    },
+    {
+      "code": "59002",
+      "name": "Burnaby Central",
+      "results": {
+        "2019": {
+          "lpc": 25.3,
+          "cpc": 28.7,
+          "ndp": 37.5,
+          "gpc": 6.0,
+          "ppc": 1.7
+        },
+        "2021": {
+          "lpc": 31.2,
+          "cpc": 22.2,
+          "ndp": 39.8,
+          "gpc": 2.9,
+          "ppc": 3.4
+        }
+      }
+    },
+    {
+      "code": "59003",
+      "name": "Burnaby North—Seymour",
+      "results": {
+        "2019": {
+          "lpc": 37.5,
+          "cpc": 21.2,
+          "ndp": 28.0,
+          "gpc": 10.6,
+          "ppc": 1.9
+        },
+        "2021": {
+          "lpc": 40.9,
+          "cpc": 26.6,
+          "ndp": 26.5,
+          "gpc": 3.4,
+          "ppc": 2.7
+        }
+      }
+    },
+    {
+      "code": "59004",
+      "name": "Cariboo—Prince George",
+      "results": {
+        "2019": {
+          "cpc": 54.0,
+          "lpc": 19.6,
+          "ndp": 14.5,
+          "gpc": 9.1,
+          "ppc": 2.1
+        },
+        "2021": {
+          "cpc": 51.2,
+          "lpc": 16.3,
+          "ndp": 20.4,
+          "gpc": 3.5,
+          "ppc": 8.2
+        }
+      }
+    },
+    {
+      "code": "59005",
+      "name": "Chilliwack—Hope",
+      "results": {
+        "2019": {
+          "cpc": 49.2,
+          "lpc": 20.5,
+          "ndp": 16.7,
+          "ppc": 3.2,
+          "gpc": 9.9
+        },
+        "2021": {
+          "cpc": 46.0,
+          "lpc": 17.1,
+          "ndp": 26.4,
+          "ppc": 7.7,
+          "gpc": 2.8
+        }
+      }
+    },
+    {
+      "code": "59006",
+      "name": "Cloverdale—Langley City",
+      "results": {
+        "2019": {
+          "cpc": 37.5,
+          "lpc": 35.3,
+          "ndp": 19.0,
+          "ppc": 1.7,
+          "gpc": 6.6
+        },
+        "2021": {
+          "cpc": 36.1,
+          "lpc": 39.1,
+          "ndp": 20.0,
+          "ppc": 4.8
+        }
+      }
+    },
+    {
+      "code": "59007",
+      "name": "Columbia—Kootenay—Southern Rockies",
+      "results": {
+        "2019": {
+          "cpc": 45.3,
+          "lpc": 9.5,
+          "ndp": 33.4,
+          "gpc": 8.9,
+          "ppc": 2.4
+        },
+        "2021": {
+          "cpc": 43.6,
+          "lpc": 8.9,
+          "ndp": 36.6,
+          "gpc": 3.7,
+          "ppc": 7.1
+        }
+      }
+    },
+    {
+      "code": "59008",
+      "name": "Coquitlam—Port Coquitlam",
+      "results": {
+        "2019": {
+          "lpc": 34.4,
+          "cpc": 33.5,
+          "ndp": 23.7,
+          "ppc": 1.2,
+          "gpc": 7.0
+        },
+        "2021": {
+          "lpc": 37.9,
+          "cpc": 30.1,
+          "ndp": 27.6,
+          "ppc": 4.4
+        }
+      }
+    },
+    {
+      "code": "59009",
+      "name": "Courtenay—Alberni",
+      "results": {
+        "2019": {
+          "cpc": 32.2,
+          "ndp": 39.8,
+          "lpc": 12.0,
+          "gpc": 15.6,
+          "ppc": 0.1
+        },
+        "2021": {
+          "cpc": 31.3,
+          "ndp": 42.9,
+          "lpc": 13.6,
+          "gpc": 7.0,
+          "ppc": 5.0
+        }
+      }
+    },
+    {
+      "code": "59010",
+      "name": "Cowichan—Malahat—Langford",
+      "results": {
+        "2019": {
+          "cpc": 26.0,
+          "ndp": 36.1,
+          "lpc": 15.8,
+          "gpc": 20.2,
+          "ppc": 1.6
+        },
+        "2021": {
+          "cpc": 28.4,
+          "ndp": 42.8,
+          "lpc": 16.4,
+          "gpc": 6.2,
+          "ppc": 6.3
+        }
+      }
+    },
+    {
+      "code": "59011",
+      "name": "Delta",
+      "results": {
+        "2019": {
+          "lpc": 41.2,
+          "cpc": 33.0,
+          "ndp": 16.6,
+          "gpc": 6.1,
+          "ppc": 1.7
+        },
+        "2021": {
+          "lpc": 42.5,
+          "cpc": 33.5,
+          "ndp": 18.4,
+          "gpc": 2.2,
+          "ppc": 2.5
+        }
+      }
+    },
+    {
+      "code": "59012",
+      "name": "Esquimalt—Saanich—Sooke",
+      "results": {
+        "2019": {
+          "lpc": 17.7,
+          "cpc": 18.8,
+          "ndp": 34.7,
+          "gpc": 26.3,
+          "ppc": 1.6
+        },
+        "2021": {
+          "lpc": 21.9,
+          "cpc": 21.0,
+          "ndp": 43.2,
+          "gpc": 8.9,
+          "ppc": 4.6
+        }
+      }
+    },
+    {
+      "code": "59013",
+      "name": "Fleetwood—Port Kells",
+      "results": {
+        "2019": {
+          "lpc": 46.2,
+          "cpc": 38.7,
+          "ndp": 6.1,
+          "gpc": 6.1,
+          "ppc": 2.6
+        },
+        "2021": {
+          "lpc": 45.9,
+          "cpc": 28.5,
+          "ndp": 20.3,
+          "gpc": 1.9,
+          "ppc": 2.9
+        }
+      }
+    },
+    {
+      "code": "59014",
+      "name": "Kamloops—Shuswap—Central Rockies",
+      "results": {
+        "2019": {
+          "cpc": 46.3,
+          "lpc": 22.7,
+          "ndp": 17.8,
+          "gpc": 10.7,
+          "ppc": 2.2
+        },
+        "2021": {
+          "cpc": 45.0,
+          "lpc": 16.6,
+          "ndp": 25.0,
+          "gpc": 5.1,
+          "ppc": 8.2
+        }
+      }
+    },
+    {
+      "code": "59015",
+      "name": "Kamloops—Thompson—Nicola",
+      "results": {
+        "2019": {
+          "cpc": 44.5,
+          "lpc": 25.7,
+          "ndp": 15.3,
+          "gpc": 12.2,
+          "ppc": 1.7
+        },
+        "2021": {
+          "cpc": 43.5,
+          "lpc": 17.7,
+          "ndp": 28.6,
+          "gpc": 3.8,
+          "ppc": 6.0
+        }
+      }
+    },
+    {
+      "code": "59016",
+      "name": "Kelowna",
+      "results": {
+        "2019": {
+          "cpc": 43.0,
+          "lpc": 32.6,
+          "ndp": 14.5,
+          "ppc": 1.9,
+          "gpc": 7.6
+        },
+        "2021": {
+          "cpc": 42.3,
+          "lpc": 26.2,
+          "ndp": 21.2,
+          "ppc": 7.3,
+          "gpc": 3.0
+        }
+      }
+    },
+    {
+      "code": "59017",
+      "name": "Langley Township—Fraser Heights",
+      "results": {
+        "2019": {
+          "lpc": 27.5,
+          "cpc": 45.8,
+          "ndp": 17.0,
+          "gpc": 7.1,
+          "ppc": 1.9
+        },
+        "2021": {
+          "lpc": 29.6,
+          "cpc": 43.9,
+          "ndp": 19.5,
+          "gpc": 2.4,
+          "ppc": 4.5
+        }
+      }
+    },
+    {
+      "code": "59018",
+      "name": "Mission—Matsqui—Abbotsford",
+      "results": {
+        "2019": {
+          "cpc": 47.8,
+          "lpc": 24.9,
+          "ndp": 16.2,
+          "gpc": 8.7,
+          "ppc": 2.1
+        },
+        "2021": {
+          "cpc": 47.1,
+          "lpc": 24.2,
+          "ndp": 18.0,
+          "gpc": 3.7,
+          "ppc": 7.0
+        }
+      }
+    },
+    {
+      "code": "59019",
+      "name": "Nanaimo—Ladysmith",
+      "results": {
+        "2019": {
+          "cpc": 25.4,
+          "lpc": 13.3,
+          "ndp": 24.3,
+          "gpc": 34.7,
+          "ppc": 1.4
+        },
+        "2021": {
+          "cpc": 26.6,
+          "lpc": 13.2,
+          "ndp": 29.4,
+          "gpc": 25.8,
+          "ppc": 5.0
+        }
+      }
+    },
+    {
+      "code": "59020",
+      "name": "New Westminster—Burnaby—Maillardville",
+      "results": {
+        "2019": {
+          "lpc": 23.9,
+          "cpc": 22.0,
+          "ndp": 43.5,
+          "gpc": 8.3,
+          "ppc": 1.6
+        },
+        "2021": {
+          "lpc": 23.4,
+          "cpc": 21.0,
+          "ndp": 48.0,
+          "gpc": 3.8,
+          "ppc": 3.7
+        }
+      }
+    },
+    {
+      "code": "59021",
+      "name": "North Island—Powell River",
+      "results": {
+        "2019": {
+          "cpc": 33.4,
+          "ndp": 37.5,
+          "lpc": 13.2,
+          "gpc": 13.8,
+          "ppc": 1.6
+        },
+        "2021": {
+          "cpc": 36.2,
+          "ndp": 39.5,
+          "lpc": 13.3,
+          "gpc": 5.9,
+          "ppc": 4.6
+        }
+      }
+    },
+    {
+      "code": "59022",
+      "name": "North Vancouver—Capilano",
+      "results": {
+        "2019": {
+          "lpc": 42.8,
+          "cpc": 28.3,
+          "ndp": 15.3,
+          "gpc": 12.2,
+          "ppc": 1.4
+        },
+        "2021": {
+          "lpc": 44.7,
+          "cpc": 29.4,
+          "ndp": 19.1,
+          "gpc": 4.3,
+          "ppc": 2.6
+        }
+      }
+    },
+    {
+      "code": "59023",
+      "name": "Okanagan Lake West—South Kelowna",
+      "results": {
+        "2019": {
+          "cpc": 48.6,
+          "lpc": 28.2,
+          "ndp": 13.8,
+          "gpc": 7.6,
+          "ppc": 1.7
+        },
+        "2021": {
+          "cpc": 48.4,
+          "lpc": 23.2,
+          "ndp": 18.9,
+          "gpc": 2.7,
+          "ppc": 6.8
+        }
+      }
+    },
+    {
+      "code": "59024",
+      "name": "Pitt Meadows—Maple Ridge",
+      "results": {
+        "2019": {
+          "cpc": 36.7,
+          "lpc": 29.3,
+          "ndp": 23.5,
+          "ppc": 1.4,
+          "gpc": 8.3
+        },
+        "2021": {
+          "cpc": 37.1,
+          "lpc": 24.7,
+          "ndp": 31.3,
+          "ppc": 5.5,
+          "gpc": 0.3
+        }
+      }
+    },
+    {
+      "code": "59025",
+      "name": "Port Moody—Coquitlam",
+      "results": {
+        "2019": {
+          "lpc": 30.4,
+          "cpc": 32.0,
+          "ndp": 28.8,
+          "ppc": 1.5,
+          "gpc": 7.2
+        },
+        "2021": {
+          "lpc": 29.5,
+          "cpc": 32.0,
+          "ndp": 35.0,
+          "ppc": 3.3
+        }
+      }
+    },
+    {
+      "code": "59026",
+      "name": "Prince George—Peace River—Northern Rockies",
+      "results": {
+        "2019": {
+          "cpc": 67.9,
+          "lpc": 12.2,
+          "ndp": 10.1,
+          "ppc": 3.2,
+          "gpc": 6.6
+        },
+        "2021": {
+          "cpc": 59.3,
+          "lpc": 9.3,
+          "ndp": 14.4,
+          "ppc": 10.4,
+          "gpc": 3.5
+        }
+      }
+    },
+    {
+      "code": "59027",
+      "name": "Richmond Centre—Marpole",
+      "results": {
+        "2019": {
+          "lpc": 27.0,
+          "cpc": 45.4,
+          "ndp": 14.2,
+          "gpc": 5.7,
+          "ppc": 1.4
+        },
+        "2021": {
+          "lpc": 38.6,
+          "cpc": 35.5,
+          "ndp": 20.4,
+          "gpc": 3.1,
+          "ppc": 2.5
+        }
+      }
+    },
+    {
+      "code": "59028",
+      "name": "Richmond East—Steveston",
+      "results": {
+        "2019": {
+          "lpc": 34.6,
+          "cpc": 42.1,
+          "ndp": 15.1,
+          "gpc": 7.0,
+          "ppc": 0.1
+        },
+        "2021": {
+          "lpc": 41.9,
+          "cpc": 34.0,
+          "ndp": 19.4,
+          "gpc": 2.3,
+          "ppc": 2.4
+        }
+      }
+    },
+    {
+      "code": "59029",
+      "name": "Saanich—Gulf Islands",
+      "results": {
+        "2019": {
+          "cpc": 20.5,
+          "lpc": 16.9,
+          "gpc": 47.7,
+          "ndp": 13.6,
+          "ppc": 1.3
+        },
+        "2021": {
+          "cpc": 22.6,
+          "lpc": 18.8,
+          "gpc": 35.8,
+          "ndp": 19.5,
+          "ppc": 3.0
+        }
+      }
+    },
+    {
+      "code": "59030",
+      "name": "Similkameen—South Okanagan—West Kootenay",
+      "results": {
+        "2019": {
+          "cpc": 37.3,
+          "lpc": 18.2,
+          "ndp": 34.0,
+          "gpc": 7.9,
+          "ppc": 2.2
+        },
+        "2021": {
+          "cpc": 37.6,
+          "lpc": 13.2,
+          "ndp": 39.0,
+          "gpc": 3.4,
+          "ppc": 6.9
+        }
+      }
+    },
+    {
+      "code": "59031",
+      "name": "Skeena—Bulkley Valley",
+      "results": {
+        "2019": {
+          "cpc": 33.2,
+          "ndp": 40.9,
+          "lpc": 11.6,
+          "gpc": 7.9,
+          "ppc": 2.3
+        },
+        "2021": {
+          "cpc": 36.1,
+          "ndp": 42.6,
+          "lpc": 7.7,
+          "gpc": 3.8,
+          "ppc": 7.7
+        }
+      }
+    },
+    {
+      "code": "59032",
+      "name": "South Surrey—White Rock",
+      "results": {
+        "2019": {
+          "lpc": 37.4,
+          "cpc": 41.9,
+          "ndp": 11.6,
+          "ppc": 1.5,
+          "gpc": 7.7
+        },
+        "2021": {
+          "lpc": 38.9,
+          "cpc": 42.4,
+          "ndp": 14.8,
+          "ppc": 3.9
+        }
+      }
+    },
+    {
+      "code": "59033",
+      "name": "Surrey Centre",
+      "results": {
+        "2019": {
+          "lpc": 38.4,
+          "cpc": 24.3,
+          "ndp": 27.9,
+          "gpc": 6.0,
+          "ppc": 1.7
+        },
+        "2021": {
+          "lpc": 44.6,
+          "cpc": 20.7,
+          "ndp": 27.6,
+          "gpc": 2.2,
+          "ppc": 3.9
+        }
+      }
+    },
+    {
+      "code": "59034",
+      "name": "Surrey Newton",
+      "results": {
+        "2019": {
+          "lpc": 45.4,
+          "cpc": 20.4,
+          "ndp": 29.5,
+          "ppc": 1.5,
+          "gpc": 3.2
+        },
+        "2021": {
+          "lpc": 54.4,
+          "cpc": 15.2,
+          "ndp": 26.1,
+          "ppc": 2.6
+        }
+      }
+    },
+    {
+      "code": "59035",
+      "name": "Vancouver Centre",
+      "results": {
+        "2019": {
+          "lpc": 42.3,
+          "cpc": 19.6,
+          "ndp": 23.5,
+          "gpc": 12.3,
+          "ppc": 1.3
+        },
+        "2021": {
+          "lpc": 40.7,
+          "cpc": 21.9,
+          "ndp": 30.3,
+          "gpc": 3.8,
+          "ppc": 3.3
+        }
+      }
+    },
+    {
+      "code": "59036",
+      "name": "Vancouver East",
+      "results": {
+        "2019": {
+          "ndp": 52.6,
+          "lpc": 18.1,
+          "cpc": 12.1,
+          "gpc": 14.5,
+          "ppc": 1.2
+        },
+        "2021": {
+          "ndp": 56.4,
+          "lpc": 19.8,
+          "cpc": 10.9,
+          "gpc": 7.7,
+          "ppc": 2.8
+        }
+      }
+    },
+    {
+      "code": "59037",
+      "name": "Vancouver Fraserview—South Burnaby",
+      "results": {
+        "2019": {
+          "lpc": 34.0,
+          "cpc": 32.4,
+          "ndp": 26.4,
+          "ppc": 1.3,
+          "gpc": 5.7
+        },
+        "2021": {
+          "lpc": 42.3,
+          "cpc": 21.9,
+          "ndp": 31.1,
+          "ppc": 3.0,
+          "gpc": 1.0
+        }
+      }
+    },
+    {
+      "code": "59038",
+      "name": "Vancouver Granville",
+      "results": {
+        "2019": {
+          "lpc": 31.5,
+          "cpc": 21.1,
+          "ndp": 14.9,
+          "gpc": 6.4,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 37.2,
+          "cpc": 24.7,
+          "ndp": 32.9,
+          "gpc": 2.7,
+          "ppc": 2.4
+        }
+      }
+    },
+    {
+      "code": "59039",
+      "name": "Vancouver Kingsway",
+      "results": {
+        "2019": {
+          "lpc": 24.4,
+          "ndp": 47.1,
+          "cpc": 20.5,
+          "gpc": 6.1,
+          "ppc": 1.0
+        },
+        "2021": {
+          "lpc": 29.0,
+          "ndp": 50.4,
+          "cpc": 14.1,
+          "gpc": 3.6,
+          "ppc": 2.2
+        }
+      }
+    },
+    {
+      "code": "59040",
+      "name": "Vancouver Quadra",
+      "results": {
+        "2019": {
+          "lpc": 42.8,
+          "cpc": 28.2,
+          "ndp": 14.9,
+          "gpc": 12.1,
+          "ppc": 0.8
+        },
+        "2021": {
+          "lpc": 43.4,
+          "cpc": 29.2,
+          "ndp": 19.4,
+          "gpc": 6.0,
+          "ppc": 2.0
+        }
+      }
+    },
+    {
+      "code": "59041",
+      "name": "Vernon—Lake Country—Monashee",
+      "results": {
+        "2019": {
+          "cpc": 45.1,
+          "lpc": 23.4,
+          "ndp": 18.1,
+          "gpc": 10.7,
+          "ppc": 2.6
+        },
+        "2021": {
+          "cpc": 43.8,
+          "lpc": 19.8,
+          "ndp": 21.7,
+          "gpc": 5.2,
+          "ppc": 9.5
+        }
+      }
+    },
+    {
+      "code": "59042",
+      "name": "Victoria",
+      "results": {
+        "2019": {
+          "lpc": 22.3,
+          "ndp": 33.2,
+          "cpc": 12.6,
+          "gpc": 29.9,
+          "ppc": 1.3
+        },
+        "2021": {
+          "lpc": 27.3,
+          "ndp": 43.9,
+          "cpc": 13.7,
+          "gpc": 11.2,
+          "ppc": 3.1
+        }
+      }
+    },
+    {
+      "code": "59043",
+      "name": "West Vancouver—Sunshine Coast—Sea to Sky Country",
+      "results": {
+        "2019": {
+          "lpc": 34.0,
+          "cpc": 25.5,
+          "ndp": 14.5,
+          "gpc": 24.0,
+          "ppc": 1.6
+        },
+        "2021": {
+          "lpc": 33.0,
+          "cpc": 29.1,
+          "ndp": 26.9,
+          "gpc": 6.8,
+          "ppc": 3.8
+        }
+      }
+    }
+  ],
+  "Yukon": [
+    {
+      "code": "60001",
+      "name": "Yukon",
+      "results": {
+        "2019": {
+          "lpc": 33.5,
+          "cpc": 32.7,
+          "ndp": 22.0,
+          "gpc": 10.5,
+          "ppc": 1.4
+        },
+        "2021": {
+          "lpc": 33.3,
+          "cpc": 26.3,
+          "ndp": 22.4,
+          "gpc": 4.4
+        }
+      }
+    }
+  ],
+  "Northwest Territories": [
+    {
+      "code": "61001",
+      "name": "Northwest Territories",
+      "results": {
+        "2019": {
+          "lpc": 39.7,
+          "cpc": 25.5,
+          "ndp": 22.3,
+          "gpc": 10.6,
+          "ppc": 1.8
+        },
+        "2021": {
+          "lpc": 38.2,
+          "cpc": 14.4,
+          "ndp": 32.3,
+          "gpc": 2.3
+        }
+      }
+    }
+  ],
+  "Nunavut": [
+    {
+      "code": "62001",
+      "name": "Nunavut",
+      "results": {
+        "2019": {
+          "lpc": 30.9,
+          "ndp": 40.8,
+          "cpc": 26.1,
+          "gpc": 2.2
+        },
+        "2021": {
+          "lpc": 35.9,
+          "ndp": 47.7,
+          "cpc": 16.5
+        }
+      }
+    }
+  ]
+}
