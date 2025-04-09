@@ -5,7 +5,7 @@ import ProjectedSeats from './ProjectedSeats';
 import ElectoralMap from './ElectoralMap';
 import About from './About';
 import Polls from './Polls';
-import TopLine from './TopLine';
+import BallSwarm from './BallSwarm';
 
 // styled components for the homepage
 const Header = styled.header`
@@ -258,8 +258,7 @@ function Forecast() {
           {activeTab === 'forecast' && (
             <>
               <DataSection>
-                <SectionTitle>Who will form the next government?</SectionTitle>
-                <TopLine />
+                <BallSwarm />
               </DataSection>
 
               <DataSection>

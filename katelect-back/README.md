@@ -62,6 +62,7 @@ The backend handles three main tasks:
 
 ### Current issues:
 
+- try making the poll aggregator bayesian
 - need to implement something that stops full rewrites of the data
 - need to implement proper error handling for failed scrapes
 
