@@ -28,18 +28,22 @@ uvicorn main:app --reload --port 8000
 ## Code Structure
 
 ```sh
-katelect-back
-|
-+-- data              # contains all poll data
-|   +-- polls         # raw poll data scraped from 338canada
-|   +-- averages     # processed poll averages
-|   +-- latest       # latest poll numbers and changes
-|
-+-- main.py          # fastapi server implementation
-|
-+-- scrape_polls.py  # poll scraping implementation
-|
-+-- aggregate_polls.py # poll processing and aggregation logic
+katelect-back/
+├── data/                    # contains all data files
+│   ├── polls/              # raw poll data scraped from 338canada
+│   ├── averages/           # processed poll averages
+│   ├── latest/             # latest poll numbers and changes
+│   ├── results/            # election results data
+│   ├── census/             # census related data
+│   ├── districts/          # electoral district information
+│   └── 98-401-X2021029_eng_CSV.zip  # census data package
+├── main.py                 # fastapi server implementation
+├── requirements.txt        # python dependencies
+├── aggregate_polls.py      # poll processing and aggregation logic
+├── riding_predictions.py   # model for predicting individual ridings
+├── scrape_districts.py     # scraping district codes and names
+├── scrape_polls.py         # scraping individual polls
+└── scrape_results.py       # scraping 2019 and 2021 riding results
 ```
 
 ### API Endpoints

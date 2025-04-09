@@ -4,4 +4,4 @@ fastapi
 uvicorn[standard]
 pandas==2.2.1
 numpy
-python-dateutil==2.8.2 
+python-dateutil==2.8.2
