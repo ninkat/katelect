@@ -35,8 +35,7 @@ katelect-back/
 │   ├── latest/             # latest poll numbers and changes
 │   ├── results/            # election results data
 │   ├── census/             # census related data
-│   ├── districts/          # electoral district information
-│   └── 98-401-X2021029_eng_CSV.zip  # census data package
+│   └── districts/          # electoral district information
 ├── main.py                 # fastapi server implementation
 ├── requirements.txt        # python dependencies
 ├── aggregate_polls.py      # poll processing and aggregation logic
