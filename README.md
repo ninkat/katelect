@@ -1,6 +1,6 @@
-# Katelect
+# Polikat
 
-The **katelect** project is a Canadian federal election forecasting model and visualization tool.
+The **polikat** project is a Canadian federal election forecasting model and visualization tool.
 
 ## Project Structure
 
